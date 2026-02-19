@@ -1,0 +1,16 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="#f0f5ef"/>
+  <!-- Pot -->
+  <path d="M220 430 L200 550 L400 550 L380 430 Z" fill="#d4a574"/>
+  <rect x="210" y="420" width="180" height="20" rx="4" fill="#c4956a"/>
+  <!-- Stem -->
+  <line x1="300" y1="430" x2="300" y2="180" stroke="#2D5A3D" stroke-width="6"/>
+  <!-- Fiddle leaves (large, rounded) -->
+  <ellipse cx="260" cy="200" rx="50" ry="70" fill="#3a8a4a" transform="rotate(-15 260 200)"/>
+  <ellipse cx="340" cy="230" rx="45" ry="65" fill="#2D5A3D" transform="rotate(10 340 230)"/>
+  <ellipse cx="290" cy="300" rx="48" ry="60" fill="#4a9a5a" transform="rotate(-5 290 300)"/>
+  <ellipse cx="320" cy="160" rx="40" ry="55" fill="#3a7a4a" transform="rotate(8 320 160)"/>
+  <!-- Leaf veins -->
+  <line x1="260" y1="150" x2="260" y2="260" stroke="#2a6a3a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="340" y1="180" x2="340" y2="280" stroke="#1a5a2a" stroke-width="1.5" opacity="0.5"/>
+</svg>
