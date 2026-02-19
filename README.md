@@ -1,6 +1,6 @@
-# Art, Nature & Coffee
+# Cactus Coffee
 
-A production-grade, mobile-first homepage for **Art, Nature & Coffee** — a curated space blending contemporary art, lush botanicals, and handcrafted specialty coffee.
+A production-grade, mobile-first homepage for **Cactus Coffee** — a curated space blending contemporary art, lush botanicals, and handcrafted specialty coffee.
 
 Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 
