@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#1a3a2a"/>
+  <circle cx="100" cy="100" r="80" fill="#2d6a4f"/>
+  <text x="100" y="108" text-anchor="middle" font-size="48" font-family="serif" fill="#c4d0c8">IM</text>
+</svg>
