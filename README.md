@@ -1,4 +1,4 @@
-# 🌵 Art, Nature & Coffee
+# Art, Nature & Coffee
 
 A production-grade, mobile-first homepage for **Art, Nature & Coffee** — a curated space blending contemporary art, lush botanicals, and handcrafted specialty coffee.
 
@@ -6,7 +6,7 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 
 ---
 
-## ✨ Features
+## Features
 
 - **8-Section Homepage** — Hero, Featured Art, Features, Popular Plants, Café Specials, CTA, Navbar, Footer
 - **Scroll Animations** — Content reveals on scroll using Intersection Observer (zero dependencies)
@@ -21,7 +21,7 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
@@ -34,7 +34,7 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -74,7 +74,7 @@ src/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ npm start
 
 ---
 
-## 🎨 Design System
+## Design System
 
 The project uses a centralized design token system:
 
@@ -118,7 +118,7 @@ All tokens are mapped to CSS custom properties in `globals.css` via Tailwind 4's
 
 ---
 
-## 📝 Scripts
+## Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -129,7 +129,7 @@ All tokens are mapped to CSS custom properties in `globals.css` via Tailwind 4's
 
 ---
 
-## 🗺 Roadmap
+## Roadmap
 
 - [ ] Replace SVG placeholders with real photography
 - [ ] Add Art Gallery page (`/art`)
@@ -141,6 +141,6 @@ All tokens are mapped to CSS custom properties in `globals.css` via Tailwind 4's
 
 ---
 
-## 📄 License
+## License
 
 This project is private and proprietary to **Zoon Feedback Lab**.
