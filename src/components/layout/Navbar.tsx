@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
@@ -14,9 +15,16 @@ const navLinks = [
     { label: 'About Us', href: '/about' },
 ] as const;
 
+/** Routes whose hero section is dark/full-bleed — navbar starts transparent with white text */
+const darkHeroRoutes = ['/', '/art'];
+
 export default function Navbar() {
+    const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+
+    /** true when navbar should use dark text (scrolled OR on a light-hero page) */
+    const useDarkText = scrolled || !darkHeroRoutes.includes(pathname);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -39,7 +47,7 @@ export default function Navbar() {
                     {/* Brand */}
                     <Link
                         href="/"
-                        className={`shrink-0 font-heading text-base font-bold transition-colors duration-300 sm:text-xl ${scrolled ? 'text-primary' : 'text-white'
+                        className={`shrink-0 font-heading text-base font-bold transition-colors duration-300 sm:text-xl ${useDarkText ? 'text-primary' : 'text-white'
                             }`}
                     >
                         <span className="sm:hidden">Cactus Coffee</span>
@@ -52,7 +60,7 @@ export default function Navbar() {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
-                                    className={`text-sm font-medium transition-colors duration-200 ${scrolled
+                                    className={`text-sm font-medium transition-colors duration-200 ${useDarkText
                                         ? 'text-text-main hover:text-primary'
                                         : 'text-white/90 hover:text-white'
                                         }`}
@@ -73,7 +81,7 @@ export default function Navbar() {
                     {/* Mobile toggle */}
                     <button
                         type="button"
-                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors md:hidden ${scrolled
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors md:hidden ${useDarkText
                             ? 'text-text-main hover:bg-accent/10'
                             : 'text-white hover:bg-white/10'
                             }`}
