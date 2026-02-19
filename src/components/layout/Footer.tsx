@@ -7,7 +7,7 @@ const quickLinks = [
     { label: 'Art Gallery', href: '/art' },
     { label: 'Plant Shop', href: '/plants' },
     { label: 'Café Menu', href: '/cafe' },
-    { label: 'News', href: '/news' },
+    { label: 'About Us', href: '/about' },
 ] as const;
 
 const services = [
@@ -32,7 +32,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div>
                         <h3 className="mb-4 font-heading text-xl font-bold text-white">
-                            Art, Nature &amp; Coffee
+                            Cactus Coffee
                         </h3>
                         <p className="mb-6 text-sm leading-relaxed text-white/60">
                             A curated space for creativity, greenery, and handcrafted brews.
@@ -122,7 +122,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="border-t border-white/10 py-6">
                     <p className="text-center text-xs text-white/40">
-                        &copy; {new Date().getFullYear()} Art, Nature &amp; Coffee. All
+                        &copy; {new Date().getFullYear()} Cactus Coffee. All
                         rights reserved.
                     </p>
                 </div>
