@@ -10,16 +10,18 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 
 - **8-Section Homepage** — Hero, Featured Art, Features, Popular Plants, Café Specials, CTA, Navbar, Footer
 - **Art Exhibition Page** — Dark forest-themed gallery with filterable categories, curator section, and quote card
+- **Plants Page** — Digital nursery with greenhouse hero, category filter chips, plant care tips, and office plants section
 - **Scroll Animations** — Content reveals on scroll using Intersection Observer (zero dependencies)
 - **Responsive Design** — Mobile-first layout with adaptive navbar and grid systems
-- **Design Token System** — Centralized colors, typography, spacing, and dark exhibition theme tokens
-- **Reusable Components** — 9 UI primitives, 2 layout components, 6 homepage sections, 3 exhibition sections
-- **Gallery Filtering** — Client-side category filter tabs (All Works, Painting, Digital Art, Abstract, Sculpture, Botanical)
+- **Route-Aware Navbar** — Adapts text color based on page background (dark hero vs light pages)
+- **Design Token System** — Centralized colors, typography, spacing, and theme tokens
+- **Reusable Components** — 12 UI primitives, 2 layout components, 6 homepage sections, 3 exhibition sections, 4 plants sections
+- **Category Filtering** — Client-side filter tabs on both Art and Plants pages
 - **Scroll-to-Top Button** — Floating button appears after scrolling down
 - **Art Card Hover Effect** — Dark overlay slides up from bottom showing art details
 - **Sticky Navbar** — Glass-blur background with scroll detection and mobile hamburger menu
 - **SEO Ready** — Per-page metadata, semantic HTML, heading hierarchy
-- **Minimal Client JS** — Only Navbar, ScrollToTop, and FilterTabs are client components
+- **Minimal Client JS** — Only Navbar, ScrollToTop, FilterTabs, and CategoryChips are client components
 
 ---
 
@@ -43,6 +45,8 @@ src/
 ├── app/
 │   ├── art/
 │   │   └── page.tsx           # Art Exhibition page
+│   ├── plants/
+│   │   └── page.tsx           # Plants digital nursery page
 │   ├── globals.css            # Tailwind 4 theme tokens + CSS custom properties
 │   ├── icon.svg               # Cactus favicon
 │   ├── layout.tsx             # Root layout (fonts, Navbar, Footer, ScrollToTop)
@@ -52,8 +56,13 @@ src/
 │   │   ├── Hero.tsx           # Full-viewport dark forest hero
 │   │   ├── FilterTabs.tsx     # Category filter pills + gallery grid (client)
 │   │   └── CuratorSection.tsx # Two-column curator bio + quote card
+│   ├── plants/
+│   │   ├── Hero.tsx           # Greenhouse banner hero
+│   │   ├── CategoryChips.tsx  # Filter chips + plant grid (client)
+│   │   ├── CareTips.tsx       # Two-column care tips section
+│   │   └── OfficePlants.tsx   # Horizontal office plant cards
 │   ├── layout/
-│   │   ├── Navbar.tsx         # Sticky header + mobile menu
+│   │   ├── Navbar.tsx         # Sticky header + route-aware text color
 │   │   └── Footer.tsx         # 4-column footer
 │   ├── sections/
 │   │   ├── HeroSection.tsx    # Full-viewport hero with gradient
@@ -65,15 +74,18 @@ src/
 │   └── ui/
 │       ├── AnimateOnScroll.tsx # Scroll-triggered animation wrapper
 │       ├── ArtCard.tsx        # Art card with slide-up hover overlay
+│       ├── Badge.tsx          # Variant badge (green, outline, muted)
 │       ├── Button.tsx         # Primary/outline button + link support
 │       ├── Container.tsx      # Max-width responsive wrapper
 │       ├── FeatureCard.tsx    # Icon + text card with hover lift
 │       ├── GalleryCard.tsx    # Dark gallery card with hover overlay
 │       ├── MenuItem.tsx       # Café menu item component
-│       ├── PlantCard.tsx      # Plant card with star rating
+│       ├── PlantCard.tsx      # Plant card with star rating (homepage)
+│       ├── PlantDetailCard.tsx # Detailed plant card with badges
 │       ├── QuoteCard.tsx      # Gold accent quote card
 │       ├── ScrollToTop.tsx    # Floating scroll-to-top button
-│       └── SectionTitle.tsx   # Label + title + subtitle heading
+│       ├── SectionTitle.tsx   # Label + title + subtitle heading
+│       └── TipCard.tsx        # Care tip card with icon
 ├── constants/
 │   ├── colors.ts              # Earthy color palette tokens
 │   ├── theme.ts               # Dark exhibition theme tokens
@@ -81,7 +93,8 @@ src/
 │   └── spacing.ts             # Spacing scale tokens
 └── lib/
     ├── data.ts                # Homepage content data arrays
-    └── exhibition-data.ts     # Exhibition gallery + curator data
+    ├── exhibition-data.ts     # Exhibition gallery + curator data
+    └── plants-data.ts         # Plants, categories, tips, office plants
 ```
 
 ---
@@ -146,7 +159,7 @@ Homepage tokens are mapped via CSS custom properties in `globals.css`. Exhibitio
 
 - [ ] Replace SVG placeholders with real photography
 - [x] Add Art Exhibition page (`/art`)
-- [ ] Add Plant Shop page (`/plants`)
+- [x] Add Plants page (`/plants`)
 - [ ] Add Café Menu page (`/cafe`)
 - [ ] Add About Us page (`/about`)
 - [ ] Add individual artwork pages (`/art/[slug]`)
