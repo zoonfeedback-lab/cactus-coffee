@@ -135,7 +135,7 @@ All tokens are mapped to CSS custom properties in `globals.css` via Tailwind 4's
 - [ ] Add Art Gallery page (`/art`)
 - [ ] Add Plant Shop page (`/plants`)
 - [ ] Add Café Menu page (`/cafe`)
-- [ ] Add News/Blog page (`/news`)
+- [ ] Add About Us page (`/about`)
 - [ ] Connect to CMS for dynamic content
 - [ ] Add page transitions and route animations
 
