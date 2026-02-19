@@ -42,8 +42,8 @@ export default function Navbar() {
                         className={`shrink-0 font-heading text-base font-bold transition-colors duration-300 sm:text-xl ${scrolled ? 'text-primary' : 'text-white'
                             }`}
                     >
-                        <span className="sm:hidden">ANC</span>
-                        <span className="hidden sm:inline">Art, Nature &amp; Coffee</span>
+                        <span className="sm:hidden">Cactus Coffee</span>
+                        <span className="hidden sm:inline">Cactus Coffee</span>
                     </Link>
 
                     {/* Desktop links */}
@@ -74,8 +74,8 @@ export default function Navbar() {
                     <button
                         type="button"
                         className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors md:hidden ${scrolled
-                                ? 'text-text-main hover:bg-accent/10'
-                                : 'text-white hover:bg-white/10'
+                            ? 'text-text-main hover:bg-accent/10'
+                            : 'text-white hover:bg-white/10'
                             }`}
                         onClick={() => setMobileOpen((prev) => !prev)}
                         aria-expanded={mobileOpen}
