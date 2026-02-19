@@ -11,7 +11,7 @@ const navLinks = [
     { label: 'Art', href: '/art' },
     { label: 'Plants', href: '/plants' },
     { label: 'Café', href: '/cafe' },
-    { label: 'News', href: '/news' },
+    { label: 'About Us', href: '/about' },
 ] as const;
 
 export default function Navbar() {
