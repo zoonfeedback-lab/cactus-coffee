@@ -1,55 +1,61 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
+import { ChevronDown } from 'lucide-react';
 
 export default function PlantsHero() {
     return (
-        <section className="bg-bg pb-8 pt-24 sm:pb-12 sm:pt-28">
-            <Container>
-                <div className="relative overflow-hidden rounded-3xl">
-                    {/* Background image */}
-                    <div className="relative aspect-[4/3] sm:aspect-[21/9] lg:aspect-[3/1]">
-                        <Image
-                            src="/images/plants/hero-greenhouse.svg"
-                            alt="Lush greenhouse interior filled with tropical plants"
-                            fill
-                            priority
-                            sizes="100vw"
-                            className="object-cover"
-                        />
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden bg-bg">
+            {/* Background image */}
+            <Image
+                src="/images/plants/hero-greenhouse.svg"
+                alt="Lush greenhouse interior filled with tropical plants"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+            />
 
-                        {/* Content */}
-                        <div className="absolute inset-0 flex flex-col justify-center p-5 sm:p-10 md:p-16">
-                            <AnimateOnScroll animation="fade-right" duration={800}>
-                                <span className="mb-2 inline-block text-[10px] font-semibold uppercase tracking-widest text-accent-light sm:text-xs">
-                                    Summer Collection 2026
-                                </span>
-                                <h1 className="mb-2 font-heading text-2xl font-bold leading-tight text-white sm:mb-3 sm:text-4xl md:text-5xl lg:text-6xl">
-                                    Bring Nature Home
-                                </h1>
-                                <p className="mb-4 max-w-md text-xs leading-relaxed text-white/70 sm:mb-6 sm:text-sm md:text-base">
-                                    Curated greenery for your living gallery. Elevate your space with our
-                                    hand-picked selection of premium indoor plants.
-                                </p>
-                                <div className="flex flex-wrap gap-2 sm:gap-3">
-                                    <Button href="#featured" size="md">
-                                        Shop All Plants
-                                    </Button>
-                                    <a
-                                        href="/art"
-                                        className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-xs font-semibold text-white transition-all duration-300 hover:bg-white/10 sm:px-6 sm:py-2.5 sm:text-sm"
-                                    >
-                                        View Gallery
-                                    </a>
-                                </div>
-                            </AnimateOnScroll>
-                        </div>
-                    </div>
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+
+            {/* Content */}
+            <Container className="relative z-10 py-20 text-center sm:py-24">
+                <div className="mx-auto max-w-3xl">
+                    <AnimateOnScroll animation="fade-down" duration={800}>
+                        <span className="mb-3 inline-block text-[10px] font-semibold uppercase tracking-widest text-accent-light sm:text-xs">
+                            Summer Collection 2026
+                        </span>
+                        <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                            Bring <span className="text-[#A8C5A0]">Nature</span> Home
+                        </h1>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll animation="fade" delay={300} duration={800}>
+                        <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+                            Curated greenery for your living gallery. Elevate your space with our
+                            hand-picked selection of premium indoor plants.
+                        </p>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll animation="fade-up" delay={600} duration={800}>
+                        <Link
+                            href="#featured"
+                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                        >
+                            <span className="relative z-10">Shop All Plants</span>
+                        </Link>
+                    </AnimateOnScroll>
                 </div>
             </Container>
+
+            {/* Scroll-down indicator */}
+            <a
+                href="#featured"
+                aria-label="Scroll to collection"
+                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/50 transition-colors duration-300 hover:text-[#A8C5A0]"
+            >
+                <ChevronDown className="h-7 w-7" />
+            </a>
         </section>
     );
 }
