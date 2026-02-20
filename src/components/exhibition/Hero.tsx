@@ -5,7 +5,7 @@ import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 
 export default function ExhibitionHero() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0a0f0d]">
+        <section className="relative mt-15 flex min-h-screen items-center justify-center overflow-hidden bg-[#0a0f0d]">
             {/* Background image */}
             <Image
                 src="/images/exhibition/hero-forest.svg"
@@ -20,7 +20,7 @@ export default function ExhibitionHero() {
             <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/30 via-[#0a0f0d]/50 to-[#0a0f0d]/85" />
 
             {/* Content */}
-            <Container className="relative z-10 py-32 text-center">
+            <Container className="relative z-10 py-32 text-center justify-center">
                 <div className="mx-auto max-w-3xl">
                     <AnimateOnScroll animation="fade-down" duration={800}>
                         <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
