@@ -14,20 +14,31 @@ export default function MenuItem({ item }: MenuItemProps) {
     const Icon = iconMap[item.icon] ?? Coffee;
 
     return (
-        <article className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:bg-white/10">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/20 text-accent">
-                <Icon className="h-5 w-5" />
-            </div>
-            <div className="min-w-0 flex-1">
-                <div className="mb-1">
-                    <h3 className="font-heading text-base font-semibold text-white">
+        <article className="group flex flex-col gap-1 transition-all duration-300">
+            <div className="flex items-baseline gap-2">
+                {/* Icon and Name */}
+                <div className="flex items-center gap-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent/20">
+                        <Icon className="h-4 w-4" />
+                    </div>
+                    <h3 className="font-heading text-lg font-semibold text-white">
                         {item.name}
                     </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-white/60">
-                    {item.description}
-                </p>
+
+                {/* Dotted Leader */}
+                <div className="min-w-[20px] flex-1 border-b border-dotted border-white/20 mb-1.5" />
+
+                {/* Price */}
+                <div className="font-heading font-bold text-accent whitespace-nowrap">
+                    {item.price} PKR
+                </div>
             </div>
+
+            {/* Description */}
+            <p className="pl-11 pr-4 text-sm leading-relaxed text-white/50 transition-colors group-hover:text-white/70">
+                {item.description}
+            </p>
         </article>
     );
 }

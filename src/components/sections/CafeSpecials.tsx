@@ -22,8 +22,8 @@ export default function CafeSpecials() {
                     />
                 </AnimateOnScroll>
 
-                {/* Menu cards */}
-                <div className="grid gap-4 sm:grid-cols-2">
+                {/* Menu list */}
+                <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-1">
                     {menuItems.map((item, index) => (
                         <AnimateOnScroll key={item.id} animation="fade-up" delay={index * 100}>
                             <MenuItem item={item} />

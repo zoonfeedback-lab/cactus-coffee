@@ -7,7 +7,7 @@ import { artItems } from '@/lib/data';
 
 export default function FeaturedArt() {
     return (
-        <section className="py-16 sm:py-24" aria-labelledby="featured-art-heading">
+        <section id="featured-art" className="py-16 sm:py-24" aria-labelledby="featured-art-heading">
             <Container>
                 {/* Centered heading + subtitle */}
                 <AnimateOnScroll animation="fade-up">

@@ -31,8 +31,8 @@ export default function FilterTabs({ categories, items }: FilterTabsProps) {
                                 type="button"
                                 onClick={() => setActiveSlug(cat.slug)}
                                 className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 ${activeSlug === cat.slug
-                                        ? 'bg-[#d4a843] text-[#0a0f0d]'
-                                        : 'border border-[#1e2e25] bg-[#141c17] text-[#8a9b8f] hover:border-[#d4a843]/30 hover:text-[#c4d0c8]'
+                                    ? 'bg-[#d4a843] text-[#0a0f0d]'
+                                    : 'border border-[#1e2e25] bg-[#141c17] text-[#8a9b8f] hover:border-[#d4a843]/30 hover:text-[#c4d0c8]'
                                     }`}
                             >
                                 {cat.label}
@@ -42,7 +42,7 @@ export default function FilterTabs({ categories, items }: FilterTabsProps) {
                 </div>
 
                 {/* Gallery grid */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 grid-cols-2 lg:grid-cols-3">
                     {filteredItems.map((item, index) => (
                         <AnimateOnScroll
                             key={item.id}

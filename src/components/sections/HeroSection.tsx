@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
+import { ChevronDown } from 'lucide-react';
 
 export default function HeroSection() {
     return (
@@ -43,6 +44,15 @@ export default function HeroSection() {
                     </AnimateOnScroll>
                 </div>
             </Container>
+
+            {/* Scroll-down indicator */}
+            <a
+                href="#featured-art"
+                aria-label="Scroll to content"
+                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/50 transition-colors duration-300 hover:text-primary"
+            >
+                <ChevronDown className="h-7 w-7" />
+            </a>
         </section>
     );
 }
