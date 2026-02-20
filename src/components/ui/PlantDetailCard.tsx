@@ -11,7 +11,7 @@ export default function PlantDetailCard({ plant }: PlantDetailCardProps) {
     return (
         <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-light bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             {/* Image */}
-            <div className="relative aspect-[4/5] overflow-hidden bg-surface-alt">
+            <div className="relative aspect-square overflow-hidden bg-surface-alt">
                 <Image
                     src={plant.image}
                     alt={plant.name}

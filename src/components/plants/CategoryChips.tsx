@@ -50,7 +50,7 @@ export default function CategoryChips({ categories, plants }: CategoryChipsProps
                 </div>
 
                 {/* Plant grid */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-6 sm:grid-cols-3 lg:grid-cols-4">
                     {filteredPlants.map((plant, index) => (
                         <AnimateOnScroll
                             key={plant.id}

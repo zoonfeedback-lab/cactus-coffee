@@ -20,7 +20,7 @@ export default function FilterTabs({ categories, items }: FilterTabsProps) {
             : items.filter((item) => item.category === activeSlug);
 
     return (
-        <section id="gallery" className="bg-[#0a0f0d] py-16 sm:py-24">
+        <section id="gallery" className="bg-white py-16 sm:py-24">
             <Container>
                 {/* Tabs — horizontal scroll on mobile */}
                 <div className="mb-12 flex items-center justify-center">
@@ -31,14 +31,21 @@ export default function FilterTabs({ categories, items }: FilterTabsProps) {
                                 type="button"
                                 onClick={() => setActiveSlug(cat.slug)}
                                 className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 ${activeSlug === cat.slug
-                                    ? 'bg-[#d4a843] text-[#0a0f0d]'
-                                    : 'border border-[#1e2e25] bg-[#141c17] text-[#8a9b8f] hover:border-[#d4a843]/30 hover:text-[#c4d0c8]'
+                                    ? 'bg-primary text-white shadow-sm'
+                                    : 'border border-border bg-white text-text-light hover:border-primary/30 hover:text-primary'
                                     }`}
                             >
                                 {cat.label}
                             </button>
                         ))}
                     </div>
+                </div>
+
+                {/* Section heading */}
+                <div className="mb-10 text-center">
+                    <h2 className="font-heading text-2xl font-bold text-text-main sm:text-3xl lg:text-4xl">
+                        Art Collection
+                    </h2>
                 </div>
 
                 {/* Gallery grid */}
@@ -56,7 +63,7 @@ export default function FilterTabs({ categories, items }: FilterTabsProps) {
                 </div>
 
                 {filteredItems.length === 0 && (
-                    <p className="py-20 text-center text-[#8a9b8f]">
+                    <p className="py-20 text-center text-text-light">
                         No works found in this category yet.
                     </p>
                 )}

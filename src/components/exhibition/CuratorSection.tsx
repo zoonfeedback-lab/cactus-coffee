@@ -10,7 +10,7 @@ interface CuratorSectionProps {
 
 export default function CuratorSection({ curator: c }: CuratorSectionProps) {
     return (
-        <section id="curator" className="bg-[#0a0f0d] py-16 sm:py-24">
+        <section id="curator" className="bg-white py-16 sm:py-24">
             <Container>
                 <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
                     {/* Left — Curator bio */}
@@ -19,18 +19,18 @@ export default function CuratorSection({ curator: c }: CuratorSectionProps) {
                             <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-[#d4a843]">
                                 The Curator&apos;s Note
                             </span>
-                            <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl">
+                            <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-text-main sm:text-4xl">
                                 Bridging the gap between the{' '}
                                 <span className="italic">wild</span> and the{' '}
                                 <span className="italic">refined.</span>
                             </h2>
-                            <p className="mb-8 text-sm leading-relaxed text-[#8a9b8f] sm:text-base">
+                            <p className="mb-8 text-sm leading-relaxed text-text-light sm:text-base">
                                 {c.bio}
                             </p>
 
                             {/* Curator avatar */}
                             <div className="flex items-center gap-4">
-                                <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                                <div className="relative h-12 w-12 overflow-hidden rounded-full border border-border">
                                     <Image
                                         src={c.image}
                                         alt={c.name}
@@ -40,8 +40,8 @@ export default function CuratorSection({ curator: c }: CuratorSectionProps) {
                                     />
                                 </div>
                                 <div>
-                                    <p className="text-sm font-semibold text-white">{c.name}</p>
-                                    <p className="text-xs text-[#8a9b8f]">{c.role}</p>
+                                    <p className="text-sm font-semibold text-text-main">{c.name}</p>
+                                    <p className="text-xs text-text-light">{c.role}</p>
                                 </div>
                             </div>
                         </div>

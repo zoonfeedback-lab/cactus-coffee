@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 
 export default function ExhibitionPage() {
     return (
-        <main className="bg-[#0a0f0d]">
+        <main className="bg-white">
             <ExhibitionHero />
 
-            {/* Gold gradient divider — hero ➜ gallery */}
+            {/* Subtle divider — hero ➜ gallery */}
             <div className="flex justify-center">
-                <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-[#d4a843]/50 to-transparent" />
+                <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-border to-transparent" />
             </div>
 
             <FilterTabs categories={categories} items={galleryItems} />
 
-            {/* Muted green divider — gallery ➜ curator */}
+            {/* Subtle divider — gallery ➜ curator */}
             <div className="flex justify-center">
-                <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-[#8a9b8f]/40 to-transparent" />
+                <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-border to-transparent" />
             </div>
 
             <CuratorSection curator={curator} />

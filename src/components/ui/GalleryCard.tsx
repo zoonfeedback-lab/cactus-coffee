@@ -8,7 +8,7 @@ interface GalleryCardProps {
 
 export default function GalleryCard({ item }: GalleryCardProps) {
     return (
-        <article className="group relative h-full overflow-hidden rounded-2xl bg-[#1a2620] shadow-sm transition-all duration-300 hover:shadow-xl">
+        <article className="group relative h-full overflow-hidden rounded-2xl border border-border-light bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
             <div className="relative aspect-[3/2] w-full overflow-hidden sm:aspect-[3/4]">
                 <Image
                     src={item.image}
