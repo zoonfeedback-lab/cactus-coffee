@@ -2,29 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
-import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 
 const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Art', href: '/art' },
+    { label: 'Coffee', href: '/cafe' },
+    { label: 'Arts', href: '/art' },
     { label: 'Plants', href: '/plants' },
-    { label: 'Café', href: '/cafe' },
-    { label: 'About Us', href: '/about' },
 ] as const;
 
-/** Routes whose hero section is dark/full-bleed — navbar starts transparent with white text */
-const darkHeroRoutes = ['/', '/art'];
-
 export default function Navbar() {
-    const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-
-    /** true when navbar should use dark text (scrolled OR on a light-hero page) */
-    const useDarkText = scrolled || !darkHeroRoutes.includes(pathname);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -34,57 +23,44 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${scrolled
-                ? 'bg-surface/95 shadow-sm backdrop-blur-md'
-                : 'bg-transparent'
+            className={`fixed top-0 right-0 left-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? 'shadow-sm' : ''
                 }`}
         >
-            <Container>
-                <nav
-                    className="flex h-14 items-center justify-between gap-4 sm:h-20"
-                    aria-label="Main navigation"
-                >
-                    {/* Brand */}
-                    <Link
-                        href="/"
-                        className={`shrink-0 font-heading text-base font-bold transition-colors duration-300 sm:text-xl ${useDarkText ? 'text-primary' : 'text-white'
-                            }`}
-                    >
-                        <span className="sm:hidden">Cactus Coffee</span>
-                        <span className="hidden sm:inline">Cactus Coffee</span>
+            {/* Centered stacked layout */}
+            <nav aria-label="Main navigation">
+                {/* Logo – centered, slightly larger */}
+                <div className="flex justify-center pt-5 pb-2">
+                    <Link href="/" className="block">
+                        <Image
+                            src="/images/cactus-logo.png"
+                            alt="Cactus Coffee logo"
+                            width={80}
+                            height={80}
+                            className="h-16 w-auto sm:h-20"
+                            priority
+                        />
                     </Link>
+                </div>
 
-                    {/* Desktop links */}
-                    <ul className="hidden items-center gap-8 md:flex">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    className={`text-sm font-medium transition-colors duration-200 ${useDarkText
-                                        ? 'text-text-main hover:text-primary'
-                                        : 'text-white/90 hover:text-white'
-                                        }`}
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                {/* Desktop links – centered row */}
+                <ul className="hidden items-center justify-center gap-10 pb-4 md:flex">
+                    {navLinks.map((link) => (
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className="text-sm font-medium tracking-wide text-text-main transition-colors duration-200 hover:text-primary"
+                            >
+                                {link.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
 
-                    {/* Desktop CTA */}
-                    <div className="hidden md:block">
-                        <Button href="/visit" size="sm">
-                            Visit Our Space
-                        </Button>
-                    </div>
-
-                    {/* Mobile toggle */}
+                {/* Mobile hamburger – right aligned */}
+                <div className="absolute top-5 right-5 md:hidden">
                     <button
                         type="button"
-                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors md:hidden ${useDarkText
-                            ? 'text-text-main hover:bg-accent/10'
-                            : 'text-white hover:bg-white/10'
-                            }`}
+                        className="flex h-10 w-10 items-center justify-center rounded-lg text-text-main transition-colors hover:bg-accent/10"
                         onClick={() => setMobileOpen((prev) => !prev)}
                         aria-expanded={mobileOpen}
                         aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -95,34 +71,27 @@ export default function Navbar() {
                             <Menu className="h-5 w-5" />
                         )}
                     </button>
-                </nav>
-            </Container>
+                </div>
+            </nav>
 
             {/* Mobile menu */}
             <div
                 className={`overflow-hidden border-t border-border bg-surface/95 backdrop-blur-md transition-all duration-300 md:hidden ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
             >
-                <Container>
-                    <ul className="flex flex-col gap-1 py-4">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    className="block rounded-lg px-4 py-2.5 text-sm font-medium text-text-main transition-colors hover:bg-accent/10 hover:text-primary"
-                                    onClick={() => setMobileOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
-                        ))}
-                        <li className="mt-2 px-4">
-                            <Button href="/visit" size="sm" className="w-full">
-                                Visit Our Space
-                            </Button>
+                <ul className="flex flex-col items-center gap-1 py-4">
+                    {navLinks.map((link) => (
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className="block rounded-lg px-6 py-2.5 text-sm font-medium text-text-main transition-colors hover:bg-accent/10 hover:text-primary"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                {link.label}
+                            </Link>
                         </li>
-                    </ul>
-                </Container>
+                    ))}
+                </ul>
             </div>
         </header>
     );
