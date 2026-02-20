@@ -118,7 +118,7 @@ export const menuItems: CafeMenuItem[] = [
         name: 'Velvet Oat Latte',
         description:
             'Silken oat milk single-origin Yirgacheffe espresso with hint of lavender, handcrafted daily.',
-        price: 6.5,
+        price: 750,
         icon: 'Coffee',
     },
     {
@@ -126,7 +126,7 @@ export const menuItems: CafeMenuItem[] = [
         name: 'Ceremonial Matcha',
         description:
             'A premium-grade Uji matcha whisked to perfection with your choice of milk.',
-        price: 7.0,
+        price: 850,
         icon: 'Leaf',
     },
     {
@@ -134,7 +134,7 @@ export const menuItems: CafeMenuItem[] = [
         name: 'Signature Pour-Over',
         description:
             'Single-origin beans prepared by skilled baristas for the cleanest cup of coffee.',
-        price: 5.5,
+        price: 650,
         icon: 'Coffee',
     },
     {
@@ -142,7 +142,7 @@ export const menuItems: CafeMenuItem[] = [
         name: "Artist's Flat White",
         description:
             'A velvety micro-foam espresso drink — bold, smooth, and crafted with precision.',
-        price: 6.0,
+        price: 720,
         icon: 'Coffee',
     },
 ];

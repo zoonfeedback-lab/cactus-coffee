@@ -29,26 +29,26 @@ export default function Navbar() {
             {/* Centered stacked layout */}
             <nav aria-label="Main navigation">
                 {/* Logo – centered, slightly larger */}
-                <div className="flex justify-center pt-5 pb-2">
+                <div className="flex justify-center pt-5 pb-4">
                     <Link href="/" className="block">
                         <Image
                             src="/images/cactus-logo.png"
                             alt="Cactus Coffee logo"
-                            width={80}
-                            height={80}
-                            className="h-16 w-auto sm:h-20"
+                            width={100}
+                            height={100}
+                            className="h-20 w-auto sm:h-24"
                             priority
                         />
                     </Link>
                 </div>
 
                 {/* Desktop links – centered row */}
-                <ul className="hidden items-center justify-center gap-10 pb-4 md:flex">
+                <ul className="hidden items-center justify-center gap-16 pb-4 md:flex">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <Link
                                 href={link.href}
-                                className="text-lg font-medium tracking-wide text-text-main transition-colors duration-200 hover:text-primary"
+                                className="text-base font-bold tracking-wide text-text-main transition-colors duration-200 hover:text-primary"
                             >
                                 {link.label}
                             </Link>
