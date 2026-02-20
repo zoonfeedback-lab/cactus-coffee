@@ -3,11 +3,9 @@ import { Instagram, Facebook, Twitter, MapPin, Mail, Phone } from 'lucide-react'
 import Container from '@/components/ui/Container';
 
 const quickLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Art Gallery', href: '/art' },
-    { label: 'Plant Shop', href: '/plants' },
-    { label: 'Café Menu', href: '/cafe' },
-    { label: 'About Us', href: '/about' },
+    { label: 'Coffee', href: '/cafe' },
+    { label: 'Arts', href: '/art' },
+    { label: 'Plants', href: '/plants' },
 ] as const;
 
 const services = [

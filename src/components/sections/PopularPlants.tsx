@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionTitle from '@/components/ui/SectionTitle';
 import PlantCard from '@/components/ui/PlantCard';
@@ -8,14 +9,16 @@ export default function PopularPlants() {
     return (
         <section className="py-16 sm:py-24" aria-labelledby="popular-plants-heading">
             <Container>
+                {/* Centered heading + subtitle */}
                 <AnimateOnScroll animation="fade-up">
                     <SectionTitle
-                        label="Available In-Store"
                         title="Popular Plants"
                         subtitle="Bring nature home with our curated selection of indoor plants, carefully sourced and nurtured."
+                        align="center"
                     />
                 </AnimateOnScroll>
 
+                {/* 3 Plant cards */}
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {plants.map((item, index) => (
                         <AnimateOnScroll key={item.id} animation="fade-up" delay={index * 100}>
@@ -23,6 +26,18 @@ export default function PopularPlants() {
                         </AnimateOnScroll>
                     ))}
                 </div>
+
+                {/* Centered button with same style as Featured Art */}
+                <AnimateOnScroll animation="fade-up" delay={500}>
+                    <div className="mt-10 text-center">
+                        <Link
+                            href="/plants"
+                            className="relative inline-block overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-semibold text-primary transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                        >
+                            <span className="relative z-10">View All Plants</span>
+                        </Link>
+                    </div>
+                </AnimateOnScroll>
             </Container>
         </section>
     );

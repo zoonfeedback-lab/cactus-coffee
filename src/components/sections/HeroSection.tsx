@@ -1,6 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 
 export default function HeroSection() {
@@ -34,9 +34,12 @@ export default function HeroSection() {
                         </p>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade-up" delay={600} duration={800}>
-                        <Button href="/visit" size="sm">
-                            Explore the Experience
-                        </Button>
+                        <Link
+                            href="/visit"
+                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                        >
+                            <span className="relative z-10">Explore the Experience</span>
+                        </Link>
                     </AnimateOnScroll>
                 </div>
             </Container>

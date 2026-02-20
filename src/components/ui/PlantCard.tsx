@@ -9,7 +9,7 @@ interface PlantCardProps {
 export default function PlantCard({ item }: PlantCardProps) {
     return (
         <article className="group overflow-hidden rounded-2xl bg-surface p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-surface-alt">
+            <div className="relative mb-4 aspect-[3/2] overflow-hidden rounded-xl bg-surface-alt sm:aspect-[3/4]">
                 <Image
                     src={item.image}
                     alt={item.name}

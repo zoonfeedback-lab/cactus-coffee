@@ -8,7 +8,7 @@ interface ArtCardProps {
 export default function ArtCard({ item }: ArtCardProps) {
     return (
         <article className="group relative h-full overflow-hidden rounded-2xl bg-surface shadow-sm transition-all duration-300 hover:shadow-lg">
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <div className="relative aspect-[3/2] w-full overflow-hidden sm:aspect-[3/4]">
                 <Image
                     src={item.image}
                     alt={item.title}

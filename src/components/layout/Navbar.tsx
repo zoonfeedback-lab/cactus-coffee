@@ -56,8 +56,8 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Mobile hamburger – right aligned */}
-                <div className="absolute top-5 right-5 md:hidden">
+                {/* Mobile hamburger – centered under logo */}
+                <div className="flex justify-center pb-3 md:hidden">
                     <button
                         type="button"
                         className="flex h-10 w-10 items-center justify-center rounded-lg text-text-main transition-colors hover:bg-accent/10"
@@ -76,7 +76,7 @@ export default function Navbar() {
 
             {/* Mobile menu */}
             <div
-                className={`overflow-hidden border-t border-border bg-surface/95 backdrop-blur-md transition-all duration-300 md:hidden ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                className={`overflow-hidden border-t border-border bg-surface/95 backdrop-blur-md transition-all duration-500 ease-in-out md:hidden ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
             >
                 <ul className="flex flex-col items-center gap-1 py-4">

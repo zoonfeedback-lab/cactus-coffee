@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import SectionTitle from '@/components/ui/SectionTitle';
 import MenuItem from '@/components/ui/MenuItem';
@@ -13,14 +12,17 @@ export default function CafeSpecials() {
             aria-labelledby="cafe-specials-heading"
         >
             <Container>
+                {/* Centered heading + subtitle */}
                 <AnimateOnScroll animation="fade-up">
                     <SectionTitle
                         title="Café Specials"
                         subtitle="Handcrafted beverages made with the finest ethically-sourced ingredients."
+                        align="center"
                         className="[&_h2]:text-white [&_p]:text-white/60"
                     />
                 </AnimateOnScroll>
 
+                {/* Menu cards */}
                 <div className="grid gap-4 sm:grid-cols-2">
                     {menuItems.map((item, index) => (
                         <AnimateOnScroll key={item.id} animation="fade-up" delay={index * 100}>
@@ -29,14 +31,14 @@ export default function CafeSpecials() {
                     ))}
                 </div>
 
-                <AnimateOnScroll animation="fade" delay={400}>
+                {/* Centered button with same sweep animation */}
+                <AnimateOnScroll animation="fade-up" delay={500}>
                     <div className="mt-10 text-center">
                         <Link
                             href="/cafe"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-accent hover:bg-white/10"
+                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
                         >
-                            View Full Menu
-                            <ArrowRight className="h-4 w-4" />
+                            <span className="relative z-10">View Full Menu</span>
                         </Link>
                     </div>
                 </AnimateOnScroll>

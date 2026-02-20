@@ -1,11 +1,11 @@
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 
 const pills = [
+    { emoji: '☕', label: 'Fresh Coffee' },
     { emoji: '🎨', label: 'Rotating Art' },
     { emoji: '🌿', label: 'Rare Plants' },
-    { emoji: '☕', label: 'Fresh Coffee' },
 ] as const;
 
 export default function CTASection() {
@@ -25,9 +25,12 @@ export default function CTASection() {
                             confluence of inspiration, greenery, and the perfect cup.
                         </p>
 
-                        <Button href="/visit" size="lg" className="mb-8">
-                            Visit Our Space
-                        </Button>
+                        <Link
+                            href="/visit"
+                            className="relative mb-8 inline-block overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-semibold text-primary transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                        >
+                            <span className="relative z-10">Visit Our Space</span>
+                        </Link>
 
                         <div className="flex flex-wrap items-center justify-center gap-3">
                             {pills.map((pill) => (
