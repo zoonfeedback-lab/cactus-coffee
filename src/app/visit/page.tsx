@@ -152,7 +152,7 @@ export default function VisitPage() {
                                     Visit Our Sanctuary
                                 </h2>
                                 <p className="mb-12 text-lg text-text-light">
-                                    We are located in the heart of the creative district, an easy walk from the main square.
+                                    We are located in Mandian, Abbottabad, an easy walk from the main square.
                                 </p>
 
                                 <div className="space-y-8">
@@ -208,7 +208,7 @@ export default function VisitPage() {
                                 </div>
 
                                 <a
-                                    href="https://maps.google.com" target="_blank" rel="noreferrer"
+                                    href="https://www.google.com/maps/place/cactus+coffee+abbottabad+location/data=!4m2!3m1!1s0x38de31002fc04993:0x5efc7a39851d9e2d?sa=X&ved=1t:242&ictx=111" target="_blank" rel="noreferrer"
                                     className="mt-10 inline-flex items-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105"
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
@@ -219,7 +219,7 @@ export default function VisitPage() {
 
                         <AnimateOnScroll animation="fade-left" delay={200} className="relative h-[500px] w-full overflow-hidden rounded-3xl bg-surface-alt border border-border">
                             <iframe
-                                src="https://maps.google.com/maps?q=Mandian,%20Abbottabad,%20KPK,%20Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                src="https://maps.google.com/maps?q=Cactus%20Coffee,%20Abbottabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                 className="absolute inset-0 h-full w-full border-0 grayscale opacity-80 mix-blend-multiply hover:grayscale-0 hover:opacity-100 hover:mix-blend-normal transition-all duration-700"
                                 allowFullScreen={false}
                                 loading="lazy"
