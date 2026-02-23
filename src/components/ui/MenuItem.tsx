@@ -1,4 +1,5 @@
 import { Coffee, Leaf } from 'lucide-react';
+import Image from 'next/image';
 import type { CafeMenuItem } from '@/lib/data';
 
 interface MenuItemProps {
@@ -18,16 +19,28 @@ export default function MenuItem({ item }: MenuItemProps) {
             <div className="flex items-baseline gap-2">
                 {/* Icon and Name */}
                 <div className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent/20">
-                        <Icon className="h-4 w-4" />
-                    </div>
-                    <h3 className="font-heading text-lg font-semibold text-white">
+                    {item.icon === 'Coffee' ? (
+                        <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-border">
+                            <Image
+                                src="/images/coffee/coffe-image.jfif"
+                                alt="Coffee"
+                                fill
+                                sizes="32px"
+                                className="object-cover"
+                            />
+                        </div>
+                    ) : (
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent/20">
+                            <Icon className="h-4 w-4" />
+                        </div>
+                    )}
+                    <h3 className="font-heading text-lg font-semibold text-primary">
                         {item.name}
                     </h3>
                 </div>
 
                 {/* Dotted Leader */}
-                <div className="min-w-[20px] flex-1 border-b border-dotted border-white/20 mb-1.5" />
+                <div className="min-w-[20px] flex-1 border-b border-dotted border-primary/20 mb-1.5" />
 
                 {/* Price */}
                 <div className="font-heading font-bold text-accent whitespace-nowrap">
@@ -36,7 +49,7 @@ export default function MenuItem({ item }: MenuItemProps) {
             </div>
 
             {/* Description */}
-            <p className="pl-11 pr-4 text-sm leading-relaxed text-white/50 transition-colors group-hover:text-white/70">
+            <p className="pl-11 pr-4 text-sm leading-relaxed text-text-light transition-colors group-hover:text-text-main">
                 {item.description}
             </p>
         </article>
