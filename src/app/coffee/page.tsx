@@ -11,7 +11,7 @@ export default function CoffeePage() {
     const [activeCategory, setActiveCategory] = useState('all');
 
     return (
-        <main className="min-h-screen bg-background">
+        <main className="min-h-screen bg-bg">
             {/* Hero Section */}
             <Hero />
 

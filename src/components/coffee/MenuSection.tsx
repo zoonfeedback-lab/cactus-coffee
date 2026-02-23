@@ -3,6 +3,7 @@
 import React from 'react';
 import Container from '@/components/ui/Container';
 import CoffeeMenuItem from '@/components/ui/CoffeeMenuItem';
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 import { coffeeMenu, categories } from '@/lib/coffee-data';
 
 interface MenuSectionProps {
@@ -14,41 +15,47 @@ export default function MenuSection({ activeCategory }: MenuSectionProps) {
         ? coffeeMenu
         : coffeeMenu.filter(item => item.category === activeCategory);
 
-    // Group items by category for cleaner display if 'all' is selected
     const displayCategories = activeCategory === 'all'
         ? categories.filter(c => c.slug !== 'all')
         : categories.filter(c => c.slug === activeCategory);
 
     return (
-        <section className="py-20 bg-surfaceLight">
+        <section className="bg-surface-alt py-16 sm:py-24">
             <Container>
+                {/* Centered section heading */}
+                <div className="mb-12 text-center">
+                    <h2 className="font-heading text-2xl font-bold text-text-main sm:text-3xl lg:text-4xl">
+                        Our Menu
+                    </h2>
+                </div>
+
                 <div className="space-y-16">
                     {displayCategories.map((category) => {
                         const catItems = filteredItems.filter(item => item.category === category.slug);
                         if (catItems.length === 0) return null;
 
                         return (
-                            <div key={category.id} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+                            <AnimateOnScroll key={category.id} animation="fade-up">
                                 <div className="flex items-center gap-4 mb-8">
-                                    <h3 className="text-2xl font-bold text-primaryBrown capitalize">
+                                    <h3 className="text-xl font-bold text-text-main capitalize sm:text-2xl">
                                         {category.label}
                                     </h3>
-                                    <div className="h-px flex-1 bg-borderColor/30" />
+                                    <div className="h-px flex-1 bg-border" />
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                                <div className="grid grid-cols-1 gap-x-12 gap-y-4 md:grid-cols-2">
                                     {catItems.map((item) => (
                                         <CoffeeMenuItem key={item.id} {...item} />
                                     ))}
                                 </div>
-                            </div>
+                            </AnimateOnScroll>
                         );
                     })}
                 </div>
 
                 {filteredItems.length === 0 && (
-                    <div className="text-center py-20">
-                        <p className="text-textLight italic">No items found in this category.</p>
-                    </div>
+                    <p className="py-20 text-center text-text-light">
+                        No items found in this category.
+                    </p>
                 )}
             </Container>
         </section>

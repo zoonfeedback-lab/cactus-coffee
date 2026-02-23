@@ -18,15 +18,15 @@ export default function FeaturedCoffeeCard({
     tag,
 }: FeaturedCoffeeCardProps) {
     return (
-        <div className="group relative overflow-hidden rounded-3xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row h-full">
+        <div className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl md:flex-row">
             {tag && (
                 <div className="absolute top-4 left-4 z-10">
                     <Badge label={tag} variant="green" />
                 </div>
             )}
 
-            <div className="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
-                <div className="absolute inset-0 bg-primaryBrown/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+            <div className="relative h-64 w-full overflow-hidden md:h-auto md:w-1/2">
+                <div className="absolute inset-0 z-10 bg-primary/10 transition-colors duration-500 group-hover:bg-transparent" />
                 <Image
                     src={image}
                     alt={name}
@@ -35,19 +35,19 @@ export default function FeaturedCoffeeCard({
                 />
             </div>
 
-            <div className="flex-1 p-8 flex flex-col justify-center bg-surfaceLight group-hover:bg-accentCream/30 transition-colors duration-500">
+            <div className="flex flex-1 flex-col justify-center bg-surface-alt p-8 transition-colors duration-500 group-hover:bg-accent-light/10">
                 <div className="mb-4">
-                    <h3 className="text-2xl md:text-3xl font-bold text-primaryBrown mb-2 group-hover:translate-x-1 transition-transform duration-300">
+                    <h3 className="mb-2 text-2xl font-bold text-text-main transition-transform duration-300 group-hover:translate-x-1 md:text-3xl">
                         {name}
                     </h3>
-                    <p className="text-textLight text-base md:text-lg leading-relaxed">
+                    <p className="text-base leading-relaxed text-text-light md:text-lg">
                         {description}
                     </p>
                 </div>
 
                 <div className="mt-auto flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primaryBrown">{price}</span>
-                    <button className="text-sm font-bold text-accentGreen hover:underline transition-all">
+                    <span className="text-2xl font-bold text-text-main">{price}</span>
+                    <button className="text-sm font-bold text-primary transition-all hover:underline">
                         Details →
                     </button>
                 </div>
