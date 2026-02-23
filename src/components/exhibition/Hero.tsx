@@ -9,7 +9,7 @@ export default function ExhibitionHero() {
         <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden bg-[#0a0f0d]">
             {/* Background image */}
             <Image
-                src="/images/exhibition/hero-forest.svg"
+                src="/images/hero-section pic.jfif"
                 alt="Dense forest canopy representing the exhibition's natural art theme"
                 fill
                 priority
@@ -18,7 +18,7 @@ export default function ExhibitionHero() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/30 via-[#0a0f0d]/50 to-[#0a0f0d]/85" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/80" />
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">
