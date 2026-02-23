@@ -38,7 +38,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-1',
         title: 'Golden Canopy',
         category: 'painting',
-        image: '/images/exhibition/gal-1.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'An oil-on-canvas exploration of autumn light filtering through dense forest canopy.',
     },
@@ -46,7 +46,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-2',
         title: 'Misty Pines',
         category: 'botanical',
-        image: '/images/exhibition/gal-2.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'A photographic study of Pacific Northwest old-growth forest in morning fog.',
     },
@@ -54,7 +54,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-3',
         title: 'Organic Flow',
         category: 'sculpture',
-        image: '/images/exhibition/gal-3.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'A polished stainless steel sculpture inspired by the flowing forms of wind-shaped branches.',
     },
@@ -62,7 +62,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-4',
         title: 'Dark Geometry',
         category: 'abstract',
-        image: '/images/exhibition/gal-4.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'A minimalist digital composition exploring the tension between rigid geometry and organic decay.',
     },
@@ -70,7 +70,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-5',
         title: 'Verdant Bloom',
         category: 'botanical',
-        image: '/images/exhibition/gal-5.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'A hyper-detailed botanical illustration of a rare tropical flower rendered in vivid gouache.',
     },
@@ -78,7 +78,7 @@ export const galleryItems: GalleryItem[] = [
         id: 'gal-6',
         title: 'Forest Floor',
         category: 'digital-art',
-        image: '/images/exhibition/gal-6.svg',
+        image: '/images/exhibition/arts-image.jfif',
         description:
             'A generative digital artwork simulating the fractal patterns found in moss and lichen.',
     },
@@ -88,7 +88,7 @@ export const curator: Curator = {
     name: 'Isabella Moretti',
     role: 'Head of Curation',
     bio: 'This exhibition explores the symbiotic relationship between urban life and the natural world. Each piece has been carefully selected to provoke a sense of calm reflection, much like the experience of walking through a sun-dappled forest floor. We invite you to lose yourself in the textures of the brush and the silence of the pixels.',
-    image: '/images/exhibition/curator.svg',
+    image: '/images/exhibition/arts-image.jfif',
     quote:
         'Art is not what you see, but what you make others see. In this collection, we focus on the invisible threads that connect our breath to the trees.',
 };

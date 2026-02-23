@@ -48,7 +48,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-1',
         name: 'Monstera Deliciosa',
-        image: '/images/plants/plant-1.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'The iconic Swiss cheese plant — a statement piece for any living space with its dramatic split leaves.',
         level: 'Beginner',
         light: 'Indirect',
@@ -59,7 +59,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-2',
         name: 'Snake Plant',
-        image: '/images/plants/plant-2.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'Nearly indestructible and a powerful air purifier. Thrives in low light and needs minimal watering.',
         level: 'Beginner',
         light: 'Low Light',
@@ -70,7 +70,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-3',
         name: 'Fiddle Leaf Fig',
-        image: '/images/plants/plant-3.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'A showstopper with large violin-shaped leaves. The perfect architectural plant for bright rooms.',
         level: 'Advanced',
         light: 'Bright Indirect',
@@ -81,7 +81,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-4',
         name: 'Peace Lily',
-        image: '/images/plants/plant-4.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'Elegant white blooms and lush green leaves. Pet-safe and one of the best air-purifying houseplants.',
         level: 'Beginner',
         light: 'Low Light',
@@ -92,7 +92,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-5',
         name: 'Lavender',
-        image: '/images/plants/plant-5.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'Fragrant purple blooms that attract pollinators. Perfect for sunny patios and container gardens.',
         level: 'Intermediate',
         light: 'Full Sun',
@@ -103,7 +103,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-6',
         name: 'Pothos',
-        image: '/images/plants/plant-6.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'A trailing vine that thrives in almost any environment. The ultimate low-maintenance houseplant.',
         level: 'Beginner',
         light: 'Any Light',
@@ -114,7 +114,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-7',
         name: 'Bird of Paradise',
-        image: '/images/plants/plant-7.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'Tropical drama with large banana-like leaves. Brings a bold, resort-like atmosphere indoors.',
         level: 'Intermediate',
         light: 'Bright Direct',
@@ -125,7 +125,7 @@ export const plantsData: Plant[] = [
     {
         id: 'p-8',
         name: 'Aloe Vera',
-        image: '/images/plants/plant-8.svg',
+        image: '/images/plants/cactus-image.jfif',
         description: 'Medicinal and decorative — the gel soothes burns and the sculptural form looks stunning on windowsills.',
         level: 'Beginner',
         light: 'Bright Indirect',
@@ -154,21 +154,21 @@ export const officePlants: OfficePlant[] = [
     {
         id: 'op-1',
         name: 'Desk Succulent',
-        image: '/images/plants/office-1.svg',
+        image: '/images/plants/cactus-image.jfif',
         descriptor: 'Tiny but tough',
         price: 12,
     },
     {
         id: 'op-2',
         name: 'Golden Pothos',
-        image: '/images/plants/office-2.svg',
+        image: '/images/plants/cactus-image.jfif',
         descriptor: 'Trails beautifully',
         price: 18,
     },
     {
         id: 'op-3',
         name: 'ZZ Plant',
-        image: '/images/plants/office-3.svg',
+        image: '/images/plants/cactus-image.jfif',
         descriptor: 'Low light master',
         price: 25,
     },
