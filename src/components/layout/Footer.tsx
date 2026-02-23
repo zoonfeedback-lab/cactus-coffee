@@ -99,7 +99,7 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                                 <span className="text-sm text-white/60">
-                                    123 Creative District, Arts Quarter
+                                    Mandian, Abbottabad, KPK, Pakistan
                                 </span>
                             </li>
                         </ul>
@@ -113,15 +113,16 @@ export default function Footer() {
                         <p className="mb-4 text-sm text-white/60">
                             Get updates on new seasonal roasts and art exhibitions.
                         </p>
-                        <form className="space-y-3">
+                        <form className="space-y-3" aria-label="Newsletter signup">
                             <div className="relative">
                                 <input
                                     type="email"
                                     placeholder="Your email address"
+                                    aria-label="Email address"
                                     className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent/50"
                                 />
                             </div>
-                            <button className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-2.5 rounded-full transition-colors text-sm">
+                            <button type="submit" className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-2.5 rounded-full transition-colors text-sm">
                                 Subscribe
                             </button>
                         </form>

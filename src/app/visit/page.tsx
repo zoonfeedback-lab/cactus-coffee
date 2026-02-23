@@ -12,39 +12,41 @@ export default function VisitPage() {
     return (
         <main className="bg-bg text-text-main pb-24">
             {/* 1. Hero Section */}
-            <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden">
+            <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=2000&ixlib=rb-4.0.3"
+                    src="/images/hero-section pic.jfif"
                     alt="Interior of Cactus Coffee Cafe"
                     fill
                     priority
                     sizes="100vw"
                     className="object-cover"
                 />
-                {/* Dark overlay for contrast */}
-                <div className="absolute inset-0 bg-black/40" />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
-                <Container className="relative z-10 text-center px-4">
-                    <AnimateOnScroll animation="fade-down" duration={800}>
-                        <h1 className="mb-4 font-heading text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-                            More Than a Cafe
-                        </h1>
-                    </AnimateOnScroll>
+                <Container className="relative z-10 py-20 text-center sm:py-24">
+                    <div className="mx-auto max-w-3xl">
+                        <AnimateOnScroll animation="fade-down" duration={800}>
+                            <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                                More Than a <span className="text-[#A8C5A0]">Cafe</span>
+                            </h1>
+                        </AnimateOnScroll>
 
-                    <AnimateOnScroll animation="fade" delay={200} duration={800}>
-                        <p className="mx-auto max-w-2xl text-lg text-white/90 md:text-xl font-medium mb-8">
-                            A curated sanctuary where specialty coffee, fine art, and lush botany converge to nourish the modern soul.
-                        </p>
-                    </AnimateOnScroll>
+                        <AnimateOnScroll animation="fade" delay={300} duration={800}>
+                            <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+                                A curated sanctuary where specialty coffee, fine art, and lush botany converge to nourish the modern soul.
+                            </p>
+                        </AnimateOnScroll>
 
-                    <AnimateOnScroll animation="fade-up" delay={400} duration={800}>
-                        <a
-                            href="#our-roots"
-                            className="inline-block rounded-full bg-[#39ff14] px-8 py-3.5 text-sm font-bold text-black transition-transform hover:scale-105"
-                        >
-                            Explore the Space
-                        </a>
-                    </AnimateOnScroll>
+                        <AnimateOnScroll animation="fade-up" delay={600} duration={800}>
+                            <a
+                                href="#our-roots"
+                                className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                            >
+                                <span className="relative z-10">Explore the Space</span>
+                            </a>
+                        </AnimateOnScroll>
+                    </div>
                 </Container>
             </section>
 
