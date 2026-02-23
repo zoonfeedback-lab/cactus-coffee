@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 
 export default function PlantsHero() {
     return (
-        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden bg-bg">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
                 src="/images/hero-section pic.jfif"
@@ -24,9 +24,6 @@ export default function PlantsHero() {
             <Container className="relative z-10 py-20 text-center sm:py-24">
                 <div className="mx-auto max-w-3xl">
                     <AnimateOnScroll animation="fade-down" duration={800}>
-                        <span className="mb-3 inline-block text-[10px] font-semibold uppercase tracking-widest text-accent-light sm:text-xs">
-                            Summer Collection 2026
-                        </span>
                         <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                             Bring <span className="text-[#A8C5A0]">Nature</span> Home
                         </h1>
