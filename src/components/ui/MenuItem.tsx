@@ -30,8 +30,17 @@ export default function MenuItem({ item }: MenuItemProps) {
                             />
                         </div>
                     ) : (
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent/20">
-                            <Icon className="h-4 w-4" />
+                        // <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent transition-colors group-hover:bg-accent/20">
+                        //     {/* <Icon className="h-4 w-4" /> */}
+                        // </div>
+                        <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-border">
+                            <Image
+                                src="/images/coffee/coffe-image.jfif"
+                                alt="Coffee"
+                                fill
+                                sizes="32px"
+                                className="object-cover"
+                            />
                         </div>
                     )}
                     <h3 className="font-heading text-lg font-semibold text-primary">
