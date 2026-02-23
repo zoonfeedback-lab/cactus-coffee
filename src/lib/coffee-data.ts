@@ -1,26 +1,17 @@
-export interface CoffeeItem {
-    id: string;
+/* ── Full menu data for Cactus Coffee ── */
+
+export interface MenuItem {
     name: string;
-    description: string;
-    price: string;
-    category: string;
+    single: number | null;
+    double: number | null;
     image: string;
-    tags?: string[];
+    note?: string;
 }
 
-export interface Category {
+export interface MenuCategory {
     id: string;
-    label: string;
-    slug: string;
-}
-
-export interface FeaturedItem {
-    id: string;
-    name: string;
-    description: string;
-    image: string;
-    price: string;
-    tag: 'Popular' | 'Seasonal' | 'New' | 'Signature';
+    title: string;
+    items: MenuItem[];
 }
 
 export interface Testimonial {
@@ -30,145 +21,98 @@ export interface Testimonial {
     title: string;
 }
 
-export const categories: Category[] = [
-    { id: '1', label: 'Coffee', slug: 'coffee' },
-    { id: '2', label: 'Tea & Botanicals', slug: 'tea' },
-    { id: '3', label: 'Pastries', slug: 'pastries' },
+const img = '/images/coffee/coffe-image.jfif';
+
+/* ── The actual menu — exactly as shown on the board ── */
+
+export const menuCategories: MenuCategory[] = [
+    {
+        id: 'mains',
+        title: 'Mainess',
+        items: [
+            { name: 'Espresso', single: 390, double: 590, image: img },
+            { name: 'Americano / Long Black', single: 450, double: 650, image: img },
+            { name: 'Cortado', single: 650, double: 850, image: img },
+            { name: 'Cappuccino', single: 550, double: 750, image: img },
+            { name: 'Café Latte', single: 550, double: 750, image: img },
+            { name: 'Caramel Macchiato', single: 650, double: 850, image: img },
+            { name: 'Spanish Latte', single: 650, double: 850, image: img },
+            { name: 'Flavoured Latte', single: 650, double: 850, image: img },
+            { name: 'Customized Coffee', single: null, double: null, image: img, note: 'Variable' },
+        ],
+    },
 ];
 
-export const featuredItems: FeaturedItem[] = [
+/* ── Today's Special pool (one is picked daily) ── */
+
+export interface DailySpecial {
+    name: string;
+    tagline: string;
+    description: string;
+    price: number;
+    image: string;
+}
+
+export const dailySpecials: DailySpecial[] = [
     {
-        id: 'f1',
         name: 'Lavender Oat Latte',
-        description: 'House-made lavender syrup, creamy oat milk, and a light, airy lavender meringue topping.',
-        image: '/images/coffee/coffe-image.jfif',
-        price: 'PKR 850',
-        tag: 'New',
+        tagline: 'Floral & Creamy',
+        description: 'House-made lavender syrup, creamy oat milk, and a light dusting of edible lavender on top.',
+        price: 850,
+        image: img,
     },
     {
-        id: 'f2',
-        name: 'Matcha White Chocolate Tart',
-        description: 'Ceremonial-grade matcha swirled with silky white chocolate ganache and edible flowers.',
-        image: '/images/coffee/coffe-image.jfif',
-        price: 'PKR 1,100',
-        tag: 'Popular',
+        name: 'Caramel Brûlée Mocha',
+        tagline: 'Rich & Indulgent',
+        description: 'Dark chocolate espresso, salted caramel drizzle with a torched sugar crust finish.',
+        price: 900,
+        image: img,
     },
     {
-        id: 'f3',
-        name: 'Artisanal Avocado Toast',
-        description: 'Freshly baked sourdough topped with smashed avocado, micro-greens, radish, and sea salt.',
-        image: '/images/coffee/coffe-image.jfif',
-        price: 'PKR 1,500',
-        tag: 'Seasonal',
+        name: 'Pistachio Rose Latte',
+        tagline: 'Nutty & Floral',
+        description: 'Creamy pistachio milk blended with a splash of rose water and double-shot espresso.',
+        price: 850,
+        image: img,
     },
     {
-        id: 'f4',
-        name: 'Nitro Rose Cold Brew',
-        description: 'Slow-steeped cold brew infused with rose water and nitrogen for a silky effervescent finish.',
-        image: '/images/coffee/coffe-image.jfif',
-        price: 'PKR 950',
-        tag: 'Signature',
+        name: 'Matcha White Chocolate',
+        tagline: 'Smooth & Earthy',
+        description: 'Ceremonial-grade matcha whisked with silky white chocolate and steamed oat milk.',
+        price: 800,
+        image: img,
+    },
+    {
+        name: 'Honey Cinnamon Cortado',
+        tagline: 'Warm & Spiced',
+        description: 'Double cortado with wildflower honey and a dusting of Saigon cinnamon.',
+        price: 750,
+        image: img,
+    },
+    {
+        name: 'Coconut Cold Brew',
+        tagline: 'Tropical & Refreshing',
+        description: '24-hour steeped cold brew sweetened with coconut cream and toasted coconut flakes.',
+        price: 700,
+        image: img,
+    },
+    {
+        name: 'Salted Maple Espresso',
+        tagline: 'Sweet & Smoky',
+        description: 'Double espresso with pure maple syrup and a flake of Maldon sea salt.',
+        price: 750,
+        image: img,
     },
 ];
 
-export const coffeeMenu: CoffeeItem[] = [
-    {
-        id: '1',
-        name: 'Artisanal Flat White',
-        description: 'Double-shot on velvety steamed milk.',
-        price: 'PKR 750',
-        category: 'coffee',
-        image: '/images/coffee/coffe-image.jfif',
-    },
-    {
-        id: '2',
-        name: 'Single Origin V60',
-        description: 'Ethiopian hand-poured for tropical berry notes.',
-        price: 'PKR 900',
-        category: 'coffee',
-        image: '/images/coffee/coffe-image.jfif',
-    },
-    {
-        id: '3',
-        name: 'House Cortado',
-        description: 'Espresso cut with an equal part of warm milk.',
-        price: 'PKR 650',
-        category: 'coffee',
-        image: '/images/coffee/coffe-image.jfif',
-    },
-    {
-        id: '4',
-        name: 'Double Espresso',
-        description: 'A concentrated shot of our Italian-roast house blend.',
-        price: 'PKR 550',
-        category: 'coffee',
-        image: '/images/coffee/coffe-image.jfif',
-    },
-    {
-        id: '5',
-        name: 'Iced Americano',
-        description: 'Chilled refreshing espresso, a summer classic.',
-        price: 'PKR 600',
-        category: 'coffee',
-        image: '/images/coffee/coffe-image.jfif',
-    },
-    {
-        id: '6',
-        name: 'Vanilla Bean Latte',
-        description: 'Komorebi-roast espresso, Madagascar vanilla pods.',
-        price: 'PKR 850',
-        category: 'coffee',
-        image: '/images/coffee/featured-3.svg',
-    },
-    {
-        id: '7',
-        name: 'Chamomile Honey',
-        description: 'Soothing chamomile infused with locally sourced wildflower honey.',
-        price: 'PKR 500',
-        category: 'tea',
-        image: '/images/coffee/featured-1.svg',
-    },
-    {
-        id: '8',
-        name: 'Iced Hibiscus Tonic',
-        description: 'Vibrant hibiscus petals steeped cold, topped with sparkling tonic water.',
-        price: 'PKR 650',
-        category: 'tea',
-        image: '/images/coffee/featured-2.svg',
-    },
-    {
-        id: '9',
-        name: 'Ceremonial Matcha',
-        description: 'Stone-ground Uji matcha whisked to a smooth, vibrant froth.',
-        price: 'PKR 900',
-        category: 'tea',
-        image: '/images/coffee/featured-3.svg',
-    },
-    {
-        id: '10',
-        name: 'Almond Croissant',
-        description: 'Flaky, buttery pastry filled with sweet almond frangipane.',
-        price: 'PKR 750',
-        category: 'pastries',
-        image: '/images/coffee/featured-1.svg',
-    },
-    {
-        id: '11',
-        name: 'Pistachio Danish',
-        description: 'Laminated pastry with pistachio cream and crushed pistachios.',
-        price: 'PKR 800',
-        category: 'pastries',
-        image: '/images/coffee/featured-2.svg',
-    },
-    {
-        id: '12',
-        name: 'Sourdough Bread',
-        description: 'Naturally fermented for 48 hours, crusty and aromatic.',
-        price: 'PKR 550',
-        category: 'pastries',
-        image: '/images/coffee/featured-3.svg',
-    },
-];
+/** Returns the special of the day based on the current date */
+export function getTodaysSpecial(): DailySpecial {
+    const today = new Date();
+    const dayOfYear = Math.floor(
+        (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
+    );
+    return dailySpecials[dayOfYear % dailySpecials.length];
+}
 
 export const testimonial: Testimonial = {
     id: 't1',
