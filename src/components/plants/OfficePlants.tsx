@@ -22,7 +22,7 @@ export default function OfficePlantsSection({ plants }: OfficePlantsProps) {
                     </div>
                 </AnimateOnScroll>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-3">
+                <div className="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-3">
                     {plants.map((plant, index) => (
                         <AnimateOnScroll key={plant.id} animation="fade-up" delay={index * 100}>
                             <div className="flex items-center gap-4 rounded-2xl border border-border-light bg-white p-4 transition-all duration-300 hover:shadow-md">

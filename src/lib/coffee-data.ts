@@ -1,118 +1,122 @@
-export interface CoffeeItem {
-    id: string;
-    name: string;
-    description: string;
-    price: string;
-    category: string;
-    tags?: string[];
-}
+/* ── Full menu data for Cactus Coffee ── */
 
-export interface Category {
-    id: string;
-    label: string;
-    slug: string;
-}
-
-export interface FeaturedItem {
-    id: string;
+export interface MenuItem {
     name: string;
-    description: string;
+    single: number | null;
+    double: number | null;
     image: string;
-    price: string;
-    tag: 'Popular' | 'Seasonal' | 'New' | 'Signature';
+    note?: string;
 }
 
-export const categories: Category[] = [
-    { id: '1', label: 'All', slug: 'all' },
-    { id: '2', label: 'Espresso', slug: 'espresso' },
-    { id: '3', label: 'Brewed', slug: 'brewed' },
-    { id: '4', label: 'Signature', slug: 'signature' },
-    { id: '5', label: 'Seasonal', slug: 'seasonal' },
-    { id: '6', label: 'Pastries', slug: 'pastries' },
+export interface MenuCategory {
+    id: string;
+    title: string;
+    items: MenuItem[];
+}
+
+export interface Testimonial {
+    id: string;
+    quote: string;
+    name: string;
+    title: string;
+}
+
+const img = '/images/coffee/coffe-image.jfif';
+
+/* ── The actual menu — exactly as shown on the board ── */
+
+export const menuCategories: MenuCategory[] = [
+    {
+        id: 'mains',
+        title: 'Mainess',
+        items: [
+            { name: 'Espresso', single: 390, double: 590, image: img },
+            { name: 'Americano / Long Black', single: 450, double: 650, image: img },
+            { name: 'Cortado', single: 650, double: 850, image: img },
+            { name: 'Cappuccino', single: 550, double: 750, image: img },
+            { name: 'Café Latte', single: 550, double: 750, image: img },
+            { name: 'Caramel Macchiato', single: 650, double: 850, image: img },
+            { name: 'Spanish Latte', single: 650, double: 850, image: img },
+            { name: 'Flavoured Latte', single: 650, double: 850, image: img },
+            { name: 'Customized Coffee', single: null, double: null, image: img, note: 'Variable' },
+        ],
+    },
 ];
 
-export const featuredItems: FeaturedItem[] = [
+/* ── Today's Special pool (one is picked daily) ── */
+
+export interface DailySpecial {
+    name: string;
+    tagline: string;
+    description: string;
+    price: number;
+    image: string;
+}
+
+export const dailySpecials: DailySpecial[] = [
     {
-        id: 'f1',
-        name: 'Midnight Velvet Latte',
-        description: 'A rich espresso foundation blended with charcoal-infused coconut milk and a hint of vanilla bean.',
-        image: '/images/coffee/featured-1.svg',
-        price: 'PKR 1,500',
-        tag: 'Signature',
+        name: 'Lavender Oat Latte',
+        tagline: 'Floral & Creamy',
+        description: 'House-made lavender syrup, creamy oat milk, and a light dusting of edible lavender on top.',
+        price: 850,
+        image: img,
     },
     {
-        id: 'f2',
-        name: 'Spiced Honey Cold Brew',
-        description: '12-hour steeped cold brew infused with organic honey and a signature blend of warming spices.',
-        image: '/images/coffee/featured-2.svg',
-        price: 'PKR 1,300',
-        tag: 'Popular',
+        name: 'Caramel Brûlée Mocha',
+        tagline: 'Rich & Indulgent',
+        description: 'Dark chocolate espresso, salted caramel drizzle with a torched sugar crust finish.',
+        price: 900,
+        image: img,
     },
     {
-        id: 'f3',
-        name: 'Rose & Cardamom Flat White',
-        description: 'Creamy oat milk and double espresso delicately flavored with rose water and freshly ground cardamom.',
-        image: '/images/coffee/featured-3.svg',
-        price: 'PKR 1,400',
-        tag: 'Seasonal',
-    }
+        name: 'Pistachio Rose Latte',
+        tagline: 'Nutty & Floral',
+        description: 'Creamy pistachio milk blended with a splash of rose water and double-shot espresso.',
+        price: 850,
+        image: img,
+    },
+    {
+        name: 'Matcha White Chocolate',
+        tagline: 'Smooth & Earthy',
+        description: 'Ceremonial-grade matcha whisked with silky white chocolate and steamed oat milk.',
+        price: 800,
+        image: img,
+    },
+    {
+        name: 'Honey Cinnamon Cortado',
+        tagline: 'Warm & Spiced',
+        description: 'Double cortado with wildflower honey and a dusting of Saigon cinnamon.',
+        price: 750,
+        image: img,
+    },
+    {
+        name: 'Coconut Cold Brew',
+        tagline: 'Tropical & Refreshing',
+        description: '24-hour steeped cold brew sweetened with coconut cream and toasted coconut flakes.',
+        price: 700,
+        image: img,
+    },
+    {
+        name: 'Salted Maple Espresso',
+        tagline: 'Sweet & Smoky',
+        description: 'Double espresso with pure maple syrup and a flake of Maldon sea salt.',
+        price: 750,
+        image: img,
+    },
 ];
 
-export const coffeeMenu: CoffeeItem[] = [
-    {
-        id: '1',
-        name: 'Classic Espresso',
-        description: 'A concentrated shot of our signature house blend with a rich crema.',
-        price: 'PKR 750',
-        category: 'espresso',
-        tags: ['Hot'],
-    },
-    {
-        id: '2',
-        name: 'Flat White',
-        description: 'Velvety micro-foam poured over a double shot of espresso.',
-        price: 'PKR 900',
-        category: 'espresso',
-        tags: ['Hot'],
-    },
-    {
-        id: '3',
-        name: 'Pour Over',
-        description: 'Single-origin beans brewed slowly to highlight unique flavor profiles.',
-        price: 'PKR 1,100',
-        category: 'brewed',
-        tags: ['Hot'],
-    },
-    {
-        id: '4',
-        name: 'Lavender Honey Latte',
-        description: 'Our signature espresso with house-made lavender syrup and local honey.',
-        price: 'PKR 1,300',
-        category: 'signature',
-        tags: ['Hot', 'Floral'],
-    },
-    {
-        id: '5',
-        name: 'Iced Maple Pecan',
-        description: 'Cold brew shaken with maple syrup and toasted pecan notes.',
-        price: 'PKR 1,400',
-        category: 'seasonal',
-        tags: ['Iced'],
-    },
-    {
-        id: '6',
-        name: 'Almond Croissant',
-        description: 'Flaky, buttery pastry filled with sweet almond frangipane.',
-        price: 'PKR 1,000',
-        category: 'pastries',
-        tags: ['Vegetarian'],
-    },
-    {
-        id: '7',
-        name: 'Vegan Avocado Toast',
-        description: 'Sourdough topped with smashed avocado, chili flakes, and lime.',
-        price: 'PKR 2,300',
-        category: 'pastries',
-        tags: ['Vegan'],
-    }
-];
+/** Returns the special of the day based on the current date */
+export function getTodaysSpecial(): DailySpecial {
+    const today = new Date();
+    const dayOfYear = Math.floor(
+        (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000
+    );
+    return dailySpecials[dayOfYear % dailySpecials.length];
+}
+
+export const testimonial: Testimonial = {
+    id: 't1',
+    quote: 'The perfect blend of high-end art and the comfort of my own living room. The Lavender Oat Latte is a spiritual experience.',
+    name: 'Bero Richards',
+    title: 'Local Regular & Artist',
+};

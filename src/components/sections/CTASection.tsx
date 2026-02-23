@@ -21,7 +21,7 @@ export default function CTASection() {
                             Ready to visit our space?
                         </h2>
                         <p className="mx-auto mb-8 max-w-lg text-base leading-relaxed text-text-light">
-                            Located in the heart of the creative district, join us for a unique
+                            Located in Mandian, Abbottabad, join us for a unique
                             confluence of inspiration, greenery, and the perfect cup.
                         </p>
 

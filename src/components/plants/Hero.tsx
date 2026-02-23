@@ -6,10 +6,10 @@ import { ChevronDown } from 'lucide-react';
 
 export default function PlantsHero() {
     return (
-        <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden bg-bg">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
-                src="/images/plants/hero-greenhouse.svg"
+                src="/images/hero-section pic.jfif"
                 alt="Lush greenhouse interior filled with tropical plants"
                 fill
                 priority
@@ -18,15 +18,12 @@ export default function PlantsHero() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">
                 <div className="mx-auto max-w-3xl">
                     <AnimateOnScroll animation="fade-down" duration={800}>
-                        <span className="mb-3 inline-block text-[10px] font-semibold uppercase tracking-widest text-accent-light sm:text-xs">
-                            Summer Collection 2026
-                        </span>
                         <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                             Bring <span className="text-[#A8C5A0]">Nature</span> Home
                         </h1>

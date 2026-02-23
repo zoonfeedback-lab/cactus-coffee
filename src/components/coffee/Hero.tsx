@@ -6,10 +6,10 @@ import { ChevronDown } from 'lucide-react';
 
 export default function CoffeeHero() {
     return (
-        <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
-                src="/images/coffee/hero-coffee.svg"
+                src="/images/hero-section pic.jfif"
                 alt="Warm coffee-shop ambiance with earthy tones"
                 fill
                 priority
@@ -18,7 +18,7 @@ export default function CoffeeHero() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">

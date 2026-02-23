@@ -6,10 +6,10 @@ import { ChevronDown } from 'lucide-react';
 
 export default function ExhibitionHero() {
     return (
-        <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden bg-[#0a0f0d]">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
-                src="/images/exhibition/hero-forest.svg"
+                src="/images/hero-section pic.jfif"
                 alt="Dense forest canopy representing the exhibition's natural art theme"
                 fill
                 priority
@@ -18,7 +18,7 @@ export default function ExhibitionHero() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/30 via-[#0a0f0d]/50 to-[#0a0f0d]/85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">
@@ -29,7 +29,7 @@ export default function ExhibitionHero() {
                         </h1>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade" delay={300} duration={800}>
-                        <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg">
+                        <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                             An immersive digital journey through our latest forest-inspired collection,
                             exploring the intersection of organic life and abstract thought.
                         </p>

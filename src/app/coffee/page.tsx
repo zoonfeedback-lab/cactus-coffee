@@ -1,34 +1,29 @@
-'use client';
-
-import React, { useState } from 'react';
+import type { Metadata } from 'next';
 import Hero from '@/components/coffee/Hero';
-import CategoryTabs from '@/components/coffee/CategoryTabs';
-import FeaturedSpecials from '@/components/coffee/FeaturedSpecials';
-import MenuSection from '@/components/coffee/MenuSection';
-import PhilosophySection from '@/components/coffee/PhilosophySection';
+import TodaysSpecial from '@/components/coffee/FeaturedSpecials';
+import FullMenu from '@/components/coffee/MenuSection';
+import TestimonialSection from '@/components/coffee/PhilosophySection';
+
+export const metadata: Metadata = {
+    title: 'Coffee Menu | Cactus Coffee',
+    description:
+        'Explore our full coffee menu — espresso, lattes, macchiatos, and more. Hand-roasted specialty beans served in Mandian, Abbottabad.',
+};
 
 export default function CoffeePage() {
-    const [activeCategory, setActiveCategory] = useState('all');
-
     return (
         <main className="min-h-screen bg-bg">
             {/* Hero Section */}
             <Hero />
 
-            {/* Sticky Navigation Tabs */}
-            <CategoryTabs
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-            />
+            {/* Today's Special — one item, centered, larger */}
+            <TodaysSpecial />
 
-            {/* Featured Specials Section */}
-            <FeaturedSpecials />
+            {/* Full Menu — categorized like the physical menu */}
+            <FullMenu />
 
-            {/* Full Menu Section */}
-            <MenuSection activeCategory={activeCategory} />
-
-            {/* Philosophy Section */}
-            <PhilosophySection />
+            {/* Testimonial / Quote */}
+            <TestimonialSection />
         </main>
     );
 }

@@ -15,7 +15,7 @@ const amberly = localFont({
 export const metadata: Metadata = {
   title: 'Cactus Coffee | Where Creativity Meets Nature',
   description:
-    'A curated space blending contemporary art, lush botanicals, and handcrafted specialty coffee. Visit us in the heart of the creative district.',
+    'A curated space blending contemporary art, lush botanicals, and handcrafted specialty coffee. Visit us in Mandian, Abbottabad.',
 };
 
 export default function RootLayout({

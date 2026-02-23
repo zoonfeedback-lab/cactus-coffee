@@ -8,7 +8,7 @@ import { menuItems } from '@/lib/data';
 export default function CafeSpecials() {
     return (
         <section
-            className="bg-primary-dark py-16 sm:py-24"
+            className="bg-surface py-16 sm:py-24"
             aria-labelledby="cafe-specials-heading"
         >
             <Container>
@@ -18,7 +18,6 @@ export default function CafeSpecials() {
                         title="Café Specials"
                         subtitle="Handcrafted beverages made with the finest ethically-sourced ingredients."
                         align="center"
-                        className="[&_h2]:text-white [&_p]:text-white/60"
                     />
                 </AnimateOnScroll>
 
@@ -35,8 +34,8 @@ export default function CafeSpecials() {
                 <AnimateOnScroll animation="fade-up" delay={500}>
                     <div className="mt-10 text-center">
                         <Link
-                            href="/cafe"
-                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                            href="/coffee#menu"
+                            className="relative inline-block overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-semibold text-primary transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
                         >
                             <span className="relative z-10">View Full Menu</span>
                         </Link>
