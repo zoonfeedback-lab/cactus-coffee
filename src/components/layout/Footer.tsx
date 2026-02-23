@@ -3,9 +3,9 @@ import { Instagram, Facebook, Twitter, MapPin, Mail, Phone } from 'lucide-react'
 import Container from '@/components/ui/Container';
 
 const quickLinks = [
-    { label: 'Coffee', href: '/cafe' },
-    { label: 'Arts', href: '/art' },
+    { label: 'Art Gallery', href: '/art' },
     { label: 'Plants', href: '/plants' },
+    { label: 'Coffee', href: '/coffee' },
 ] as const;
 
 const services = [
@@ -83,8 +83,15 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    {/* Contact & Hours */}
                     <div>
+                        <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                            Opening Hours
+                        </h4>
+                        <ul className="mb-6 space-y-1 text-sm text-white/60">
+                            <li>Mon - Fri: 08:00 - 19:00</li>
+                            <li>Sat - Sun: 09:00 - 20:00</li>
+                        </ul>
                         <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
                             Contact
                         </h4>
@@ -95,25 +102,29 @@ export default function Footer() {
                                     123 Creative District, Arts Quarter
                                 </span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <Mail className="h-4 w-4 shrink-0 text-accent" />
-                                <a
-                                    href="mailto:hello@artnaturecoffee.com"
-                                    className="text-sm text-white/60 transition-colors hover:text-accent-light"
-                                >
-                                    hello@artnaturecoffee.com
-                                </a>
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <Phone className="h-4 w-4 shrink-0 text-accent" />
-                                <a
-                                    href="tel:+1234567890"
-                                    className="text-sm text-white/60 transition-colors hover:text-accent-light"
-                                >
-                                    (123) 456-7890
-                                </a>
-                            </li>
                         </ul>
+                    </div>
+
+                    {/* Newsletter */}
+                    <div className="sm:col-span-2 lg:col-span-1">
+                        <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                            Join the Brew
+                        </h4>
+                        <p className="mb-4 text-sm text-white/60">
+                            Get updates on new seasonal roasts and art exhibitions.
+                        </p>
+                        <form className="space-y-3">
+                            <div className="relative">
+                                <input
+                                    type="email"
+                                    placeholder="Your email address"
+                                    className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                                />
+                            </div>
+                            <button className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-2.5 rounded-full transition-colors text-sm">
+                                Subscribe
+                            </button>
+                        </form>
                     </div>
                 </div>
 
