@@ -77,7 +77,7 @@ export default function VisitPage() {
                                 <div className="absolute -left-6 -bottom-6 h-48 w-48 rounded-3xl bg-[#bbf7d0]/50 -z-10" />
                                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-lg">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1577083864036-7c9869151e06?auto=format&fit=crop&q=80&w=1200"
+                                        src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&q=80&w=1200"
                                         alt="Gallery view inside the cafe"
                                         fill
                                         sizes="(max-width: 768px) 100vw, 50vw"
