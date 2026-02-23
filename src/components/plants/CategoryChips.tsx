@@ -49,14 +49,13 @@ export default function CategoryChips({ categories, plants }: CategoryChipsProps
                     </h2>
                 </div>
 
-                {/* Plant grid */}
-                <div className="grid gap-6 grid-cols-2 lg:grid-cols-3">
+                {/* Pinterest-style masonry grid — same as art gallery */}
+                <div className="columns-2 gap-4 sm:columns-3 lg:columns-4 [&>*]:mb-4">
                     {filteredPlants.map((plant, index) => (
                         <AnimateOnScroll
                             key={plant.id}
                             animation="fade-up"
-                            delay={index * 80}
-                            className="h-full"
+                            delay={index * 60}
                         >
                             <PlantDetailCard plant={plant} />
                         </AnimateOnScroll>

@@ -10,6 +10,7 @@ export interface Plant {
     watering: string;
     category: string;
     price: number;
+    size: 'sm' | 'md' | 'lg';
 }
 
 export interface PlantCategory {
@@ -55,6 +56,7 @@ export const plantsData: Plant[] = [
         watering: 'Weekly',
         category: 'indoor',
         price: 45,
+        size: 'lg',
     },
     {
         id: 'p-2',
@@ -66,6 +68,7 @@ export const plantsData: Plant[] = [
         watering: 'Monthly',
         category: 'air-purifying',
         price: 32,
+        size: 'sm',
     },
     {
         id: 'p-3',
@@ -77,6 +80,7 @@ export const plantsData: Plant[] = [
         watering: 'Weekly',
         category: 'indoor',
         price: 65,
+        size: 'md',
     },
     {
         id: 'p-4',
@@ -88,6 +92,7 @@ export const plantsData: Plant[] = [
         watering: 'Bi-Weekly',
         category: 'pet-friendly',
         price: 28,
+        size: 'lg',
     },
     {
         id: 'p-5',
@@ -99,6 +104,7 @@ export const plantsData: Plant[] = [
         watering: 'Weekly',
         category: 'outdoor',
         price: 22,
+        size: 'sm',
     },
     {
         id: 'p-6',
@@ -110,6 +116,7 @@ export const plantsData: Plant[] = [
         watering: 'Weekly',
         category: 'low-maintenance',
         price: 18,
+        size: 'md',
     },
     {
         id: 'p-7',
@@ -121,6 +128,7 @@ export const plantsData: Plant[] = [
         watering: 'Weekly',
         category: 'indoor',
         price: 75,
+        size: 'lg',
     },
     {
         id: 'p-8',
@@ -132,6 +140,7 @@ export const plantsData: Plant[] = [
         watering: 'Bi-Weekly',
         category: 'low-maintenance',
         price: 15,
+        size: 'sm',
     },
 ];
 
