@@ -50,10 +50,10 @@ export default function FullMenu() {
                                     ) : (
                                         <div className="mt-1 flex items-center gap-3">
                                             <span className="rounded-full bg-surface-alt px-3 py-0.5 text-xs font-semibold text-text-main">
-                                                {item.single}
+                                                PKR {item.single}
                                             </span>
                                             <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-bold text-primary">
-                                                {item.double}
+                                                PKR {item.double}
                                             </span>
                                         </div>
                                     )}
