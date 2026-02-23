@@ -12,17 +12,17 @@ export default function OfficePlantsSection({ plants }: OfficePlantsProps) {
         <section className="bg-bg py-16 sm:py-20">
             <Container>
                 <AnimateOnScroll animation="fade-up">
-                    <div className="mb-2 flex items-end justify-between">
+                    <div className="mb-2 flex flex-col items-center text-center">
                         <h2 className="font-heading text-2xl font-bold text-text-main sm:text-3xl">
                             Perfect for the Office
                         </h2>
-                        <p className="hidden text-sm text-text-light sm:block">
+                        <p className="hidden text-sm text-text-light sm:block mt-2">
                             Low light tolerant and air-purifying varieties
                         </p>
                     </div>
                 </AnimateOnScroll>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-3">
                     {plants.map((plant, index) => (
                         <AnimateOnScroll key={plant.id} animation="fade-up" delay={index * 100}>
                             <div className="flex items-center gap-4 rounded-2xl border border-border-light bg-white p-4 transition-all duration-300 hover:shadow-md">
