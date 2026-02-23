@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#3a2518" rx="16"/>
+  <!-- Cup -->
+  <ellipse cx="300" cy="240" rx="90" ry="110" fill="#5a4030" opacity="0.6"/>
+  <ellipse cx="300" cy="140" rx="90" ry="22" fill="#6a5040" opacity="0.7"/>
+  <rect x="380" y="200" width="28" height="55" rx="10" fill="#5a4030" opacity="0.5"/>
+  <!-- Steam -->
+  <ellipse cx="270" cy="100" rx="10" ry="28" fill="#f5e6d3" opacity="0.12" transform="rotate(-12 270 100)"/>
+  <ellipse cx="300" cy="90" rx="8" ry="32" fill="#f5e6d3" opacity="0.1" transform="rotate(6 300 90)"/>
+  <ellipse cx="330" cy="95" rx="9" ry="26" fill="#f5e6d3" opacity="0.11" transform="rotate(-5 330 95)"/>
+  <!-- Dark liquid surface -->
+  <ellipse cx="300" cy="150" rx="75" ry="15" fill="#2a1a10" opacity="0.4"/>
+  <!-- Accent swirl -->
+  <ellipse cx="290" cy="155" rx="30" ry="6" fill="#f5e6d3" opacity="0.15" transform="rotate(15 290 155)"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#2a1a10" rx="16"/>
+  <!-- Tall glass -->
+  <rect x="240" y="100" width="120" height="240" rx="12" fill="#4a3528" opacity="0.6"/>
+  <rect x="240" y="100" width="120" height="40" rx="12" fill="#5a4535" opacity="0.5"/>
+  <!-- Ice cubes -->
+  <rect x="260" y="160" width="30" height="25" rx="4" fill="#f5e6d3" opacity="0.15" transform="rotate(8 275 172)"/>
+  <rect x="310" y="180" width="28" height="22" rx="4" fill="#f5e6d3" opacity="0.12" transform="rotate(-5 324 191)"/>
+  <rect x="270" y="220" width="26" height="24" rx="4" fill="#f5e6d3" opacity="0.1" transform="rotate(12 283 232)"/>
+  <!-- Straw -->
+  <rect x="295" y="60" width="8" height="160" rx="4" fill="#6a5040" opacity="0.5" transform="rotate(5 299 140)"/>
+  <!-- Honey drizzle -->
+  <ellipse cx="300" cy="250" rx="40" ry="8" fill="#d4a843" opacity="0.2"/>
+</svg>
