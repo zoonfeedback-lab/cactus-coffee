@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 
 export default function ExhibitionHero() {
     return (
-        <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden bg-[#0a0f0d]">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden bg-[#0a0f0d]">
             {/* Background image */}
             <Image
                 src="/images/hero-section pic.jfif"
