@@ -9,7 +9,7 @@ export default function HeroSection() {
         <section className="relative mt-28 flex min-h-[75vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
-                src="/images/hero-bg.svg"
+                src="/images/hero-section pic.jfif"
                 alt="Cactus Coffee — a curated space with art, plants, and specialty coffee"
                 fill
                 priority
@@ -18,7 +18,7 @@ export default function HeroSection() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">
