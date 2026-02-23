@@ -7,7 +7,7 @@ import { plants } from '@/lib/data';
 
 export default function PopularPlants() {
     return (
-        <section className="py-16 sm:py-24" aria-labelledby="popular-plants-heading">
+        <section className="bg-primary-dark py-16 sm:py-24" aria-labelledby="popular-plants-heading">
             <Container>
                 {/* Centered heading + subtitle */}
                 <AnimateOnScroll animation="fade-up">
@@ -15,6 +15,7 @@ export default function PopularPlants() {
                         title="Popular Plants"
                         subtitle="Bring nature home with our curated selection of indoor plants, carefully sourced and nurtured."
                         align="center"
+                        className="[&_h2]:text-white [&_p]:text-white/60"
                     />
                 </AnimateOnScroll>
 
@@ -32,7 +33,7 @@ export default function PopularPlants() {
                     <div className="mt-10 text-center">
                         <Link
                             href="/plants"
-                            className="relative inline-block overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-semibold text-primary transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
                         >
                             <span className="relative z-10">View All Plants</span>
                         </Link>
