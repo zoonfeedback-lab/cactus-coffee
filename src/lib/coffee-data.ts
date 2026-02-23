@@ -4,6 +4,7 @@ export interface CoffeeItem {
     description: string;
     price: string;
     category: string;
+    image: string;
     tags?: string[];
 }
 
@@ -22,97 +23,156 @@ export interface FeaturedItem {
     tag: 'Popular' | 'Seasonal' | 'New' | 'Signature';
 }
 
+export interface Testimonial {
+    id: string;
+    quote: string;
+    name: string;
+    title: string;
+}
+
 export const categories: Category[] = [
-    { id: '1', label: 'All', slug: 'all' },
-    { id: '2', label: 'Espresso', slug: 'espresso' },
-    { id: '3', label: 'Brewed', slug: 'brewed' },
-    { id: '4', label: 'Signature', slug: 'signature' },
-    { id: '5', label: 'Seasonal', slug: 'seasonal' },
-    { id: '6', label: 'Pastries', slug: 'pastries' },
+    { id: '1', label: 'Coffee', slug: 'coffee' },
+    { id: '2', label: 'Tea & Botanicals', slug: 'tea' },
+    { id: '3', label: 'Pastries', slug: 'pastries' },
 ];
 
 export const featuredItems: FeaturedItem[] = [
     {
         id: 'f1',
-        name: 'Midnight Velvet Latte',
-        description: 'A rich espresso foundation blended with charcoal-infused coconut milk and a hint of vanilla bean.',
-        image: '/images/coffee/featured-1.jpg',
-        price: '£5.50',
-        tag: 'Signature',
+        name: 'Lavender Oat Latte',
+        description: 'House-made lavender syrup, creamy oat milk, and a light, airy lavender meringue topping.',
+        image: '/images/coffee/featured-1.svg',
+        price: 'PKR 850',
+        tag: 'New',
     },
     {
         id: 'f2',
-        name: 'Spiced Honey Cold Brew',
-        description: '12-hour steeped cold brew infused with organic honey and a signature blend of warming spices.',
-        image: '/images/coffee/featured-2.jpg',
-        price: '£4.80',
+        name: 'Matcha White Chocolate Tart',
+        description: 'Ceremonial-grade matcha swirled with silky white chocolate ganache and edible flowers.',
+        image: '/images/coffee/featured-2.svg',
+        price: 'PKR 1,100',
         tag: 'Popular',
     },
     {
         id: 'f3',
-        name: 'Rose & Cardamom Flat White',
-        description: 'Creamy oat milk and double espresso delicately flavored with rose water and freshly ground cardamom.',
-        image: '/images/coffee/featured-3.jpg',
-        price: '£5.20',
+        name: 'Artisanal Avocado Toast',
+        description: 'Freshly baked sourdough topped with smashed avocado, micro-greens, radish, and sea salt.',
+        image: '/images/coffee/featured-3.svg',
+        price: 'PKR 1,500',
         tag: 'Seasonal',
-    }
+    },
+    {
+        id: 'f4',
+        name: 'Nitro Rose Cold Brew',
+        description: 'Slow-steeped cold brew infused with rose water and nitrogen for a silky effervescent finish.',
+        image: '/images/coffee/featured-1.svg',
+        price: 'PKR 950',
+        tag: 'Signature',
+    },
 ];
 
 export const coffeeMenu: CoffeeItem[] = [
     {
         id: '1',
-        name: 'Classic Espresso',
-        description: 'A concentrated shot of our signature house blend with a rich crema.',
-        price: '£2.80',
-        category: 'espresso',
-        tags: ['Hot'],
+        name: 'Artisanal Flat White',
+        description: 'Double-shot on velvety steamed milk.',
+        price: 'PKR 750',
+        category: 'coffee',
+        image: '/images/coffee/featured-1.svg',
     },
     {
         id: '2',
-        name: 'Flat White',
-        description: 'Velvety micro-foam poured over a double shot of espresso.',
-        price: '£3.40',
-        category: 'espresso',
-        tags: ['Hot'],
+        name: 'Single Origin V60',
+        description: 'Ethiopian hand-poured for tropical berry notes.',
+        price: 'PKR 900',
+        category: 'coffee',
+        image: '/images/coffee/featured-2.svg',
     },
     {
         id: '3',
-        name: 'Pour Over',
-        description: 'Single-origin beans brewed slowly to highlight unique flavor profiles.',
-        price: '£4.20',
-        category: 'brewed',
-        tags: ['Hot'],
+        name: 'House Cortado',
+        description: 'Espresso cut with an equal part of warm milk.',
+        price: 'PKR 650',
+        category: 'coffee',
+        image: '/images/coffee/featured-3.svg',
     },
     {
         id: '4',
-        name: 'Lavender Honey Latte',
-        description: 'Our signature espresso with house-made lavender syrup and local honey.',
-        price: '£4.80',
-        category: 'signature',
-        tags: ['Hot', 'Floral'],
+        name: 'Double Espresso',
+        description: 'A concentrated shot of our Italian-roast house blend.',
+        price: 'PKR 550',
+        category: 'coffee',
+        image: '/images/coffee/featured-1.svg',
     },
     {
         id: '5',
-        name: 'Iced Maple Pecan',
-        description: 'Cold brew shaken with maple syrup and toasted pecan notes.',
-        price: '£5.10',
-        category: 'seasonal',
-        tags: ['Iced'],
+        name: 'Iced Americano',
+        description: 'Chilled refreshing espresso, a summer classic.',
+        price: 'PKR 600',
+        category: 'coffee',
+        image: '/images/coffee/featured-2.svg',
     },
     {
         id: '6',
-        name: 'Almond Croissant',
-        description: 'Flaky, buttery pastry filled with sweet almond frangipane.',
-        price: '£3.80',
-        category: 'pastries',
-        tags: ['Vegetarian'],
+        name: 'Vanilla Bean Latte',
+        description: 'Komorebi-roast espresso, Madagascar vanilla pods.',
+        price: 'PKR 850',
+        category: 'coffee',
+        image: '/images/coffee/featured-3.svg',
     },
     {
         id: '7',
-        name: 'Vegan Avocado Toast',
-        description: 'Sourdough topped with smashed avocado, chili flakes, and lime.',
-        price: '£8.50',
+        name: 'Chamomile Honey',
+        description: 'Soothing chamomile infused with locally sourced wildflower honey.',
+        price: 'PKR 500',
+        category: 'tea',
+        image: '/images/coffee/featured-1.svg',
+    },
+    {
+        id: '8',
+        name: 'Iced Hibiscus Tonic',
+        description: 'Vibrant hibiscus petals steeped cold, topped with sparkling tonic water.',
+        price: 'PKR 650',
+        category: 'tea',
+        image: '/images/coffee/featured-2.svg',
+    },
+    {
+        id: '9',
+        name: 'Ceremonial Matcha',
+        description: 'Stone-ground Uji matcha whisked to a smooth, vibrant froth.',
+        price: 'PKR 900',
+        category: 'tea',
+        image: '/images/coffee/featured-3.svg',
+    },
+    {
+        id: '10',
+        name: 'Almond Croissant',
+        description: 'Flaky, buttery pastry filled with sweet almond frangipane.',
+        price: 'PKR 750',
         category: 'pastries',
-        tags: ['Vegan'],
-    }
+        image: '/images/coffee/featured-1.svg',
+    },
+    {
+        id: '11',
+        name: 'Pistachio Danish',
+        description: 'Laminated pastry with pistachio cream and crushed pistachios.',
+        price: 'PKR 800',
+        category: 'pastries',
+        image: '/images/coffee/featured-2.svg',
+    },
+    {
+        id: '12',
+        name: 'Sourdough Bread',
+        description: 'Naturally fermented for 48 hours, crusty and aromatic.',
+        price: 'PKR 550',
+        category: 'pastries',
+        image: '/images/coffee/featured-3.svg',
+    },
 ];
+
+export const testimonial: Testimonial = {
+    id: 't1',
+    quote: 'The perfect blend of high-end art and the comfort of my own living room. The Lavender Oat Latte is a spiritual experience.',
+    name: 'Bero Richards',
+    title: 'Local Regular & Artist',
+};
