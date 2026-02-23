@@ -1,34 +1,25 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from '@/components/coffee/Hero';
-import CategoryTabs from '@/components/coffee/CategoryTabs';
 import FeaturedSpecials from '@/components/coffee/FeaturedSpecials';
-import MenuSection from '@/components/coffee/MenuSection';
-import PhilosophySection from '@/components/coffee/PhilosophySection';
+import CollectionSection from '@/components/coffee/MenuSection';
+import TestimonialSection from '@/components/coffee/PhilosophySection';
 
 export default function CoffeePage() {
-    const [activeCategory, setActiveCategory] = useState('all');
-
     return (
         <main className="min-h-screen bg-bg">
-            {/* Hero Section */}
+            {/* Hero Section – unchanged */}
             <Hero />
 
-            {/* Sticky Navigation Tabs */}
-            <CategoryTabs
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-            />
-
-            {/* Featured Specials Section */}
+            {/* Today's Specials – horizontal card carousel */}
             <FeaturedSpecials />
 
-            {/* Full Menu Section */}
-            <MenuSection activeCategory={activeCategory} />
+            {/* The Collection – filter tabs + circular image grid */}
+            <CollectionSection />
 
-            {/* Philosophy Section */}
-            <PhilosophySection />
+            {/* Testimonial / Quote */}
+            <TestimonialSection />
         </main>
     );
 }
