@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <CafeSpecials />
       <FeaturedArt />
       <PopularPlants />
-      <CafeSpecials />
       <CTASection />
     </main>
   );
