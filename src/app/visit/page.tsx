@@ -95,7 +95,7 @@ export default function VisitPage() {
                 <Container>
                     <div className="mx-auto max-w-3xl text-center mb-16">
                         <h2 className="mb-4 font-heading text-3xl font-bold tracking-tight md:text-4xl text-text-main">
-                            Why Art + Plants + Coffee?
+                            Why Coffee + Art + Plants?
                         </h2>
                         <p className="text-text-light text-lg">
                             The hybrid concept designed to inspire your daily ritual through three core pillars of aesthetic living.
