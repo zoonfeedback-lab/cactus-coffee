@@ -247,23 +247,23 @@ export default function VisitPage() {
             <section className="mb-12">
                 <div className="mb-8 text-center">
                     <h2 className="font-heading text-2xl font-bold tracking-tight">Follow the journey</h2>
-                    <p className="text-text-light">@art_plants_coffee</p>
+                    <p className="text-text-light" >@cactuscoffee01</p>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 bg-surface">
-                    <a href="#" className="group relative aspect-square overflow-hidden bg-black">
+                    <a href="https://www.instagram.com/cactuscoffee01/" className="group relative aspect-square overflow-hidden bg-black">
                         <Image src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf" alt="Coffee Pour" fill className="object-cover opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" sizes="(max-width: 768px) 50vw, 20vw" />
                     </a>
-                    <a href="#" className="group relative aspect-square overflow-hidden bg-black">
+                    <a href="https://www.instagram.com/cactuscoffee01/" className="group relative aspect-square overflow-hidden bg-black">
                         <Image src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Plant closeup" fill className="object-cover opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" sizes="(max-width: 768px) 50vw, 20vw" />
                     </a>
-                    <a href="#" className="group relative aspect-square overflow-hidden bg-black">
+                    <a href="https://www.instagram.com/cactuscoffee01/" className="group relative aspect-square overflow-hidden bg-black">
                         <Image src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Latte Art" fill className="object-cover opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" sizes="(max-width: 768px) 50vw, 20vw" />
                     </a>
-                    <a href="#" className="group relative aspect-square overflow-hidden bg-black hidden md:block">
+                    <a href="https://www.instagram.com/cactuscoffee01/" className="group relative aspect-square overflow-hidden bg-black hidden md:block">
                         <Image src="https://images.unsplash.com/photo-1544816155-12df9643f363" alt="Artist painting" fill className="object-cover opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" sizes="(max-width: 768px) 50vw, 20vw" />
                     </a>
-                    <a href="#" className="group relative aspect-square overflow-hidden bg-black hidden lg:block">
+                    <a href="https://www.instagram.com/cactuscoffee01/" className="group relative aspect-square overflow-hidden bg-black hidden lg:block">
                         <Image src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65" alt="Store Front" fill className="object-cover opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" sizes="(max-width: 768px) 50vw, 20vw" />
                     </a>
                 </div>
