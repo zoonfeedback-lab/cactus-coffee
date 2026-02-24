@@ -52,18 +52,6 @@ export default function Footer() {
                             A curated space for creativity, greenery, and handcrafted brews.
                             Come explore the harmony of art and nature.
                         </p>
-                        <div className="flex gap-3">
-                            {socialLinks.map(({ icon: Icon, href, label }) => (
-                                <a
-                                    key={label}
-                                    href={href}
-                                    aria-label={label}
-                                    className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/70 transition-all duration-200 hover:bg-accent/30 hover:text-white"
-                                >
-                                    <Icon className="h-4 w-4" />
-                                </a>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Quick Links */}
@@ -175,11 +163,23 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom bar */}
-                <div className="border-t border-white/10 py-6">
+                <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-center text-xs text-white/40">
                         &copy; {new Date().getFullYear()} Cactus Coffee. All
                         rights reserved.
                     </p>
+                    <div className="flex gap-3">
+                        {socialLinks.map(({ icon: Icon, href, label }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                aria-label={label}
+                                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/70 transition-all duration-200 hover:bg-accent/30 hover:text-white"
+                            >
+                                <Icon className="h-4 w-4" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </Container>
         </footer>
