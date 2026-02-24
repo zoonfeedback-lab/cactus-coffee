@@ -25,7 +25,7 @@ export default function ExhibitionHero() {
                 <div className="mx-auto max-w-3xl">
                     <AnimateOnScroll animation="fade-down" duration={800}>
                         <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                            <span className="italic text-[#d4a843]">Curated Art</span>
+                            <span className="italic text-[#A8C5A0]">Curated</span> <span className="italic text-white">Art</span>
                         </h1>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade" delay={300} duration={800}>
@@ -37,7 +37,7 @@ export default function ExhibitionHero() {
                     <AnimateOnScroll animation="fade-up" delay={600} duration={800}>
                         <Link
                             href="#gallery"
-                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#d4a843] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
+                            className="relative inline-block overflow-hidden rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition-all duration-500 before:absolute before:inset-0 before:-translate-x-full before:bg-[#A8C5A0] before:transition-transform before:duration-500 hover:text-white hover:before:translate-x-0"
                         >
                             <span className="relative z-10">Explore Collection</span>
                         </Link>
@@ -49,7 +49,7 @@ export default function ExhibitionHero() {
             <a
                 href="#gallery"
                 aria-label="Scroll to gallery"
-                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/50 transition-colors duration-300 hover:text-[#d4a843]"
+                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/50 transition-colors duration-300 hover:text-[#A8C5A0]"
             >
                 <ChevronDown className="h-7 w-7" />
             </a>
