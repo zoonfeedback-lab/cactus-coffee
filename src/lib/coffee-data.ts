@@ -2,6 +2,7 @@
 
 export interface MenuItem {
     name: string;
+    description: string;
     single: number | null;
     double: number | null;
     image: string;
@@ -30,15 +31,15 @@ export const menuCategories: MenuCategory[] = [
         id: 'mains',
         title: 'Mainess',
         items: [
-            { name: 'Espresso', single: 390, double: 590, image: img },
-            { name: 'Americano / Long Black', single: 450, double: 650, image: img },
-            { name: 'Cortado', single: 650, double: 850, image: img },
-            { name: 'Cappuccino', single: 550, double: 750, image: img },
-            { name: 'Café Latte', single: 550, double: 750, image: img },
-            { name: 'Caramel Macchiato', single: 650, double: 850, image: img },
-            { name: 'Spanish Latte', single: 650, double: 850, image: img },
-            { name: 'Flavoured Latte', single: 650, double: 850, image: img },
-            { name: 'Customized Coffee', single: null, double: null, image: img, note: 'Variable' },
+            { name: 'Espresso', description: 'Bold and intense shot pulled to perfection from our house-roasted beans.', single: 390, double: 590, image: img },
+            { name: 'Americano / Long Black', description: 'Rich espresso lengthened with hot water for a smooth, full-bodied cup.', single: 450, double: 650, image: img },
+            { name: 'Cortado', description: 'Equal parts espresso and steamed milk — balanced, silky, and strong.', single: 650, double: 850, image: img },
+            { name: 'Cappuccino', description: 'Classic Italian favorite with velvety micro-foam and a dusting of cocoa.', single: 550, double: 750, image: img },
+            { name: 'Café Latte', description: 'Smooth espresso blended with steamed milk for a creamy, comforting drink.', single: 550, double: 750, image: img },
+            { name: 'Caramel Macchiato', description: 'Layers of vanilla, steamed milk, espresso, and rich caramel drizzle.', single: 650, double: 850, image: img },
+            { name: 'Spanish Latte', description: 'Sweet condensed milk meets bold espresso — indulgent and irresistible.', single: 650, double: 850, image: img },
+            { name: 'Flavoured Latte', description: 'Choose your favourite syrup — vanilla, hazelnut, or seasonal specials.', single: 650, double: 850, image: img },
+            { name: 'Customized Coffee', description: 'Your imagination, our craft. Tell us what you crave and we\'ll make it.', single: null, double: null, image: img, note: 'Variable' },
         ],
     },
 ];
