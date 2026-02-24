@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 const reviews = [
     {
-        name: "Ayesha Malik",
+        name: "Amjad Iqbal",
         role: "Local Artist",
         content: "Cactus Coffee is my absolute favorite spot in Abbottabad. The vibrant plants and incredible art create such an inspiring atmosphere. And their V60 pour over is unmatched!",
         rating: 5,
@@ -15,7 +15,7 @@ const reviews = [
         rating: 5,
     },
     {
-        name: "Fatima Khan",
+        name: "Waqas Tariq",
         role: "Plant Enthusiast",
         content: "Not only is the coffee fantastic, but their plant selection is amazing! I bought a beautiful Monstera here and got great care tips from the barista. A truly unique cafe.",
         rating: 5,
