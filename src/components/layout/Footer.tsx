@@ -23,6 +23,21 @@ const socialLinks = [
     { icon: Twitter, href: '#', label: 'Twitter' },
 ] as const;
 
+const additionalInfo = [
+    { title: "Service Options", items: ["Onsite services", "Dine-in"] },
+    { title: "Highlights", items: ["Fireplace", "Great coffee", "Great dessert", "Great tea selection", "Live music", "Live performances", "Rooftop seating", "Sports"] },
+    { title: "Popular For", items: ["Solo dining", "Good for working on laptop"] },
+    { title: "Offerings", items: ["Coffee", "Organic dishes", "Prepared foods", "Private dining room", "Small plates", "Vegan options", "Vegetarian options"] },
+    { title: "Dining Options", items: ["Brunch", "Dessert", "Seating", "Table service"] },
+    { title: "Amenities", items: ["Gender-neutral restroom", "Restroom", "Wi-Fi", "Free Wi-Fi"] },
+    { title: "Atmosphere", items: ["Casual", "Cozy", "Quiet", "Trendy"] },
+    { title: "Crowd", items: ["College students", "Family-friendly", "Groups"] },
+    { title: "Planning", items: ["Accepts reservations"] },
+    { title: "Payments", items: ["Credit cards", "Debit cards", "NFC mobile payments"] },
+    { title: "Children", items: ["Good for kids", "High chairs"] },
+    { title: "Parking", items: ["Free parking lot", "Free street parking", "On-site parking"] }
+];
+
 export default function Footer() {
     return (
         <footer className="bg-primary-dark text-white/80">
@@ -111,16 +126,38 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
+                </div>
 
-                    {/* Newsletter */}
-                    <div className="sm:col-span-2 lg:col-span-1">
+                {/* Additional Info */}
+                <div className="border-t border-white/10 py-10 mt-8 lg:mt-0">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-6 gap-y-8">
+                        {additionalInfo.map((section) => (
+                            <div key={section.title}>
+                                <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/80">
+                                    {section.title}
+                                </h4>
+                                <ul className="space-y-1.5">
+                                    {section.items.map((item, idx) => (
+                                        <li key={idx} className="text-xs text-white/50">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Newsletter */}
+                <div className="border-t border-white/10 py-10 flex flex-col items-center text-center">
+                    <div className="w-full max-w-md">
                         <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
                             Join the Brew
                         </h4>
                         <p className="mb-4 text-sm text-white/60">
                             Get updates on new seasonal roasts and art exhibitions.
                         </p>
-                        <form className="space-y-3" aria-label="Newsletter signup">
+                        <form className="space-y-3 text-left" aria-label="Newsletter signup">
                             <div className="relative">
                                 <input
                                     type="email"
