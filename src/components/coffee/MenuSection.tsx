@@ -17,9 +17,9 @@ export default function FullMenu() {
                         <div className="mx-auto mt-2 h-0.5 w-16 bg-primary" />
                     </div>
                     {/* Single / Double legend */}
-                    <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-text-light">
+                    {/* <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-text-light">
                         Single &nbsp;·&nbsp; Double
-                    </p>
+                    </p> */}
                 </AnimateOnScroll>
 
                 {/* Accordion menu grid */}
