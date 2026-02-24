@@ -10,7 +10,7 @@ export default function FullMenu() {
             <Container>
                 {/* Section heading */}
                 <AnimateOnScroll animation="fade-up">
-                    <div className="mb-4 text-center">
+                    <div className="mb-12 text-center">
                         <h2 className="font-heading text-2xl font-bold text-text-main sm:text-3xl lg:text-4xl">
                             {menuCategories[0].title}
                         </h2>

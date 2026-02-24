@@ -13,13 +13,13 @@ const reviews = [
         name: "Zain Ahmed",
         role: "Student",
         content: "A beautiful hidden gem. The aesthetic is so calming and the staff is incredibly friendly. I love coming here to study and enjoy a piece of their chocolate cake.",
-        rating: 5,
+        rating: 4,
     },
     {
         name: "Waqas Tariq",
         role: "Plant Enthusiast",
         content: "Not only is the coffee fantastic, but their plant selection is amazing! I bought a beautiful Monstera here and got great care tips from the barista. A truly unique cafe.",
-        rating: 5,
+        rating: 3,
     }
 ];
 
@@ -44,18 +44,18 @@ export default function ReviewsSection() {
                             <div
                                 className="flex flex-col rounded-2xl border border-border bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-accent/30"
                             >
-                                <div className="mb-6 flex gap-1">
+                                <div className="mb-4 flex gap-1">
                                     {[...Array(review.rating)].map((_, i) => (
                                         <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                                     ))}
                                 </div>
-                                <blockquote className="mb-8 flex-grow text-text-light leading-relaxed">
-                                    "{review.content}"
-                                </blockquote>
-                                <div className="mt-auto">
+                                <div className="mb-6">
                                     <div className="font-heading font-bold text-text-main text-lg">{review.name}</div>
                                     <div className="text-sm text-text-light">{review.role}</div>
                                 </div>
+                                <blockquote className="flex-grow text-text-light leading-relaxed">
+                                    "{review.content}"
+                                </blockquote>
                             </div>
                         </AnimateOnScroll>
                     ))}
