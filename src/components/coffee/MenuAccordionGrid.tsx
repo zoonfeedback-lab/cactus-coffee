@@ -17,25 +17,38 @@ function chunk<T>(arr: T[], size: number): T[][] {
 
 /* ── per-column accordion ── */
 
-function AccordionColumn({ items }: { items: MenuItem[] }) {
-    const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+interface AccordionColumnProps {
+    items: MenuItem[];
+    columnIndex: number;
+    expandedId: string | null;
+    onToggle: (id: string) => void;
+}
 
-    const toggle = (idx: number) =>
-        setExpandedIdx((prev) => (prev === idx ? null : idx));
+function AccordionColumn({ items, columnIndex, expandedId, onToggle }: AccordionColumnProps) {
+    // keep a min-height so the group doesn't shrink when items collapse
+    // fixed height = collapsed size of all items, so expanding never
+    // pushes other column groups
+    const colH = items.length * 104;
 
     return (
-        <div className="flex h-full flex-col">
+        <div className="flex flex-col overflow-hidden" style={{ height: colH }}>
             {items.map((item, idx) => {
-                const isExpanded = expandedIdx === idx;
-                const isHidden = expandedIdx !== null && !isExpanded;
+                const itemId = `${columnIndex}-${idx}`;
+                const isExpanded = expandedId === itemId;
+
+                // hide siblings in the same group when one is expanded
+                const isHiddenInThisColumn =
+                    expandedId !== null &&
+                    expandedId.startsWith(`${columnIndex}-`) &&
+                    !isExpanded;
 
                 return (
                     <div
                         key={item.name}
                         className={`overflow-hidden rounded-2xl border transition-all duration-500 ease-in-out ${isExpanded
-                            ? 'flex-1 border-primary/40 bg-white shadow-lg'
+                            ? 'flex-1 flex flex-col border-primary/40 bg-white shadow-lg'
                             : 'border-border bg-white hover:border-primary/30 hover:shadow-md'
-                            } ${isHidden
+                            } ${isHiddenInThisColumn
                                 ? 'mb-0 max-h-0 scale-95 border-transparent opacity-0'
                                 : isExpanded
                                     ? 'mb-4 opacity-100'
@@ -43,13 +56,13 @@ function AccordionColumn({ items }: { items: MenuItem[] }) {
                             }`}
                         style={{
                             transitionProperty:
-                                'max-height, opacity, transform, border-color, box-shadow, flex, margin-bottom',
+                                'max-height, opacity, transform, border-color, box-shadow, margin-bottom',
                         }}
                     >
                         {/* Compact / clickable header */}
                         <button
                             type="button"
-                            onClick={() => toggle(idx)}
+                            onClick={() => onToggle(itemId)}
                             className="group flex w-full items-center gap-4 p-4 text-left"
                         >
                             {/* Circular image */}
@@ -115,7 +128,7 @@ function AccordionColumn({ items }: { items: MenuItem[] }) {
                         {/* Expanded details */}
                         <div
                             className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded
-                                ? 'max-h-80 opacity-100'
+                                ? 'flex-1 opacity-100'
                                 : 'max-h-0 opacity-0'
                                 }`}
                         >
@@ -170,13 +183,24 @@ export default function MenuAccordionGrid({
     items,
     columns = 3,
 }: MenuAccordionGridProps) {
+    const [expandedId, setExpandedId] = useState<string | null>(null);
+
+    const handleToggle = (id: string) =>
+        setExpandedId((prev) => (prev === id ? null : id));
+
     const perColumn = Math.ceil(items.length / columns);
     const cols = chunk(items, perColumn);
 
     return (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cols.map((colItems, ci) => (
-                <AccordionColumn key={ci} items={colItems} />
+                <AccordionColumn
+                    key={ci}
+                    items={colItems}
+                    columnIndex={ci}
+                    expandedId={expandedId}
+                    onToggle={handleToggle}
+                />
             ))}
         </div>
     );
