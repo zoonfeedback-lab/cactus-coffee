@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Twitter, MapPin, Mail, Phone } from 'lucide-react';
+import { Instagram, Facebook, Twitter, MapPin, Mail, Phone, Check } from 'lucide-react';
 import Container from '@/components/ui/Container';
 
 const quickLinks = [
@@ -103,7 +103,7 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                                 <span className="text-sm text-white/60">
-                                    Sardar Plaza, PMA Link Rd, Jinnahabad Abbottabad, 22010
+                                    PMA Link Rd, Jinnahabad Abbottabad, 22010, Pakistan
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">
@@ -126,8 +126,9 @@ export default function Footer() {
                                 </h4>
                                 <ul className="space-y-1.5">
                                     {section.items.map((item, idx) => (
-                                        <li key={idx} className="text-sm text-white/50">
-                                            {item}
+                                        <li key={idx} className="flex items-start gap-2 text-sm text-white/50">
+                                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent/80" />
+                                            <span>{item}</span>
                                         </li>
                                     ))}
                                 </ul>

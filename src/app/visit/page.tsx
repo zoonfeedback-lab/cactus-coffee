@@ -154,7 +154,7 @@ export default function VisitPage() {
                                     Visit Our Sanctuary
                                 </h2>
                                 <p className="mb-12 text-lg text-text-light">
-                                    We are located in Sardar Plaza, Jinnahabad, Abbottabad, an easy walk from the main square.
+                                    We are located in Jinnahabad, Abbottabad, an easy walk from the main square.
                                 </p>
 
                                 <div className="space-y-8">
