@@ -13,13 +13,13 @@ const reviews = [
         name: "Rana Nofil",
         role: "1 review",
         content: "Never had coffee this smooth , flavourfull and pure anywhere in Pakistan . Coffee speacilisits !! The atmosphere is cozy , melodious and full of art , having canvases for you to paint and later displayed , having pets for a complete natural cohesive environment .",
-        rating: 5,
+        rating: 4,
     },
     {
         name: "Musafir",
         role: "2 reviews · 1 photo",
         content: "Cactus Coffee is a great spot in Abbottabad  for coffee lovers who enjoy a calm and welcoming atmosphere. The coffee is rich, smooth, and well balanced made with quality beans that you can truly taste in every sip. The café has a cozy vibe, perfect for relaxing, catching up with friends, or spending some quiet time alone.",
-        rating: 5,
+        rating: 3,
     }
 ];
 
