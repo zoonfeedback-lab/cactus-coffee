@@ -202,7 +202,7 @@ export default function VisitPage() {
                                         <div>
                                             <h3 className="font-bold text-text-main">Contact</h3>
                                             <div className="mt-1 flex flex-col space-y-1 text-text-light">
-                                                <a href="mailto:hello@cactuscoffee.com" className="hover:text-primary transition-colors">hello@cactuscoffee.com</a>
+                                                <a href="mailto:hello@cactuscoffee.com" className="hover:text-primary transition-colors">cactuscoffee@gmail.com</a>
                                                 <a href="tel:+1234567890" className="hover:text-primary transition-colors">(+92) 3104557777</a>
                                             </div>
                                         </div>
