@@ -3,9 +3,12 @@
 export interface GalleryItem {
     id: string;
     title: string;
+    artist: string;
+    description: string;
     category: string;
     image: string;
     size: 'sm' | 'md' | 'lg';
+    featured?: boolean;
 }
 
 export interface Category {
@@ -33,10 +36,37 @@ export const categories: Category[] = [
     { id: 'cat-botanical', label: 'Botanical', slug: 'botanical' },
 ];
 
-const img = '/images/exhibition/arts-image.jfif';
+const images = [
+    '/images/exhibition/arts-image.jfif',
+    '/images/exhibition/img-2.jfif',
+    '/images/exhibition/img-3.jfif',
+    '/images/exhibition/img-4.jfif',
+    '/images/exhibition/img-5.jfif',
+];
 
-const sizes: ('sm' | 'md' | 'lg')[] = ['sm', 'md', 'lg', 'md', 'sm', 'lg', 'md', 'sm', 'lg', 'sm'];
 const cats = ['painting', 'botanical', 'sculpture', 'abstract', 'digital-art'];
+
+const artists = [
+    'Lena Hartwood', 'Omar Khayam', 'Sophia Veil', 'Kael Ashburn',
+    'Mira Tanaka', 'Elias Crane', 'Nadia Solstice', 'Rune Hallberg',
+    'Yara Montoya', 'Felix Noir', 'Isla Verdant', 'Nico Ferro',
+];
+
+const descriptions = [
+    'Where light bends through ancient canopy, silence becomes visible.',
+    'A meditation on stillness and the breath between two seasons.',
+    'Organic matter dissolving into rhythm and pure gesture.',
+    'The tension between order and the chaos hiding just beneath.',
+    'Petals pressed against glass — nature reaching for something more.',
+    'Decomposition reimagined as an act of beauty and renewal.',
+    'The last embers of daylight caught in pigment and patience.',
+    'Mathematical harmony found in the veins of a single leaf.',
+    'That fragile hour when the sky forgets whether to sleep or wake.',
+    'Stone remembering the river that carved it into being.',
+    'Salt air and the erosion of certainty, rendered in soft focus.',
+    'Moss reclaiming what was never truly ours to begin with.',
+];
+
 const titles = [
     'Golden Canopy', 'Misty Pines', 'Organic Flow', 'Dark Geometry',
     'Verdant Bloom', 'Forest Floor', 'Ember Glow', 'Sacred Geometry',
@@ -49,19 +79,24 @@ const titles = [
     'Dew Drop', 'Echo Chamber', 'Wild Grain', 'Sunken City',
 ];
 
+const sizes: ('sm' | 'md' | 'lg')[] = ['sm', 'md', 'lg', 'md', 'sm', 'lg', 'md', 'sm', 'lg', 'sm'];
+
 export const galleryItems: GalleryItem[] = titles.map((title, i) => ({
     id: `gal-${i + 1}`,
     title,
+    artist: artists[i % artists.length],
+    description: descriptions[i % descriptions.length],
     category: cats[i % cats.length],
-    image: img,
+    image: images[i % images.length],
     size: sizes[i % sizes.length],
+    featured: i === 0,
 }));
 
 export const curator: Curator = {
     name: 'Isabella Moretti',
     role: 'Head of Curation',
     bio: 'This exhibition explores the symbiotic relationship between urban life and the natural world. Each piece has been carefully selected to provoke a sense of calm reflection, much like the experience of walking through a sun-dappled forest floor. We invite you to lose yourself in the textures of the brush and the silence of the pixels.',
-    image: img,
+    image: images[0],
     quote:
         'Art is not what you see, but what you make others see. In this collection, we focus on the invisible threads that connect our breath to the trees.',
 };
