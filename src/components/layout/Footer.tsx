@@ -89,8 +89,8 @@ export default function Footer() {
                             Opening Hours
                         </h4>
                         <ul className="mb-6 space-y-1 text-sm text-white/60">
-                            <li>Mon - Fri: 08:00 - 19:00</li>
-                            <li>Sat - Sun: 09:00 - 20:00</li>
+                            <li>Mon&ndash;Fri: 10 am &ndash; 11:30 pm</li>
+                            <li>Sat&ndash;Sun: 10 am &ndash; 1 am</li>
                         </ul>
                         <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
                             Contact
@@ -99,8 +99,14 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                                 <span className="text-sm text-white/60">
-                                    Mandian, Abbottabad, KPK, Pakistan
+                                    Sardar Plaza, PMA Link Rd, Jinnahabad Abbottabad, 22010
                                 </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                                <a href="tel:03104557777" className="text-sm text-white/60 transition-colors hover:text-accent-light">
+                                    0310 4557777
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -119,10 +125,11 @@ export default function Footer() {
                                     type="email"
                                     placeholder="Your email address"
                                     aria-label="Email address"
+                                    suppressHydrationWarning
                                     className="w-full bg-white/5 border border-white/10 rounded-full py-2.5 px-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-accent/50"
                                 />
                             </div>
-                            <button type="submit" className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-2.5 rounded-full transition-colors text-sm">
+                            <button type="submit" suppressHydrationWarning className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-2.5 rounded-full transition-colors text-sm">
                                 Subscribe
                             </button>
                         </form>
