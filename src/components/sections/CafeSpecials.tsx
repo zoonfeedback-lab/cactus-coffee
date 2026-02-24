@@ -15,7 +15,7 @@ export default function CafeSpecials() {
                 {/* Centered heading + subtitle */}
                 <AnimateOnScroll animation="fade-up">
                     <SectionTitle
-                        title="Café Specials"
+                        title="Café"
                         subtitle="Handcrafted beverages made with the finest ethically-sourced ingredients."
                         align="center"
                     />
