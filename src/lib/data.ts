@@ -38,7 +38,7 @@ export const artItems: ArtItem[] = [
     {
         id: 'art-1',
         title: 'Curated Art',
-        image: '/images/art-1.svg',
+        image: '/images/exhibition/arts-image.jfif',
         category: 'Abstract',
         description:
             'Immerse yourself in emerging contemporary artistic expression — always designed with a unique cultural workspace.',
@@ -46,7 +46,7 @@ export const artItems: ArtItem[] = [
     {
         id: 'art-2',
         title: 'Urban Jungle',
-        image: '/images/art-2.svg',
+        image: '/images/exhibition/img-2.jfif',
         category: 'Sculpture',
         description:
             'Hand-selected botanical sculptures and conceptual nature art — a unique, calming sanctuary.',
@@ -54,7 +54,7 @@ export const artItems: ArtItem[] = [
     {
         id: 'art-3',
         title: 'Handcrafted Brews',
-        image: '/images/art-3.svg',
+        image: '/images/exhibition/img-3.jfif',
         category: 'Photography',
         description:
             'Explore artisan-crafted specialty brews, prepared by skilled baristas and served in curated environments.',
