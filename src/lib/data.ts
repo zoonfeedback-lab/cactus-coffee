@@ -89,7 +89,7 @@ export const plants: Plant[] = [
     {
         id: 'plant-1',
         name: 'Monstera Deliciosa',
-        image: '/images/plant-1.svg',
+        image: '/images/plants/img-2.jfif',
         price: 45,
         rating: 5,
         category: 'Indoor',
@@ -97,7 +97,7 @@ export const plants: Plant[] = [
     {
         id: 'plant-2',
         name: 'Fiddle Leaf Fig',
-        image: '/images/plant-2.svg',
+        image: '/images/plants/img-3.jfif',
         price: 65,
         rating: 4,
         category: 'Indoor',
@@ -105,7 +105,7 @@ export const plants: Plant[] = [
     {
         id: 'plant-3',
         name: 'Snake Plant Zeylanica',
-        image: '/images/plant-3.svg',
+        image: '/images/plants/img-4.jfif',
         price: 30,
         rating: 5,
         category: 'Low Light',
