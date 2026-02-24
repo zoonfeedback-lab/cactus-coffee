@@ -4,22 +4,22 @@ import { Star } from 'lucide-react';
 
 const reviews = [
     {
-        name: "Ibrahim Shafqat Naveed",
-        role: "Local Artist",
-        content: "Cactus Coffee is my absolute favorite spot in Abbottabad. The vibrant plants and incredible art create such an inspiring atmosphere. And their V60 pour over is unmatched!",
+        name: "Rabee Habib",
+        role: "1 review · 6 photos",
+        content: "10/10. The best coffee bar in town. After living in Abottabad for an year and half and trying every coffee place I could, this is by far the best one I've come across. It's especially a good spot for studying/working. The cafe has a beautiful art gallery and decor. Good customer service and an overall pleasant experience.",
         rating: 5,
     },
     {
-        name: "Zain Ahmed",
-        role: "Student",
-        content: "A beautiful hidden gem. The aesthetic is so calming and the staff is incredibly friendly. I love coming here to study and enjoy a piece of their chocolate cake.",
-        rating: 4,
+        name: "Rana Nofil",
+        role: "1 review",
+        content: "Never had coffee this smooth , flavourfull and pure anywhere in Pakistan . Coffee speacilisits !! The atmosphere is cozy , melodious and full of art , having canvases for you to paint and later displayed , having pets for a complete natural cohesive environment .",
+        rating: 5,
     },
     {
-        name: "Waqas Tariq",
-        role: "Plant Enthusiast",
-        content: "Not only is the coffee fantastic, but their plant selection is amazing! I bought a beautiful Monstera here and got great care tips from the barista. A truly unique cafe.",
-        rating: 3,
+        name: "Musafir",
+        role: "2 reviews · 1 photo",
+        content: "Cactus Coffee is a great spot in Abbottabad  for coffee lovers who enjoy a calm and welcoming atmosphere. The coffee is rich, smooth, and well balanced made with quality beans that you can truly taste in every sip. The café has a cozy vibe, perfect for relaxing, catching up with friends, or spending some quiet time alone.",
+        rating: 5,
     }
 ];
 
