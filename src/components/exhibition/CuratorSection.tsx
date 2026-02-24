@@ -16,7 +16,7 @@ export default function CuratorSection({ curator: c }: CuratorSectionProps) {
                     {/* Left — Curator bio */}
                     <AnimateOnScroll animation="fade-right">
                         <div>
-                            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-[#d4a843]">
+                            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-[#A8C5A0]">
                                 The Curator&apos;s Note
                             </span>
                             <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-text-main sm:text-4xl">

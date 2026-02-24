@@ -133,12 +133,12 @@ export default function Footer() {
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-6 gap-y-8">
                         {additionalInfo.map((section) => (
                             <div key={section.title}>
-                                <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-white/80">
+                                <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/80">
                                     {section.title}
                                 </h4>
                                 <ul className="space-y-1.5">
                                     {section.items.map((item, idx) => (
-                                        <li key={idx} className="text-xs text-white/50">
+                                        <li key={idx} className="text-sm text-white/50">
                                             {item}
                                         </li>
                                     ))}
