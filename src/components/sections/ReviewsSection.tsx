@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 const reviews = [
     {
-        name: "Amjad Iqbal",
+        name: "Ibrahim Shafqat Naveed",
         role: "Local Artist",
         content: "Cactus Coffee is my absolute favorite spot in Abbottabad. The vibrant plants and incredible art create such an inspiring atmosphere. And their V60 pour over is unmatched!",
         rating: 5,

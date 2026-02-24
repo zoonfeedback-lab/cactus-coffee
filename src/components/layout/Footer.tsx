@@ -109,7 +109,7 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                                 <a href="tel:03104557777" className="text-sm text-white/60 transition-colors hover:text-accent-light">
-                                    0310 4557777
+                                    (+92) 310 4557777
                                 </a>
                             </li>
                         </ul>
