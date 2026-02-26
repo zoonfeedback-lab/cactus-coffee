@@ -25,13 +25,13 @@ export default function ExhibitionHero() {
                 <div className="mx-auto max-w-3xl">
                     <AnimateOnScroll animation="fade-down" duration={800}>
                         <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                            <span className="italic text-[#A8C5A0]">Curated</span> <span className="italic text-white">Art</span>
+                            <span className="italic text-[#A8C5A0]">Nigarkhana</span> <span className="italic text-white">Art Gallery</span>
                         </h1>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade" delay={300} duration={800}>
                         <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                            An immersive digital journey through our latest forest-inspired collection,
-                            exploring the intersection of organic life and abstract thought.
+                            Managed by Sir Khalid Khayan, showcasing curated art
+                            exhibitions and creative masterpieces.
                         </p>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade-up" delay={600} duration={800}>

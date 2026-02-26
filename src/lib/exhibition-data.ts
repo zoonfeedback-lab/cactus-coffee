@@ -8,6 +8,7 @@ export interface GalleryItem {
     category: string;
     image: string;
     size: 'sm' | 'md' | 'lg';
+    price: number;
     featured?: boolean;
 }
 
@@ -81,6 +82,14 @@ const titles = [
 
 const sizes: ('sm' | 'md' | 'lg')[] = ['sm', 'md', 'lg', 'md', 'sm', 'lg', 'md', 'sm', 'lg', 'sm'];
 
+const prices = [
+    15000, 25000, 18000, 32000, 12000, 45000, 22000, 28000,
+    35000, 19000, 40000, 16000, 27000, 38000, 21000, 50000,
+    14000, 33000, 26000, 42000, 17000, 30000, 24000, 36000,
+    20000, 48000, 13000, 29000, 39000, 23000, 31000, 44000,
+    11000, 37000, 15500, 41000,
+];
+
 export const galleryItems: GalleryItem[] = titles.map((title, i) => ({
     id: `gal-${i + 1}`,
     title,
@@ -89,6 +98,7 @@ export const galleryItems: GalleryItem[] = titles.map((title, i) => ({
     category: cats[i % cats.length],
     image: images[i % images.length],
     size: sizes[i % sizes.length],
+    price: prices[i % prices.length],
     featured: i === 0,
 }));
 
