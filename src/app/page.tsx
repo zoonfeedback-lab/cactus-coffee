@@ -3,6 +3,9 @@ import HeroSection from '@/components/sections/HeroSection';
 import FeaturedArt from '@/components/sections/FeaturedArt';
 import PopularPlants from '@/components/sections/PopularPlants';
 import CafeSpecials from '@/components/sections/CafeSpecials';
+import UpcomingEvents from '@/components/sections/UpcomingEvents';
+import PastWorkshops from '@/components/sections/PastWorkshops';
+import LatestBlogs from '@/components/sections/LatestBlogs';
 import ReviewsSection from '@/components/sections/ReviewsSection';
 import CTASection from '@/components/sections/CTASection';
 
@@ -19,6 +22,9 @@ export default function Home() {
       <CafeSpecials />
       <FeaturedArt />
       <PopularPlants />
+      <UpcomingEvents />
+      <PastWorkshops />
+      <LatestBlogs />
       <ReviewsSection />
       <CTASection />
     </main>
