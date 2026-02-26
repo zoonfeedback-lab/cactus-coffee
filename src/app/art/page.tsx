@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ExhibitionHero from '@/components/exhibition/Hero';
+import ArtSubNav from '@/components/layout/ArtSubNav';
 import FeaturedArtwork from '@/components/exhibition/FeaturedArtwork';
 import EditorialGallery from '@/components/exhibition/EditorialGallery';
 import CuratorSection from '@/components/exhibition/CuratorSection';
@@ -22,10 +23,8 @@ export default function ExhibitionPage() {
         <main className="bg-white">
             <ExhibitionHero />
 
-            {/* Subtle divider — hero ➜ featured */}
-            <div className="flex justify-center">
-                <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-border to-transparent" />
-            </div>
+            <ArtSubNav />
+
 
             <FeaturedArtwork item={featuredItem} />
 
