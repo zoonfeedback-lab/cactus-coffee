@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 const artTabs = [
     { label: 'Gallery', href: '/art' },
     { label: 'Exhibitions', href: '/art/exhibitions' },
+    { label: 'Classes', href: '/art/classes' },
 ];
 
 export default function ArtSubNav() {
@@ -27,16 +28,16 @@ export default function ArtSubNav() {
                         <Link
                             href={tab.href}
                             className={`relative block px-6 py-4 text-sm font-semibold tracking-wide transition-colors duration-200 ${isActive(tab.href)
-                                    ? 'text-primary'
-                                    : 'text-text-light hover:text-text-main'
+                                ? 'text-primary'
+                                : 'text-text-light hover:text-text-main'
                                 }`}
                         >
                             {tab.label}
                             {/* Active underline */}
                             <span
                                 className={`absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-primary transition-all duration-300 ${isActive(tab.href)
-                                        ? 'w-full opacity-100'
-                                        : 'w-0 opacity-0'
+                                    ? 'w-full opacity-100'
+                                    : 'w-0 opacity-0'
                                     }`}
                             />
                         </Link>
