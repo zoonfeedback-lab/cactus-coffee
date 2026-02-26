@@ -7,7 +7,6 @@ export const metadata: Metadata = {
     title: 'Explore Dr. Bean | Cactus Coffee',
     description: 'Experience the essence of the desert in every cup with our signature roasts. Small-batch crafted for the ultimate home brewing experience.',
 };
-// Bean shop page
 
 export default function ShopPage() {
     return (
