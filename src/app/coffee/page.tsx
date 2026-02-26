@@ -3,6 +3,7 @@ import Hero from '@/components/coffee/Hero';
 import TodaysSpecial from '@/components/coffee/FeaturedSpecials';
 import FullMenu from '@/components/coffee/MenuSection';
 import NewArrivalsSection from '@/components/coffee/NewArrivalsSection';
+import CactusRewardsSection from '@/components/coffee/CactusRewardsSection';
 import ShopBeansSection from '@/components/coffee/ShopBeansSection';
 import TestimonialSection from '@/components/coffee/PhilosophySection';
 
@@ -29,6 +30,9 @@ export default function CoffeePage() {
 
             {/* Shop Beans Section */}
             <ShopBeansSection />
+
+            {/* Cactus Rewards Section */}
+            <CactusRewardsSection />
 
             {/* Testimonial / Quote */}
             <TestimonialSection />

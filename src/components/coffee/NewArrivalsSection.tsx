@@ -32,7 +32,7 @@ const newArrivals = [
 
 export default function NewArrivalsSection() {
     return (
-        <section className="bg-bg py-16 sm:py-24" aria-labelledby="new-arrivals-heading">
+        <section className="bg-surface py-16 sm:py-24" aria-labelledby="new-arrivals-heading">
             <Container>
                 {/* Section Header */}
                 <AnimateOnScroll animation="fade-up" className="text-center mb-12">
