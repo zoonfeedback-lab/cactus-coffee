@@ -46,17 +46,13 @@ function AccordionColumn({ items, columnIndex, expandedId, onToggle }: Accordion
                     <div
                         key={item.name}
                         className={`overflow-hidden rounded-2xl border transition-all duration-500 ease-in-out ${isExpanded
-                            ? 'flex-1 flex flex-col border-primary/40 bg-white shadow-lg'
-                            : 'border-border bg-white hover:border-primary/30 hover:shadow-md'
-                            } ${isHiddenInThisColumn
-                                ? 'mb-0 max-h-0 scale-95 border-transparent opacity-0'
-                                : isExpanded
-                                    ? 'mb-4 opacity-100'
-                                    : 'mb-4 max-h-40 opacity-100'
+                            ? 'flex-1 flex flex-col border-primary/40 bg-white shadow-lg mb-4 opacity-100'
+                            : isHiddenInThisColumn
+                                ? 'hidden' // Instantly hide siblings
+                                : 'border-border bg-white hover:border-primary/30 hover:shadow-md mb-4 max-h-40 opacity-100' // Show normal state
                             }`}
                         style={{
-                            transitionProperty:
-                                'max-height, opacity, transform, border-color, box-shadow, margin-bottom',
+                            transitionProperty: isHiddenInThisColumn ? 'none' : 'max-height, opacity, transform, border-color, box-shadow, margin-bottom',
                         }}
                     >
                         {/* Compact / clickable header */}
