@@ -34,6 +34,9 @@ export default function FeaturedArtwork({ item }: FeaturedArtworkProps) {
                         <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-light">
                             {item.artist}
                         </p>
+                        <p className="mt-2 text-lg font-bold text-[#A8C5A0] sm:text-xl">
+                            PKR {item.price.toLocaleString()}
+                        </p>
                         <p className="mt-5 font-heading text-base italic leading-relaxed text-text-light/80 sm:text-lg">
                             &ldquo;{item.description}&rdquo;
                         </p>

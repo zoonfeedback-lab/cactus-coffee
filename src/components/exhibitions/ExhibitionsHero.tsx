@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 
 export default function ExhibitionsHero() {
     return (
-        <section className="relative flex min-h-[45vh] items-center justify-center overflow-hidden">
+        <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
             {/* Background image */}
             <Image
                 src="/images/hero-section pic.jfif"
@@ -31,9 +31,8 @@ export default function ExhibitionsHero() {
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade" delay={300} duration={800}>
                         <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                            Discover the talented artists who have graced our walls.
-                            From month-long residencies to pop-up showcases, every
-                            exhibition is a new conversation between art and coffee.
+                            Discover the talented artists who bring our walls to life
+                            through curated showcases and creative residencies.
                         </p>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade-up" delay={600} duration={800}>
