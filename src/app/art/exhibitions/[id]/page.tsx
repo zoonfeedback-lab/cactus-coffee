@@ -164,6 +164,9 @@ export default async function ExhibitionDetailPage({ params }: PageProps) {
                                         <p className="mt-1 text-xs text-text-light">
                                             {art.medium} · {art.year}
                                         </p>
+                                        <p className="mt-2 text-sm font-bold text-[#A8C5A0]">
+                                            PKR {art.price.toLocaleString()}
+                                        </p>
                                     </div>
                                 </div>
                             </AnimateOnScroll>
