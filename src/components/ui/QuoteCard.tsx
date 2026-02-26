@@ -14,7 +14,7 @@ export default function QuoteCard({
     return (
         <div className="rounded-2xl bg-[#1a2620] p-8 sm:p-10">
             {/* Accent quote icon */}
-            <span className="mb-4 inline-block font-heading text-5xl leading-none text-[#d4a843]">
+            <span className="mb-4 inline-block font-heading text-5xl leading-none text-[#A8C5A0]">
                 &ldquo;
             </span>
             <blockquote className="mb-6 font-heading text-lg leading-relaxed text-[#c4d0c8] italic sm:text-xl">
@@ -22,7 +22,7 @@ export default function QuoteCard({
             </blockquote>
             <a
                 href={ctaHref}
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#d4a843] transition-colors duration-200 hover:text-[#e8c36a]"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#A8C5A0] transition-colors duration-200 hover:text-[#c4e6c0]"
             >
                 {ctaLabel}
                 <ArrowRight className="h-4 w-4" />

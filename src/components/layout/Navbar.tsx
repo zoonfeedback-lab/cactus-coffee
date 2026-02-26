@@ -6,11 +6,16 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
-const navLinks = [
+interface NavLink {
+    label: string;
+    href: string;
+}
+
+const navLinks: NavLink[] = [
     { label: 'Coffee', href: '/coffee' },
-    { label: 'Art Gallery', href: '/art' },
+    { label: 'Art', href: '/art' },
     { label: 'Plants', href: '/plants' },
-] as const;
+];
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -23,14 +28,21 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Close mobile menu on route change
+    useEffect(() => {
+        setMobileOpen(false);
+    }, [pathname]);
+
+    const isActive = (href: string) =>
+        pathname === href || pathname.startsWith(href + '/');
+
     return (
         <header
             className={`relative z-50 bg-white transition-shadow duration-300 ${scrolled ? 'shadow-sm' : ''
                 }`}
         >
-            {/* Centered stacked layout */}
             <nav aria-label="Main navigation">
-                {/* Logo – centered, slightly larger */}
+                {/* Logo */}
                 <div className="flex justify-center pt-5 pb-4">
                     <Link href="/" className="block">
                         <Image
@@ -44,13 +56,15 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Desktop links – centered row */}
+                {/* Desktop links */}
                 <ul className="hidden items-center justify-center gap-16 pb-4 md:flex">
                     {navLinks.map((link) => (
-                        <li key={link.href}>
+                        <li key={link.label}>
                             <Link
                                 href={link.href}
-                                className={`text-base font-bold tracking-wide transition-colors duration-200 hover:text-primary ${pathname === link.href ? 'text-primary' : 'text-text-main'
+                                className={`text-base font-bold tracking-wide transition-colors duration-200 hover:text-primary ${isActive(link.href)
+                                    ? 'text-primary'
+                                    : 'text-text-main'
                                     }`}
                             >
                                 {link.label}
@@ -59,7 +73,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Mobile hamburger – centered under logo */}
+                {/* Mobile hamburger */}
                 <div className="flex justify-center pb-3 md:hidden">
                     <button
                         type="button"
@@ -79,15 +93,22 @@ export default function Navbar() {
 
             {/* Mobile menu */}
             <div
-                className={`overflow-hidden border-t border-border bg-white transition-all duration-500 ease-in-out md:hidden ${mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                className={`overflow-hidden border-t border-border bg-white transition-all duration-500 ease-in-out md:hidden ${mobileOpen
+                    ? 'max-h-[500px] opacity-100'
+                    : 'max-h-0 opacity-0'
                     }`}
             >
                 <ul className="flex flex-col items-center gap-1 py-4">
                     {navLinks.map((link) => (
-                        <li key={link.href}>
+                        <li
+                            key={link.label}
+                            className="w-full text-center"
+                        >
                             <Link
                                 href={link.href}
-                                className={`block rounded-lg px-6 py-2.5 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-primary ${pathname === link.href ? 'text-primary' : 'text-text-main'
+                                className={`block rounded-lg px-6 py-2.5 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-primary ${isActive(link.href)
+                                    ? 'text-primary'
+                                    : 'text-text-main'
                                     }`}
                                 onClick={() => setMobileOpen(false)}
                             >

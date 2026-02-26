@@ -3,6 +3,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import FeaturedArt from '@/components/sections/FeaturedArt';
 import PopularPlants from '@/components/sections/PopularPlants';
 import CafeSpecials from '@/components/sections/CafeSpecials';
+import ReviewsSection from '@/components/sections/ReviewsSection';
 import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
       <CafeSpecials />
       <FeaturedArt />
       <PopularPlants />
+      <ReviewsSection />
       <CTASection />
     </main>
   );

@@ -154,7 +154,7 @@ export default function VisitPage() {
                                     Visit Our Sanctuary
                                 </h2>
                                 <p className="mb-12 text-lg text-text-light">
-                                    We are located in Mandian, Abbottabad, an easy walk from the main square.
+                                    We are located in Jinnahabad, Abbottabad, an easy walk from the main square.
                                 </p>
 
                                 <div className="space-y-8">
@@ -166,8 +166,8 @@ export default function VisitPage() {
                                         <div>
                                             <h3 className="font-bold text-text-main">Location</h3>
                                             <address className="not-italic text-text-light mt-1">
-                                                Mandian<br />
-                                                Abbottabad, KPK<br />
+                                                PMA Link Rd, Jinnahabad<br />
+                                                Abbottabad, 22010,<br />
                                                 Pakistan
                                             </address>
                                         </div>
@@ -182,13 +182,13 @@ export default function VisitPage() {
                                             <h3 className="font-bold text-text-main">Hours</h3>
                                             <div className="mt-1 space-y-1 text-text-light">
                                                 <div className="flex justify-between w-full max-w-[240px]">
-                                                    <span>Mon - Fri:</span> <span>7:00AM - 8:00PM</span>
+                                                    <span>Mon - Fri:</span> <span>10:00AM - 11:30PM</span>
                                                 </div>
                                                 <div className="flex justify-between w-full max-w-[240px]">
-                                                    <span>Saturday:</span> <span>8:00AM - 9:00PM</span>
+                                                    <span>Saturday:</span> <span>10:00AM - 1:00AM</span>
                                                 </div>
                                                 <div className="flex justify-between w-full max-w-[240px]">
-                                                    <span>Sunday:</span> <span>9:00AM - 5:00PM</span>
+                                                    <span>Sunday:</span> <span>10:00AM - 1:00AM</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,8 +202,8 @@ export default function VisitPage() {
                                         <div>
                                             <h3 className="font-bold text-text-main">Contact</h3>
                                             <div className="mt-1 flex flex-col space-y-1 text-text-light">
-                                                <a href="mailto:hello@cactuscoffee.com" className="hover:text-primary transition-colors">hello@cactuscoffee.com</a>
-                                                <a href="tel:+1234567890" className="hover:text-primary transition-colors">(123) 456-7890</a>
+                                                <a href="mailto:hello@cactuscoffee.com" className="hover:text-primary transition-colors">cactuscoffee@gmail.com</a>
+                                                <a href="tel:+1234567890" className="hover:text-primary transition-colors">(+92) 3104557777</a>
                                             </div>
                                         </div>
                                     </div>
