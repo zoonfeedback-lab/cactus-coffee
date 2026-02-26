@@ -1,0 +1,14 @@
+<svg width="800" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#faf7f2"/>
+  <!-- Frame -->
+  <rect x="100" y="100" width="600" height="450" rx="4" fill="#e8e4de" stroke="#d0ccc6" stroke-width="2"/>
+  <!-- Photo inside frame -->
+  <rect x="120" y="120" width="560" height="410" fill="#888"/>
+  <!-- Mountains -->
+  <polygon points="120,530 280,250 440,530" fill="#666"/>
+  <polygon points="320,530 500,300 680,530" fill="#777"/>
+  <!-- Sky gradient -->
+  <rect x="120" y="120" width="560" height="200" fill="#aaa" opacity="0.3"/>
+  <!-- Wall shadow -->
+  <rect x="100" y="560" width="600" height="4" fill="#d0ccc6" opacity="0.5"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="#f0f5ef"/>
+  <!-- Pot -->
+  <path d="M230 420 L215 540 L385 540 L370 420 Z" fill="#4a4a4a"/>
+  <rect x="225" y="410" width="150" height="18" rx="4" fill="#3a3a3a"/>
+  <!-- Stems -->
+  <line x1="300" y1="420" x2="280" y2="250" stroke="#2D5A3D" stroke-width="5"/>
+  <line x1="300" y1="420" x2="320" y2="280" stroke="#2D5A3D" stroke-width="4"/>
+  <line x1="300" y1="420" x2="260" y2="300" stroke="#2D5A3D" stroke-width="4"/>
+  <!-- Arrow-shaped leaves (Alocasia) -->
+  <path d="M280 250 L240 180 L280 200 L280 160 L320 200 L320 180 Z" fill="#2D5A3D"/>
+  <path d="M320 280 L290 220 L320 235 L320 200 L350 235 L360 220 Z" fill="#3a8a4a"/>
+  <path d="M260 300 L220 240 L255 260 L250 225 L285 260 L290 240 Z" fill="#3a7a4a"/>
+  <!-- Leaf veins -->
+  <line x1="280" y1="250" x2="280" y2="170" stroke="#1a4a2a" stroke-width="1.5" opacity="0.6"/>
+  <line x1="320" y1="280" x2="320" y2="210" stroke="#2a5a3a" stroke-width="1.5" opacity="0.5"/>
+</svg>

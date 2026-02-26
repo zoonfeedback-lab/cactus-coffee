@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
+/* ── Design System Custom Properties ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #2D5A3D;
+  --color-primary-dark: #1E3F2B;
+  --color-primary-light: #3A7A52;
+  --color-accent: #8FBC8F;
+  --color-accent-light: #A8D5A8;
+
+  --color-bg: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F0F5EF;
+
+  --color-text: #1F2937;
+  --color-text-light: #6B7280;
+  --color-text-inverse: #FFFFFF;
+
+  --color-muted: #9CA3AF;
+  --color-border: #E5E1DB;
+  --color-border-light: #F0EDE8;
+
+  --color-warning: #F59E0B;
+  --color-success: #22C55E;
+
+  --font-heading: var(--font-amberly), Georgia, serif;
+  --font-body: var(--font-amberly), system-ui, sans-serif;
 }
 
+/* ── Tailwind 4 Theme Tokens ── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+
+  --color-text-main: var(--color-text);
+  --color-text-light: var(--color-text-light);
+  --color-text-inverse: var(--color-text-inverse);
+
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-border-light: var(--color-border-light);
+
+  --color-warning: var(--color-warning);
+  --color-success: var(--color-success);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* ── Utility: hide scrollbar ── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Menu accordion cover animation ── */
+@keyframes coverIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
