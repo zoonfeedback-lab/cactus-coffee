@@ -43,6 +43,9 @@ function ArtworkCard({ item, large = false }: { item: GalleryItem; large?: boole
                         <p className="mt-0.5 text-[10px] capitalize text-white/50 sm:text-[11px]">
                             {item.category.replace('-', ' ')}
                         </p>
+                        <p className="mt-1.5 text-xs font-bold text-[#A8C5A0] sm:text-sm">
+                            PKR {item.price.toLocaleString()}
+                        </p>
                     </div>
                 </div>
             </div>

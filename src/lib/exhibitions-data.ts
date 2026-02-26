@@ -6,6 +6,7 @@ export interface Artwork {
     image: string;
     medium: string;
     year: number;
+    price: number;
 }
 
 export interface Exhibition {
@@ -39,12 +40,14 @@ function makeArtworks(prefix: string, count: number): Artwork[] {
         'Awakening', 'Solitude', 'Verdant Pulse', 'Fragments',
         'Echoes', 'Bloom', 'Shifting Grounds', 'Quiet Fire',
     ];
+    const prices = [18000, 25000, 32000, 15000, 42000, 28000, 35000, 20000];
     return Array.from({ length: count }, (_, i) => ({
         id: `${prefix}-art-${i + 1}`,
         title: titles[i % titles.length],
         image: images[i % images.length],
         medium: mediums[i % mediums.length],
         year: 2025 + (i % 2),
+        price: prices[i % prices.length],
     }));
 }
 
