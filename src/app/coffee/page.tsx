@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Hero from '@/components/coffee/Hero';
 import TodaysSpecial from '@/components/coffee/FeaturedSpecials';
 import FullMenu from '@/components/coffee/MenuSection';
+import NewArrivalsSection from '@/components/coffee/NewArrivalsSection';
+import CactusRewardsSection from '@/components/coffee/CactusRewardsSection';
+import ShopBeansSection from '@/components/coffee/ShopBeansSection';
 import TestimonialSection from '@/components/coffee/PhilosophySection';
 
 export const metadata: Metadata = {
@@ -21,6 +24,15 @@ export default function CoffeePage() {
 
             {/* Full Menu — categorized like the physical menu */}
             <FullMenu />
+
+            {/* New Arrivals Section */}
+            <NewArrivalsSection />
+
+            {/* Shop Beans Section */}
+            <ShopBeansSection />
+
+            {/* Cactus Rewards Section */}
+            <CactusRewardsSection />
 
             {/* Testimonial / Quote */}
             <TestimonialSection />
