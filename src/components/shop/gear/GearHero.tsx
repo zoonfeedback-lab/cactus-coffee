@@ -5,9 +5,9 @@ import { ArrowRight } from 'lucide-react';
 
 export default function GearHero() {
     return (
-        <section className="bg-bg py-8 lg:py-12">
+        <section className="bg-surface py-8 lg:py-12">
             <Container>
-                <div className="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-border">
+                <div className="flex flex-col md:flex-row bg-surface-alt rounded-3xl overflow-hidden shadow-sm border border-border">
                     {/* Left: Image */}
                     <div className="relative h-64 md:h-96 lg:h-[450px] w-full md:w-1/2 overflow-hidden bg-[#1A1A1A]">
                         <Image

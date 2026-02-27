@@ -21,7 +21,7 @@ export default function RelatedProducts() {
     if (related.length === 0) return null;
 
     return (
-        <section className="bg-bg py-16 sm:py-24 border-t border-border/50">
+        <section className="bg-surface-alt py-16 sm:py-24 border-t border-border/50">
             <Container>
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
                     <div>

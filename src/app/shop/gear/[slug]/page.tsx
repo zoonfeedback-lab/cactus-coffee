@@ -7,9 +7,9 @@ import RelatedProducts from '@/components/shop/gear/RelatedProducts';
 import GearNewsletter from '@/components/shop/gear/GearNewsletter';
 
 interface Props {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 // Generate static params so Next.js knows which pages to build
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-    const product = getGearProductBySlug(params.slug);
+    const { slug } = await params;
+    const product = getGearProductBySlug(slug);
     if (!product) return { title: 'Product Not Found' };
 
     return {
@@ -29,15 +30,16 @@ export async function generateMetadata({ params }: Props) {
     };
 }
 
-export default function GearProductPage({ params }: Props) {
-    const product = getGearProductBySlug(params.slug);
+export default async function GearProductPage({ params }: Props) {
+    const { slug } = await params;
+    const product = getGearProductBySlug(slug);
 
     if (!product) {
         notFound();
     }
 
     return (
-        <main className="min-h-screen bg-bg">
+        <main className="min-h-screen bg-surface">
             <Container className="pt-8 sm:pt-12 pb-16 sm:pb-24">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 

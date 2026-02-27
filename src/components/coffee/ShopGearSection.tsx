@@ -6,10 +6,10 @@ import { ShoppingBag } from 'lucide-react';
 
 export default function ShopGearSection() {
     return (
-        <section className="bg-bg py-16 sm:py-24" aria-labelledby="shop-gear-heading">
+        <section className="bg-surface py-16 sm:py-24" aria-labelledby="shop-gear-heading">
             <Container>
                 <AnimateOnScroll animation="scale" duration={700}>
-                    <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-10 rounded-3xl border border-border bg-white p-6 shadow-sm md:flex-row-reverse md:p-8 lg:p-12 overflow-hidden">
+                    <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-10 rounded-3xl border border-border bg-surface-alt p-6 shadow-sm md:flex-row-reverse md:p-8 lg:p-12 overflow-hidden">
 
                         {/* Text Content */}
                         <div className="flex-1 text-center md:text-left">
