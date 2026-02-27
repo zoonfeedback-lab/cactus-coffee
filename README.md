@@ -18,6 +18,8 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 | `/plants` | Plant shop — category chip filters, care tips, and office plants section |
 | `/visit` | About & location — origin story, three-pillar features, map with directions, hours, contact, and Instagram grid |
 | `/shop` | Bean shop — hero, product grid, and process section |
+| `/workshops` | Creative workshops — intro highlights, filterable card grid with category pills, instructor spotlight, benefits, past workshop gallery, testimonials, FAQ accordion, and CTA |
+| `/events` | Community events — featured event hero card, filterable event grid with status tags (Upcoming/Ongoing/Sold Out), vertical timeline, past event gallery, animated stats, attendee testimonials, host-an-event CTA, FAQ accordion |
 
 ---
 
@@ -29,6 +31,8 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 - **Art Classes** — Instructor profile with large photo, structured curriculum modules, class cards with level badges, schedule, and PKR pricing, student photo gallery
 - **Plant Shop** — Category chip filtering, care tip cards, and office plant showcase
 - **Past Events & Workshops** — Cards showcasing previous events and workshops with dates, locations, and attendee counts
+- **Creative Workshops** — Category-filterable workshop grid, expandable details, instructor spotlight with alternating layout, benefits grid, horizontal gallery, student testimonials, FAQ accordion
+- **Community Events** — Featured event hero card with Book Now + seat counter, status-tagged event cards (Upcoming/Ongoing/Sold Out with greyscale), pill-style category filters, vertical timeline with color-coded categories, animated count-up stats, host-an-event community CTA
 - **Latest Blogs** — 3 blog preview cards with category badges and dates
 - **Scroll Animations** — Content reveals on scroll using Intersection Observer (zero dependencies)
 - **Responsive Design** — Mobile-first layout with adaptive navbar and grid systems
@@ -77,6 +81,10 @@ src/
 │   │   └── page.tsx              # Bean shop page
 │   ├── visit/
 │   │   └── page.tsx              # Visit & location page
+│   ├── workshops/
+│   │   └── page.tsx              # Workshops page (9 sections)
+│   ├── events/
+│   │   └── page.tsx              # Events page (11 sections)
 │   ├── globals.css               # Tailwind 4 theme tokens + CSS custom properties
 │   ├── layout.tsx                # Root layout (font, Navbar, Footer, ScrollToTop)
 │   └── page.tsx                  # Homepage
@@ -95,6 +103,18 @@ src/
 │   │   ├── CactusRewardsSection.tsx # Rewards section
 │   │   ├── NewArrivalsSection.tsx # New arrivals showcase
 │   │   └── ShopBeansSection.tsx  # Shop beans CTA
+│   ├── events/
+│   │   ├── EventsHero.tsx        # Events hero ("Unforgettable Experiences")
+│   │   ├── EventsOverview.tsx    # Intro + event type icon row
+│   │   ├── FeaturedEvent.tsx     # Large featured event card with Book Now
+│   │   ├── UpcomingEventsGrid.tsx # Filterable cards with status tags (client)
+│   │   ├── EventTimeline.tsx     # Vertical timeline with color-coded categories
+│   │   ├── EventGallery.tsx      # Horizontal scroll past event gallery
+│   │   ├── EventHighlights.tsx   # Animated count-up stats (client)
+│   │   ├── EventTestimonials.tsx # Attendee review cards with star ratings
+│   │   ├── HostAnEvent.tsx       # Community collaboration CTA
+│   │   ├── EventFAQ.tsx          # Accordion FAQ (client)
+│   │   └── EventCTA.tsx          # Final CTA
 │   ├── exhibition/
 │   │   ├── Hero.tsx              # Art gallery hero (Nigarkhana Art Gallery)
 │   │   ├── EditorialGallery.tsx  # Gallery with ArtworkCard and PKR pricing
@@ -114,6 +134,16 @@ src/
 │   │   ├── ShopHero.tsx          # Shop page hero
 │   │   ├── ProductGrid.tsx       # Product listing grid
 │   │   └── ProcessSection.tsx    # Coffee process showcase
+│   ├── workshops/
+│   │   ├── WorkshopHero.tsx      # Workshop hero section
+│   │   ├── WorkshopIntro.tsx     # Intro + 2x2 highlight feature cards
+│   │   ├── UpcomingWorkshops.tsx  # Filterable workshop card grid (client)
+│   │   ├── InstructorSpotlight.tsx # Instructor bios with alternating layout
+│   │   ├── WorkshopBenefits.tsx  # Icon-based benefits grid
+│   │   ├── PastWorkshopGallery.tsx # Horizontal scroll gallery
+│   │   ├── WorkshopTestimonials.tsx # Student review cards
+│   │   ├── WorkshopFAQ.tsx       # Accordion FAQ (client)
+│   │   └── WorkshopCTA.tsx       # Final CTA
 │   ├── layout/
 │   │   ├── Navbar.tsx            # Responsive header with mobile menu
 │   │   ├── ArtSubNav.tsx         # Art section tabbed sub-navigation
@@ -153,7 +183,9 @@ src/
     ├── exhibition-data.ts        # Art gallery items, categories, curator (with PKR pricing)
     ├── exhibitions-data.ts       # Exhibition listings and artworks (with PKR pricing)
     ├── art-classes-data.ts       # Art classes, curriculum, student photos (with PKR pricing)
-    └── plants-data.ts            # Plants, categories, tips, office plants
+    ├── plants-data.ts            # Plants, categories, tips, office plants
+    ├── workshop-data.ts          # Workshop categories, listings, instructors, gallery, testimonials, FAQ, benefits
+    └── events-data.ts            # Event categories, featured event, listings, timeline, gallery, stats, testimonials, FAQ
 ```
 
 ---
@@ -226,9 +258,9 @@ All hero sections share a unified template: `60vh` height, gradient overlay (`fr
 - [x] Visit page (`/visit`) with map and contact info
 - [x] Shop page (`/shop`) with product grid
 - [x] Per-page SEO metadata on all routes
+- [x] Workshops page (`/workshops`) with 9 sections — category filters, instructor spotlight, benefits, gallery, FAQ
+- [x] Events page (`/events`) with 11 sections — featured event, status tags, timeline, animated stats, host-an-event CTA
 - [ ] Blog listing page (`/blog`)
-- [ ] Events listing page (`/events`)
-- [ ] Workshops listing page (`/workshops`)
 - [ ] Replace placeholder images with real photography
 - [ ] Add page transitions and route animations
 - [ ] Add online ordering / reservation system
