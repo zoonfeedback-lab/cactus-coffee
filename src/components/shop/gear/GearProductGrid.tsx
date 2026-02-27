@@ -18,7 +18,7 @@ export default function GearProductGrid() {
     });
 
     return (
-        <section id="collections" className="bg-[#fcfaf8] py-16 sm:py-24" aria-labelledby="products-heading">
+        <section id="collections" className="bg-surface-alt py-16 sm:py-24" aria-labelledby="products-heading">
             <Container>
                 {/* Filters & Sorting */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-10">
@@ -30,8 +30,8 @@ export default function GearProductGrid() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 border ${activeCategory === category
-                                        ? 'bg-[#6A945B] text-white border-[#6A945B]'
-                                        : 'bg-white text-text-light border-border hover:border-[#6A945B]/50 hover:text-[#6A945B]'
+                                    ? 'bg-[#6A945B] text-white border-[#6A945B]'
+                                    : 'bg-white text-text-light border-border hover:border-[#6A945B]/50 hover:text-[#6A945B]'
                                     }`}
                             >
                                 {category}

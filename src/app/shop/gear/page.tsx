@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function GearShopPage() {
     return (
-        <main className="min-h-screen bg-bg">
+        <main className="min-h-screen bg-surface">
             {/* Split Hero Banner */}
             <GearHero />
 

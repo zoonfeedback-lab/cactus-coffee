@@ -5,10 +5,10 @@ import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 
 export default function GearNewsletter() {
     return (
-        <section className="bg-bg py-16 sm:py-24 overflow-hidden">
+        <section className="bg-surface py-16 sm:py-24 overflow-hidden">
             <Container>
                 <AnimateOnScroll animation="scale" duration={600}>
-                    <div className="w-full max-w-5xl mx-auto bg-[#f8f5f0] rounded-[2.5rem] p-10 sm:p-14 lg:p-20 border border-[#eee]/50 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-20">
+                    <div className="w-full max-w-5xl mx-auto bg-surface-alt rounded-[2.5rem] p-10 sm:p-14 lg:p-20 border border-[#eee]/50 shadow-sm relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-20">
                         {/* Decorative background element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#6A945B]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
