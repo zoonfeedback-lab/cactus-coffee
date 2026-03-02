@@ -157,6 +157,12 @@ export const careTips: Tip[] = [
         description: 'Decoding bright, indirect, dappled, and low light conditions for your home.',
         icon: 'Sun',
     },
+    {
+        id: 'tip-3',
+        title: 'Repotting Tips',
+        description: 'Know when and how to repot — giving roots room to grow keeps plants happy.',
+        icon: 'Sprout',
+    },
 ];
 
 export const officePlants: OfficePlant[] = [

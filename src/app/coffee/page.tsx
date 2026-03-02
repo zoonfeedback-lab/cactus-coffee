@@ -5,6 +5,7 @@ import FullMenu from '@/components/coffee/MenuSection';
 import NewArrivalsSection from '@/components/coffee/NewArrivalsSection';
 import CactusRewardsSection from '@/components/coffee/CactusRewardsSection';
 import ShopBeansSection from '@/components/coffee/ShopBeansSection';
+import ShopGearSection from '@/components/coffee/ShopGearSection';
 import TestimonialSection from '@/components/coffee/PhilosophySection';
 
 export const metadata: Metadata = {
@@ -30,6 +31,9 @@ export default function CoffeePage() {
 
             {/* Shop Beans Section */}
             <ShopBeansSection />
+
+            {/* Shop Coffee Gear Section */}
+            <ShopGearSection />
 
             {/* Cactus Rewards Section */}
             <CactusRewardsSection />

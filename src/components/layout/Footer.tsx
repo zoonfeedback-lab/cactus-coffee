@@ -17,6 +17,13 @@ const services = [
     'Workshop Spaces',
 ] as const;
 
+const careers = [
+    'View Open Roles',
+    'Our Culture',
+    'Life at Cactus',
+    'Meet the Team',
+] as const;
+
 const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/cactuscoffee01?igsh=MTA1cGVqZ3psOTI5', label: 'Instagram' },
     { icon: Facebook, href: 'https://www.facebook.com/people/Cactus-Coffee/61579279110315/#', label: 'Facebook' },
@@ -42,7 +49,7 @@ export default function Footer() {
     return (
         <footer className="bg-primary-dark text-white/80">
             <Container>
-                <div className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+                <div className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
                     {/* Brand */}
                     <div>
                         <h3 className="mb-4 font-heading text-xl font-bold text-white">
@@ -82,6 +89,20 @@ export default function Footer() {
                             {services.map((service) => (
                                 <li key={service}>
                                     <span className="text-sm text-white/60">{service}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Careers */}
+                    <div>
+                        <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                            Careers
+                        </h4>
+                        <ul className="space-y-2.5">
+                            {careers.map((career) => (
+                                <li key={career}>
+                                    <span className="text-sm text-white/60 hover:text-white transition-colors cursor-pointer">{career}</span>
                                 </li>
                             ))}
                         </ul>
