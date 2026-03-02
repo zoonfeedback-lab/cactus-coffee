@@ -73,7 +73,7 @@ export default async function ArtworkDetailPage({
             <div className="border-b border-border bg-white">
                 <Container className="py-4">
                     <Link
-                        href={artwork.source === 'exhibition' ? '/art/exhibitions' : '/arts'}
+                        href={artwork.source === 'exhibition' ? '/art/exhibitions' : '/art'}
                         className="inline-flex items-center gap-2 text-sm font-medium text-text-light transition-colors hover:text-primary"
                     >
                         <ArrowLeft className="h-4 w-4" />
@@ -181,7 +181,7 @@ export default async function ArtworkDetailPage({
                                         </span>
                                     )}
                                     <Link
-                                        href="/arts"
+                                        href="/art"
                                         className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-text-main transition-all duration-300 hover:bg-[#FAF7F0]"
                                     >
                                         Browse More Art
