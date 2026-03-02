@@ -8,6 +8,7 @@ const artTabs = [
     { label: 'Exhibitions', href: '/art/exhibitions' },
     { label: 'Classes', href: '/art/classes' },
     { label: 'Commissioned', href: '/art/commissions' },
+    { label: 'Studio', href: '/art/studio' },
     { label: 'Community Art', href: '/art/customer-art' },
 ];
 
