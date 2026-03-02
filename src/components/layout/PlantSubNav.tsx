@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const plantTabs = [
-    { label: 'Our Collection', href: '/plants' },
+    { label: 'Collection', href: '/plants' },
     { label: 'Gallery', href: '/plants/gallery' },
     { label: 'Consultation', href: '/plants/consultation' },
 ];
