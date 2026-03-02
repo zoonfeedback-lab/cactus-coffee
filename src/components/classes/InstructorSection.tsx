@@ -3,9 +3,9 @@ import Container from '@/components/ui/Container';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 
 const instructor = {
-    name: 'Sir Khalid Khayan',
+    name: 'Sir Khalid Khayam',
     role: 'Lead Instructor, Nigarkhana Art Gallery',
-    bio: 'Sir Khalid Khayan is a classically trained visual artist with over 15 years of experience in painting, drawing, and calligraphy. A graduate of the National College of Arts, he has exhibited across Pakistan and mentored hundreds of aspiring artists. His teaching philosophy centres on building strong fundamentals while encouraging each student to discover their own creative voice.',
+    bio: 'Sir Khalid Khayam is a classically trained visual artist with over 15 years of experience in painting, drawing, and calligraphy. A graduate of the National College of Arts, he has exhibited across Pakistan and mentored hundreds of aspiring artists. His teaching philosophy centres on building strong fundamentals while encouraging each student to discover their own creative voice.',
     image: '/images/exhibition/publo-picaso.jfif',
 };
 
