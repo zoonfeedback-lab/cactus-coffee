@@ -1,4 +1,4 @@
-import { Droplets, Sun } from 'lucide-react';
+import { Droplets, Sun, Sprout } from 'lucide-react';
 import type { Tip } from '@/lib/plants-data';
 
 interface TipCardProps {
@@ -8,6 +8,7 @@ interface TipCardProps {
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Droplets,
     Sun,
+    Sprout,
 };
 
 export default function TipCard({ tip }: TipCardProps) {
