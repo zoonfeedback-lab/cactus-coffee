@@ -8,6 +8,7 @@ const artTabs = [
     { label: 'Exhibitions', href: '/art/exhibitions' },
     { label: 'Classes', href: '/art/classes' },
     { label: 'Commissioned', href: '/art/commissions' },
+    { label: 'Community Art', href: '/art/customer-art' },
 ];
 
 export default function ArtSubNav() {
