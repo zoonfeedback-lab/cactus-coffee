@@ -370,4 +370,6 @@ export const careTips: Tip[] = [
     },
 ];
 
-export const officePlants = plantsData.filter(p => p.category === 'office');
+export const officePlants: OfficePlant[] = plantsData
+    .filter(p => p.category === 'office')
+    .map(p => ({ id: p.id, name: p.name, image: p.image, descriptor: p.description.split('.')[0], price: p.price }));
