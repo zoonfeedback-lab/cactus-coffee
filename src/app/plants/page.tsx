@@ -5,6 +5,8 @@ import FeaturedPlant from '@/components/plants/FeaturedPlant';
 import CategoryChips from '@/components/plants/CategoryChips';
 import CareTips from '@/components/plants/CareTips';
 import PlantGallery from '@/components/plants/PlantGallery';
+import PlantConsultation from '@/components/plants/PlantConsultation';
+import PlantWorkshops from '@/components/plants/PlantWorkshops';
 import WhyBuyFromUs from '@/components/plants/WhyBuyFromUs';
 import PlantCTA from '@/components/plants/PlantCTA';
 import OfficePlantsSection from '@/components/plants/OfficePlants';
@@ -44,6 +46,12 @@ export default function PlantsPage() {
 
             {/* 6. Gallery Lifestyle — NEW */}
             <PlantGallery />
+
+            {/* Plant Consultation — NEW */}
+            <PlantConsultation />
+
+            {/* Plant Workshops — NEW */}
+            <PlantWorkshops />
 
             {/* 7. Why Buy From Us — NEW */}
             <WhyBuyFromUs />
