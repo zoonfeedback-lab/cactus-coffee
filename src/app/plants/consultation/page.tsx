@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import PlantsHero from '@/components/plants/Hero';
 import PlantSubNav from '@/components/layout/PlantSubNav';
 import PlantConsultation from '@/components/plants/PlantConsultation';
+import CareTips from '@/components/plants/CareTips';
 import Container from '@/components/ui/Container';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 import { Clock, Video, MapPin } from 'lucide-react';
+import { careTips } from '@/lib/plants-data';
 
 export const metadata: Metadata = {
     title: 'Plant Consultation | Cactus Coffee',
@@ -61,6 +63,10 @@ export default function ConsultationPage() {
             </section>
 
             <PlantConsultation />
+
+            {/* Care Tips */}
+            <CareTips tips={careTips} />
         </main>
     );
 }
+
