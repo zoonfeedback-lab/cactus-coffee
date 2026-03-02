@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 const plantTabs = [
     { label: 'Our Collection', href: '/plants' },
     { label: 'Care Tips', href: '/plants/care' },
-    { label: 'Office Plants', href: '/plants/office' },
     { label: 'Gallery', href: '/plants/gallery' },
     { label: 'Consultation', href: '/plants/consultation' },
     { label: 'Workshops', href: '/plants/workshops' },
