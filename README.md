@@ -33,7 +33,7 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 - **Past Events & Workshops** — Cards showcasing previous events and workshops with dates, locations, and attendee counts
 - **Creative Workshops** — Category-filterable workshop grid, expandable details, instructor spotlight with alternating layout, benefits grid, horizontal gallery, student testimonials, FAQ accordion
 - **Community Events** — Featured event hero card with Book Now + seat counter, status-tagged event cards (Upcoming/Ongoing/Sold Out with greyscale), pill-style category filters, vertical timeline with color-coded categories, animated count-up stats, host-an-event community CTA
-- **Latest Blogs** — 3 blog preview cards with category badges and dates
+- **Latest Blogs** — 3 blog preview cards on homepage with category badges (Culture, Plants, Art), date stamps, cover images with hover zoom, and "View All Posts" CTA linking to `/blog`
 - **Scroll Animations** — Content reveals on scroll using Intersection Observer (zero dependencies)
 - **Responsive Design** — Mobile-first layout with adaptive navbar and grid systems
 - **Design Token System** — Centralized colors, typography, and spacing via CSS custom properties
