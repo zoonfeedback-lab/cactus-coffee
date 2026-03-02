@@ -27,7 +27,7 @@ const careers = [
 const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/cactuscoffee01?igsh=MTA1cGVqZ3psOTI5', label: 'Instagram' },
     { icon: Facebook, href: 'https://www.facebook.com/people/Cactus-Coffee/61579279110315/#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Twitter, href: 'https://www.twitter.com/', label: 'Twitter' },
 ] as const;
 
 const additionalInfo = [
