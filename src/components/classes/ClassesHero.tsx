@@ -31,7 +31,7 @@ export default function ClassesHero() {
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade" delay={300} duration={800}>
                         <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                            Learn from Sir Khalid Khayan and develop your artistic skills
+                            Learn from Sir Khalid Khayam and develop your artistic skills
                             through hands-on studio sessions and guided practice.
                         </p>
                     </AnimateOnScroll>
