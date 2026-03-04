@@ -46,7 +46,7 @@ export default function Navbar() {
                 <div className="flex justify-center pt-5 pb-4">
                     <Link href="/" className="block">
                         <Image
-                            src="/images/cactus-logo.png"
+                            src="/images/NEW-CACTUS.png"
                             alt="Cactus Coffee logo"
                             width={100}
                             height={100}
