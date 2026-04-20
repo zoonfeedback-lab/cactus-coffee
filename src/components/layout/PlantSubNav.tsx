@@ -3,30 +3,27 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const artTabs = [
-    { label: 'Gallery', href: '/art' },
-    { label: 'Exhibitions', href: '/art/exhibition' },
-    { label: 'Classes', href: '/art/classes' },
-    { label: 'Commissioned', href: '/art/commissions' },
-    { label: 'Studio', href: '/art/studio' },
-    { label: 'Community Art', href: '/art/customer-art' },
+const plantTabs = [
+    { label: 'Collection', href: '/plants' },
+    { label: 'Gallery', href: '/plants/gallery' },
+    { label: 'Consultation', href: '/plants/consultation' },
 ];
 
-export default function ArtSubNav() {
+export default function PlantSubNav() {
     const pathname = usePathname();
 
     const isActive = (href: string) => {
-        if (href === '/art') return pathname === '/art';
+        if (href === '/plants') return pathname === '/plants';
         return pathname === href || pathname.startsWith(href + '/');
     };
 
     return (
         <nav
-            aria-label="Art sections"
+            aria-label="Plant sections"
             className="sticky top-0 z-40 border-b border-border bg-white"
         >
             <ul className="scrollbar-hide flex items-center justify-center gap-2 overflow-x-auto px-6">
-                {artTabs.map((tab) => (
+                {plantTabs.map((tab) => (
                     <li key={tab.href}>
                         <Link
                             href={tab.href}

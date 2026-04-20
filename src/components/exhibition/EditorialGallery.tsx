@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
 import type { Category, GalleryItem } from '@/lib/exhibition-data';
@@ -17,7 +18,7 @@ interface EditorialGalleryProps {
 
 function ArtworkCard({ item, large = false }: { item: GalleryItem; large?: boolean }) {
     return (
-        <article className="group cursor-pointer">
+        <Link href={`/art/artwork/${item.id}`} className="group block cursor-pointer">
             <div
                 className={`relative w-full overflow-hidden rounded-sm ${large ? 'aspect-[4/5]' : 'aspect-[4/3]'
                     }`}
@@ -46,10 +47,13 @@ function ArtworkCard({ item, large = false }: { item: GalleryItem; large?: boole
                         <p className="mt-1.5 text-xs font-bold text-[#A8C5A0] sm:text-sm">
                             PKR {item.price.toLocaleString()}
                         </p>
+                        <p className="mt-1 text-[10px] font-medium text-white/60">
+                            Click to view details →
+                        </p>
                     </div>
                 </div>
             </div>
-        </article>
+        </Link>
     );
 }
 

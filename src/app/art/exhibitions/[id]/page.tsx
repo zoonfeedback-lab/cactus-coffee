@@ -148,14 +148,23 @@ export default async function ExhibitionDetailPage({ params }: PageProps) {
                                 animation="fade-up"
                                 delay={i * 60}
                             >
-                                <div className="mb-5 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:border-primary/30 hover:shadow-lg">
+                                <Link
+                                    href={`/art/artwork/${art.id}`}
+                                    className="group mb-5 block break-inside-avoid overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:border-primary/30 hover:shadow-lg"
+                                >
                                     <div className="relative aspect-[4/5] overflow-hidden">
                                         <Image
                                             src={art.image}
                                             alt={art.title}
                                             fill
-                                            className="object-cover transition-transform duration-500 hover:scale-105"
+                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
+                                        {/* Hover overlay */}
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            <span className="rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-text-main">
+                                                View Details →
+                                            </span>
+                                        </div>
                                     </div>
                                     <div className="p-4">
                                         <h3 className="font-heading text-base font-bold text-text-main">
@@ -168,7 +177,7 @@ export default async function ExhibitionDetailPage({ params }: PageProps) {
                                             PKR {art.price.toLocaleString()}
                                         </p>
                                     </div>
-                                </div>
+                                </Link>
                             </AnimateOnScroll>
                         ))}
                     </div>

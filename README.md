@@ -11,38 +11,74 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 | Route | Description |
 |-------|-------------|
 | `/` | Homepage — hero, cafe specials, featured art, popular plants, past events, past workshops, latest blogs, reviews, and visit CTA |
-| `/coffee` | Full restaurant-style menu — Today's Special, categorized menu (Mains, Cold Drinks, Hot Beverages, Sides & Pastries), and testimonial |
-| `/art` | Nigarkhana Art Gallery — Pinterest-style masonry grid with 36 items, category filter tabs, curator bio, and PKR pricing |
-| `/art/exhibitions` | Artist Exhibitions — filterable exhibition cards (Upcoming, Ongoing, Past), individual exhibition detail pages with artwork galleries and PKR pricing |
-| `/art/classes` | Art Classes — instructor bio (Sir Khalid Khayan), curriculum modules, class grid with PKR pricing, and student gallery |
-| `/plants` | Plant shop — category chip filters, care tips, and office plants section |
-| `/visit` | About & location — origin story, three-pillar features, map with directions, hours, contact, and Instagram grid |
+| `/coffee` | Full restaurant-style menu — Today's Special, categorized menu (Mains, Cold Drinks, Hot Beverages, Sides & Pastries), rewards, new arrivals, and shop beans CTA |
+| `/art` | Nigarkhana Art Gallery — magazine-style editorial layout with 36 clickable artworks, category filter tabs, featured artwork, curator bio, and PKR pricing |
+| `/art/exhibitions` | Artist Exhibitions — filterable exhibition cards (Upcoming, Ongoing, Past) with individual detail pages featuring clickable artwork galleries |
+| `/art/exhibitions/[id]` | Exhibition Detail — artist bio, artwork gallery with clickable pieces linking to artwork detail pages |
+| `/art/artwork/[id]` | Artwork Detail — product-style page with large image, status badge (Available/Sold/On Exhibition), price, medium, dimensions, source info, "Inquire to Buy" button, and related artworks |
+| `/art/classes` | Art Classes — instructor bio (Sir Khalid Khayam), curriculum modules, class grid with PKR pricing, and student gallery |
+| `/art/commissions` | Commissioned Art — 12-section page: intro, art types grid, how-it-works process, portfolio gallery, pricing packages, artist bio, customization options, testimonials, commission request form, FAQ accordion, and CTA |
+| `/art/studio` | Art Studio — Sir Khalid Khayam's studio: intro & bio, live painting section, signature works gallery, studio experience offerings, and commission CTA |
+| `/art/customer-art` | Community Art — customer artwork gallery, behind-the-moments photo grid, participant testimonials, and submit-your-artwork CTA |
+| `/plants` | Plant shop — category chip filters, care tips, and CTA |
+| `/plants/[id]` | Plant Detail — individual plant product page |
+| `/plants/gallery` | Plant Gallery — masonry grid of all plants |
+| `/plants/office` | Office Plants — workspace-specific plants with benefits grid |
+| `/plants/care` | Plant Care — care guides and tips |
+| `/plants/consultation` | Plant Consultation — booking consultation services |
+| `/plants/workshops` | Plant Workshops — plant care workshop listings |
 | `/shop` | Bean shop — hero, product grid, and process section |
+| `/shop/gear` | Coffee Gear — equipment and accessories shop |
+| `/shop/gear/[slug]` | Gear Detail — individual coffee gear product page |
+| `/blog` | Blog — featured article, blog grid with category filters, popular posts, newsletter signup, pagination, and CTA |
+| `/blog/[slug]` | Blog Post — individual article with author spotlight and tags |
 | `/workshops` | Creative workshops — intro highlights, filterable card grid with category pills, instructor spotlight, benefits, past workshop gallery, testimonials, FAQ accordion, and CTA |
 | `/events` | Community events — featured event hero card, filterable event grid with status tags (Upcoming/Ongoing/Sold Out), vertical timeline, past event gallery, animated stats, attendee testimonials, host-an-event CTA, FAQ accordion |
+| `/visit` | About & location — origin story, three-pillar features, map with directions, hours, contact, and Instagram grid |
 
 ---
 
 ## Features
 
+### 🎨 Art & Gallery
+- **Magazine-Style Art Gallery** — Editorial layout with CSS `columns` (responsive), filter tabs, hover overlays, and PKR price tags. Every artwork is clickable and links to a detail page
+- **Artwork Detail Pages** — Product-style pages for every piece: large image, status badges (Available / Sold / On Exhibition), price, medium, dimensions, year, source info, "Inquire to Buy" mailto button, sold items get greyscale + ribbon overlay, and "You May Also Like" related artworks
+- **Artist Exhibitions** — Filterable exhibition cards with individual detail pages. Artwork cards within exhibitions are clickable, linking to the artwork detail page
+- **Art Classes** — Instructor profile, structured curriculum modules, class cards with level badges, schedule, and PKR pricing, student photo gallery
+- **Commissioned Art** — Full 12-section page with art types, how-it-works process, portfolio, pricing packages, customization options, commission request form, FAQ, and CTA
+- **Art Studio** — Dedicated page for Sir Khalid Khayam with live painting showcase, signature works gallery, studio experience, and commission CTA
+- **Community Art** — Showcase of customer-created artwork with behind-the-moments photos, testimonials, and artwork submission CTA
+- **Art Sub-Navigation** — Tabbed navigation across Gallery, Exhibitions, Classes, Commissioned, Studio, and Community Art pages
+
+### ☕ Coffee & Shop
 - **Restaurant-Style Menu** — Categorized coffee menu with Today's Special (daily rotating item), pricing (Single/Double), and item images
-- **Masonry Art Gallery** — Pinterest-style layout with CSS `columns` (2→3→4 cols responsive), filter tabs, hover overlays, and PKR price tags
-- **Artist Exhibitions** — Filterable exhibition cards with individual detail pages, artwork galleries, and per-artwork PKR pricing
-- **Art Classes** — Instructor profile with large photo, structured curriculum modules, class cards with level badges, schedule, and PKR pricing, student photo gallery
-- **Plant Shop** — Category chip filtering, care tip cards, and office plant showcase
-- **Past Events & Workshops** — Cards showcasing previous events and workshops with dates, locations, and attendee counts
-- **Creative Workshops** — Category-filterable workshop grid, expandable details, instructor spotlight with alternating layout, benefits grid, horizontal gallery, student testimonials, FAQ accordion
-- **Community Events** — Featured event hero card with Book Now + seat counter, status-tagged event cards (Upcoming/Ongoing/Sold Out with greyscale), pill-style category filters, vertical timeline with color-coded categories, animated count-up stats, host-an-event community CTA
-- **Latest Blogs** — 3 blog preview cards on homepage with category badges (Culture, Plants, Art), date stamps, cover images with hover zoom, and "View All Posts" CTA linking to `/blog`
+- **Rewards Program** — Cactus Rewards section with loyalty benefits
+- **Bean Shop** — Product grid for specialty coffee beans
+- **Coffee Gear** — Equipment shop with individual product detail pages
+
+### 🌿 Plants
+- **Plant Shop** — Category chip filtering, care tip cards, and plant detail pages
+- **Plant Sub-Pages** — Gallery, office plants, care guides, consultation booking, and plant workshops
+- **Plant Sub-Navigation** — Tabbed navigation across plant section pages
+
+### 📝 Blog
+- **Blog Listing** — Featured article hero, filterable blog grid, popular posts sidebar, categories, tags, newsletter signup, and pagination
+- **Blog Posts** — Individual article pages with author spotlight and tag navigation
+
+### 🎉 Events & Workshops
+- **Community Events** — Featured event hero card with Book Now, status-tagged event cards, vertical timeline, animated count-up stats, host-an-event CTA, FAQ accordion
+- **Creative Workshops** — Category-filterable workshop grid, instructor spotlight, benefits grid, past workshop gallery, testimonials, FAQ accordion
+
+### 🛠 Technical
 - **Scroll Animations** — Content reveals on scroll using Intersection Observer (zero dependencies)
 - **Responsive Design** — Mobile-first layout with adaptive navbar and grid systems
 - **Design Token System** — Centralized colors, typography, and spacing via CSS custom properties
 - **SEO Optimized** — Per-page `<title>` and `<meta description>` on all routes, semantic HTML, heading hierarchy
+- **Static Generation** — Dynamic routes use `generateStaticParams` for pre-rendering at build time
 - **Accessibility** — `aria-label` on interactive elements, `aria-expanded` on mobile menu, semantic landmarks
-- **Minimal Client JS** — Only interactive components are client components
+- **Minimal Client JS** — Only interactive components (`'use client'`) are client components
 - **Scroll-to-Top Button** — Floating button appears after scrolling
 - **Consistent Hero Sections** — All pages share identical hero structure (60vh, gradient overlay, responsive heading scale)
-- **Art Sub-Navigation** — Tabbed navigation across Gallery, Exhibitions, and Classes pages
 
 ---
 
@@ -64,128 +100,144 @@ Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**.
 ```
 src/
 ├── app/
+│   ├── page.tsx                  # Homepage
+│   ├── layout.tsx                # Root layout (font, Navbar, Footer, ScrollToTop)
+│   ├── globals.css               # Tailwind 4 theme tokens + CSS custom properties
 │   ├── coffee/
 │   │   └── page.tsx              # Coffee menu page
 │   ├── art/
 │   │   ├── page.tsx              # Art gallery page
 │   │   ├── layout.tsx            # Art section layout
+│   │   ├── artwork/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx      # Artwork detail page (product-style)
 │   │   ├── exhibitions/
 │   │   │   ├── page.tsx          # Exhibitions listing page
 │   │   │   └── [id]/
 │   │   │       └── page.tsx      # Individual exhibition detail
-│   │   └── classes/
-│   │       └── page.tsx          # Art classes page
+│   │   ├── classes/
+│   │   │   └── page.tsx          # Art classes page
+│   │   ├── commissions/
+│   │   │   └── page.tsx          # Commissioned art page (12 sections)
+│   │   ├── studio/
+│   │   │   └── page.tsx          # Art Studio — Sir Khalid Khayam
+│   │   └── customer-art/
+│   │       └── page.tsx          # Community Art page
 │   ├── plants/
-│   │   └── page.tsx              # Plant shop page
+│   │   ├── page.tsx              # Plant shop page
+│   │   ├── layout.tsx            # Plant section layout
+│   │   ├── [id]/
+│   │   │   └── page.tsx          # Individual plant detail
+│   │   ├── gallery/
+│   │   │   └── page.tsx          # Plant gallery
+│   │   ├── office/
+│   │   │   └── page.tsx          # Office plants page
+│   │   ├── care/
+│   │   │   └── page.tsx          # Plant care guides
+│   │   ├── consultation/
+│   │   │   └── page.tsx          # Plant consultation
+│   │   └── workshops/
+│   │       └── page.tsx          # Plant workshops
 │   ├── shop/
-│   │   └── page.tsx              # Bean shop page
-│   ├── visit/
-│   │   └── page.tsx              # Visit & location page
-│   ├── workshops/
-│   │   └── page.tsx              # Workshops page (9 sections)
+│   │   ├── page.tsx              # Bean shop page
+│   │   └── gear/
+│   │       ├── page.tsx          # Coffee gear shop
+│   │       └── [slug]/
+│   │           └── page.tsx      # Individual gear product
+│   ├── blog/
+│   │   ├── page.tsx              # Blog listing page
+│   │   └── [slug]/
+│   │       └── page.tsx          # Individual blog post
 │   ├── events/
 │   │   └── page.tsx              # Events page (11 sections)
-│   ├── globals.css               # Tailwind 4 theme tokens + CSS custom properties
-│   ├── layout.tsx                # Root layout (font, Navbar, Footer, ScrollToTop)
-│   └── page.tsx                  # Homepage
-├── components/
-│   ├── classes/
-│   │   ├── ClassesHero.tsx       # Art classes hero section
-│   │   ├── ClassesGrid.tsx       # Available classes 3-col grid with PKR pricing
-│   │   ├── CurriculumSection.tsx # Curriculum modules in 2-col grid
-│   │   ├── InstructorSection.tsx # Instructor bio with large portrait photo
-│   │   └── StudentGallery.tsx    # Masonry student photo gallery
-│   ├── coffee/
-│   │   ├── Hero.tsx              # Coffee page hero
-│   │   ├── FeaturedSpecials.tsx   # Today's Special (daily rotating item)
-│   │   ├── MenuSection.tsx       # Full categorized menu grid
-│   │   ├── PhilosophySection.tsx  # Testimonial / quote section
-│   │   ├── CactusRewardsSection.tsx # Rewards section
-│   │   ├── NewArrivalsSection.tsx # New arrivals showcase
-│   │   └── ShopBeansSection.tsx  # Shop beans CTA
-│   ├── events/
-│   │   ├── EventsHero.tsx        # Events hero ("Unforgettable Experiences")
-│   │   ├── EventsOverview.tsx    # Intro + event type icon row
-│   │   ├── FeaturedEvent.tsx     # Large featured event card with Book Now
-│   │   ├── UpcomingEventsGrid.tsx # Filterable cards with status tags (client)
-│   │   ├── EventTimeline.tsx     # Vertical timeline with color-coded categories
-│   │   ├── EventGallery.tsx      # Horizontal scroll past event gallery
-│   │   ├── EventHighlights.tsx   # Animated count-up stats (client)
-│   │   ├── EventTestimonials.tsx # Attendee review cards with star ratings
-│   │   ├── HostAnEvent.tsx       # Community collaboration CTA
-│   │   ├── EventFAQ.tsx          # Accordion FAQ (client)
-│   │   └── EventCTA.tsx          # Final CTA
-│   ├── exhibition/
-│   │   ├── Hero.tsx              # Art gallery hero (Nigarkhana Art Gallery)
-│   │   ├── EditorialGallery.tsx  # Gallery with ArtworkCard and PKR pricing
-│   │   ├── FeaturedArtwork.tsx   # Featured artwork with PKR pricing
-│   │   ├── FilterTabs.tsx        # Category filter pills + masonry grid (client)
-│   │   └── CuratorSection.tsx    # Two-column curator bio + quote card
-│   ├── exhibitions/
-│   │   ├── ExhibitionsHero.tsx   # Exhibitions hero section
-│   │   ├── ExhibitionsGrid.tsx   # Filterable exhibition cards grid
-│   │   └── ExhibitionCard.tsx    # Individual exhibition card with PKR pricing
-│   ├── plants/
-│   │   ├── Hero.tsx              # Plants page hero
-│   │   ├── CategoryChips.tsx     # Filter chips + plant grid (client)
-│   │   ├── CareTips.tsx          # Two-column care tips section
-│   │   └── OfficePlants.tsx      # Horizontal office plant cards
-│   ├── shop/
-│   │   ├── ShopHero.tsx          # Shop page hero
-│   │   ├── ProductGrid.tsx       # Product listing grid
-│   │   └── ProcessSection.tsx    # Coffee process showcase
 │   ├── workshops/
-│   │   ├── WorkshopHero.tsx      # Workshop hero section
-│   │   ├── WorkshopIntro.tsx     # Intro + 2x2 highlight feature cards
-│   │   ├── UpcomingWorkshops.tsx  # Filterable workshop card grid (client)
-│   │   ├── InstructorSpotlight.tsx # Instructor bios with alternating layout
-│   │   ├── WorkshopBenefits.tsx  # Icon-based benefits grid
-│   │   ├── PastWorkshopGallery.tsx # Horizontal scroll gallery
-│   │   ├── WorkshopTestimonials.tsx # Student review cards
-│   │   ├── WorkshopFAQ.tsx       # Accordion FAQ (client)
-│   │   └── WorkshopCTA.tsx       # Final CTA
-│   ├── layout/
+│   │   └── page.tsx              # Workshops page (9 sections)
+│   └── visit/
+│       └── page.tsx              # Visit & location page
+├── components/
+│   ├── blog/                     # Blog components (10 files)
+│   │   ├── FeaturedArticle.tsx, BlogGrid.tsx, BlogCategories.tsx
+│   │   ├── PopularPosts.tsx, BlogNewsletter.tsx, BlogPagination.tsx
+│   │   ├── BlogHeader.tsx, BlogTags.tsx, AuthorSpotlight.tsx
+│   │   └── BlogCTA.tsx
+│   ├── classes/                  # Art classes components (5 files)
+│   │   ├── ClassesHero.tsx, ClassesGrid.tsx, CurriculumSection.tsx
+│   │   ├── InstructorSection.tsx, StudentGallery.tsx
+│   ├── coffee/                   # Coffee page components (7 files)
+│   │   ├── Hero.tsx, FeaturedSpecials.tsx, MenuSection.tsx
+│   │   ├── PhilosophySection.tsx, CactusRewardsSection.tsx
+│   │   ├── NewArrivalsSection.tsx, ShopBeansSection.tsx
+│   ├── commissions/              # Commissioned art components (12 files)
+│   │   ├── CommissionsHero.tsx, CommissionsIntro.tsx, ArtTypesGrid.tsx
+│   │   ├── HowItWorks.tsx, CommissionsPortfolio.tsx, PricingPackages.tsx
+│   │   ├── ArtistIntro.tsx, CustomizationOptions.tsx
+│   │   ├── CommissionTestimonials.tsx, CommissionForm.tsx
+│   │   ├── CommissionFAQ.tsx, CommissionCTA.tsx
+│   ├── customer-art/             # Community art components (6 files)
+│   │   ├── CustomerArtHero.tsx, CustomerArtIntro.tsx
+│   │   ├── CustomerArtGallery.tsx, BehindTheMoments.tsx
+│   │   ├── CustomerTestimonials.tsx, SubmitArtworkCTA.tsx
+│   ├── events/                   # Events page components (11 files)
+│   │   ├── EventsHero.tsx, EventsOverview.tsx, FeaturedEvent.tsx
+│   │   ├── UpcomingEventsGrid.tsx, EventTimeline.tsx
+│   │   ├── EventGallery.tsx, EventHighlights.tsx
+│   │   ├── EventTestimonials.tsx, HostAnEvent.tsx
+│   │   ├── EventFAQ.tsx, EventCTA.tsx
+│   ├── exhibition/               # Art gallery components (6 files)
+│   │   ├── Hero.tsx, EditorialGallery.tsx, FeaturedArtwork.tsx
+│   │   ├── ArtExhibitionFeature.tsx, ArtForSaleFeature.tsx
+│   │   └── CuratorSection.tsx
+│   ├── exhibitions/              # Exhibition listing components (4 files)
+│   │   ├── ExhibitionsHero.tsx, ExhibitionsGrid.tsx
+│   │   └── ExhibitionCard.tsx
+│   ├── studio/                   # Art studio components (6 files)
+│   │   ├── StudioHero.tsx, StudioIntro.tsx, LivePainting.tsx
+│   │   ├── SignatureWorks.tsx, StudioExperience.tsx
+│   │   └── StudioCommissionCTA.tsx
+│   ├── plants/                   # Plant components (11 files)
+│   │   ├── Hero.tsx, PlantGallery.tsx, CategoryChips.tsx
+│   │   ├── CareTips.tsx, OfficePlants.tsx, and more
+│   ├── shop/                     # Shop components (9 files)
+│   │   ├── ShopHero.tsx, ProductGrid.tsx, ProcessSection.tsx
+│   │   └── gear/ (ProductGallery.tsx, etc.)
+│   ├── workshops/                # Workshop components (9 files)
+│   │   ├── WorkshopHero.tsx, WorkshopIntro.tsx
+│   │   ├── UpcomingWorkshops.tsx, InstructorSpotlight.tsx
+│   │   ├── WorkshopBenefits.tsx, PastWorkshopGallery.tsx
+│   │   ├── WorkshopTestimonials.tsx, WorkshopFAQ.tsx
+│   │   └── WorkshopCTA.tsx
+│   ├── layout/                   # Global layout components
 │   │   ├── Navbar.tsx            # Responsive header with mobile menu
+│   │   ├── Footer.tsx            # 4-column footer with newsletter signup
 │   │   ├── ArtSubNav.tsx         # Art section tabbed sub-navigation
-│   │   └── Footer.tsx            # 4-column footer with newsletter signup
-│   ├── sections/
-│   │   ├── HeroSection.tsx       # Homepage hero
-│   │   ├── FeaturedArt.tsx       # 3-column art preview grid
-│   │   ├── PopularPlants.tsx     # 3-column plant grid
-│   │   ├── CafeSpecials.tsx      # Menu item highlights
-│   │   ├── UpcomingEvents.tsx    # Past events 3-card grid
-│   │   ├── PastWorkshops.tsx     # Past workshops 3-card grid
-│   │   ├── LatestBlogs.tsx       # Latest blog posts 3-card grid
-│   │   ├── ReviewsSection.tsx    # Customer reviews
-│   │   ├── CTASection.tsx        # Visit CTA card with feature pills
-│   │   └── Features.tsx          # 3 icon feature cards
-│   └── ui/
-│       ├── AnimateOnScroll.tsx    # Scroll-triggered animation wrapper
-│       ├── ArtCard.tsx           # Art card with slide-up hover overlay
-│       ├── Badge.tsx             # Variant badge (green, outline, muted)
-│       ├── Button.tsx            # Primary/outline button + link support
-│       ├── CoffeeMenuItem.tsx    # Coffee menu item with image + pricing
-│       ├── Container.tsx         # Max-width responsive wrapper
-│       ├── FeatureCard.tsx       # Icon + text card with hover lift
-│       ├── FeaturedCoffeeCard.tsx # Today's Special featured card
-│       ├── GalleryCard.tsx       # Masonry gallery card with hover overlay
-│       ├── Input.tsx             # Styled input component
-│       ├── MenuItem.tsx          # Cafe menu item component
-│       ├── PlantCard.tsx         # Plant card with star rating
-│       ├── PlantDetailCard.tsx   # Detailed plant card with badges
-│       ├── QuoteCard.tsx         # Gold accent quote card
-│       ├── ScrollToTop.tsx       # Floating scroll-to-top button
-│       ├── SectionTitle.tsx      # Label + title + subtitle heading
-│       └── TipCard.tsx           # Care tip card with icon
-└── lib/
+│   │   └── PlantSubNav.tsx       # Plant section tabbed sub-navigation
+│   ├── sections/                 # Homepage section components (10 files)
+│   │   ├── HeroSection.tsx, FeaturedArt.tsx, PopularPlants.tsx
+│   │   ├── CafeSpecials.tsx, UpcomingEvents.tsx, PastWorkshops.tsx
+│   │   ├── LatestBlogs.tsx, ReviewsSection.tsx
+│   │   ├── CTASection.tsx, Features.tsx
+│   └── ui/                       # Reusable UI components (16 files)
+│       ├── AnimateOnScroll.tsx, Container.tsx, Button.tsx, Badge.tsx
+│       ├── ArtCard.tsx, GalleryCard.tsx, PlantCard.tsx
+│       ├── PlantDetailCard.tsx, CoffeeMenuItem.tsx
+│       ├── FeaturedCoffeeCard.tsx, FeatureCard.tsx
+│       ├── MenuItem.tsx, QuoteCard.tsx, TipCard.tsx
+│       ├── Input.tsx, ScrollToTop.tsx, SectionTitle.tsx
+└── lib/                          # Data layers
     ├── data.ts                   # Homepage content data
     ├── coffee-data.ts            # Coffee menu items, categories, testimonial
-    ├── exhibition-data.ts        # Art gallery items, categories, curator (with PKR pricing)
-    ├── exhibitions-data.ts       # Exhibition listings and artworks (with PKR pricing)
-    ├── art-classes-data.ts       # Art classes, curriculum, student photos (with PKR pricing)
+    ├── exhibition-data.ts        # Art gallery items, categories, curator (36 artworks)
+    ├── exhibitions-data.ts       # Exhibition listings and artworks (6 exhibitions)
+    ├── art-shop-data.ts          # Unified artwork detail data (gallery + exhibitions)
+    ├── art-classes-data.ts       # Art classes, curriculum, student photos
+    ├── commissions-data.ts       # Commission types, pricing, portfolio, FAQ
+    ├── studio-data.ts            # Studio artist bio, works, offerings
+    ├── customer-art-data.ts      # Customer artwork, moments, testimonials
     ├── plants-data.ts            # Plants, categories, tips, office plants
-    ├── workshop-data.ts          # Workshop categories, listings, instructors, gallery, testimonials, FAQ, benefits
-    └── events-data.ts            # Event categories, featured event, listings, timeline, gallery, stats, testimonials, FAQ
+    ├── gear-data.ts              # Coffee gear products
+    ├── blog-data.ts              # Blog posts, categories, authors
+    ├── workshop-data.ts          # Workshops, instructors, gallery, FAQ
+    └── events-data.ts            # Events, timeline, gallery, stats, FAQ
 ```
 
 ---
@@ -250,20 +302,38 @@ All hero sections share a unified template: `60vh` height, gradient overlay (`fr
 ## Roadmap
 
 - [x] Homepage with 9 sections (hero, specials, art, plants, events, workshops, blogs, reviews, CTA)
-- [x] Art Gallery page (`/art`) with masonry gallery and PKR pricing
-- [x] Art Exhibitions page (`/art/exhibitions`) with filterable cards and detail pages
+- [x] Art Gallery page (`/art`) with editorial magazine layout, clickable artworks, and PKR pricing
+- [x] Art Exhibitions page (`/art/exhibitions`) with filterable cards and detail pages with clickable artworks
+- [x] Artwork Detail pages (`/art/artwork/[id]`) — product-style with status badges, "Inquire to Buy", and related artworks
 - [x] Art Classes page (`/art/classes`) with instructor bio, curriculum, and class grid
-- [x] Plants page (`/plants`) with category filtering
-- [x] Coffee Menu page (`/coffee`) with Today's Special
+- [x] Commissioned Art page (`/art/commissions`) — 12 sections: art types, process, portfolio, pricing, form, FAQ
+- [x] Art Studio page (`/art/studio`) — Sir Khalid Khayam's studio, live painting, signature works
+- [x] Community Art page (`/art/customer-art`) — customer artwork gallery, moments, testimonials, submit CTA
+- [x] Plants page (`/plants`) with category filtering, gallery, office plants, care, consultation, workshops
+- [x] Coffee Menu page (`/coffee`) with Today's Special, rewards, new arrivals
 - [x] Visit page (`/visit`) with map and contact info
 - [x] Shop page (`/shop`) with product grid
+- [x] Coffee Gear shop (`/shop/gear`) with individual product pages
+- [x] Blog (`/blog`) with featured article, grid, categories, newsletter, individual post pages
+- [x] Workshops page (`/workshops`) — category filters, instructor spotlight, benefits, gallery, FAQ
+- [x] Events page (`/events`) — featured event, status tags, timeline, animated stats, host-an-event CTA
 - [x] Per-page SEO metadata on all routes
-- [x] Workshops page (`/workshops`) with 9 sections — category filters, instructor spotlight, benefits, gallery, FAQ
-- [x] Events page (`/events`) with 11 sections — featured event, status tags, timeline, animated stats, host-an-event CTA
-- [ ] Blog listing page (`/blog`)
+- [x] Art sub-navigation (Gallery, Exhibitions, Classes, Commissioned, Studio, Community Art)
+- [x] Plant sub-navigation (main, gallery, office, care, consultation, workshops)
 - [ ] Replace placeholder images with real photography
 - [ ] Add page transitions and route animations
 - [ ] Add online ordering / reservation system
+
+---
+
+## Stats
+
+| Metric | Count |
+|--------|-------|
+| Total Pages | 25+ routes |
+| Components | 100+ React components |
+| Data Layers | 14 TypeScript files |
+| Static Pages | 76 pre-rendered at build time |
 
 ---
 
