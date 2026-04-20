@@ -22,13 +22,23 @@ export default function ExhibitionHero() {
 
             {/* Content */}
             <Container className="relative z-10 py-20 text-center sm:py-24">
-                <div className="mx-auto max-w-3xl">
+                <div className="mx-auto flex max-w-3xl flex-col items-center">
                     <AnimateOnScroll animation="fade-down" duration={800}>
-                        <h1 className="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                            <span className="italic text-[#A8C5A0]">Nigarkhana</span> <span className="italic text-white">Art Gallery</span>
+                        <Image
+                            src="/images/exhibition/Nigarkhana Logo.png"
+                            alt="Nigarkhana"
+                            width={320}
+                            height={120}
+                            className="mx-auto mb-4 h-auto w-[200px] sm:w-[260px] md:w-[320px]"
+                            priority
+                        />
+                    </AnimateOnScroll>
+                    <AnimateOnScroll animation="fade" delay={200} duration={800}>
+                        <h1 className="mb-4 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+                            <span className="italic text-[#A8C5A0]">Art Work</span>
                         </h1>
                     </AnimateOnScroll>
-                    <AnimateOnScroll animation="fade" delay={300} duration={800}>
+                    <AnimateOnScroll animation="fade" delay={400} duration={800}>
                         <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                             Managed by Sir Khalid Khayan, showcasing curated art
                             exhibitions and creative masterpieces.

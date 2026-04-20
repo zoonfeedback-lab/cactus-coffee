@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 const artTabs = [
     { label: 'Gallery', href: '/art' },
-    { label: 'Exhibitions', href: '/art/exhibitions' },
+    { label: 'Exhibitions', href: '/art/exhibition' },
     { label: 'Classes', href: '/art/classes' },
     { label: 'Commissioned', href: '/art/commissions' },
     { label: 'Studio', href: '/art/studio' },
